@@ -137,7 +137,7 @@ public class KitchenSinkController {
         private static final long serialVersionUID = 1L;
 
         {
-           put("misson", MISSION_MESSAGE);
+           put("mission", MISSION_MESSAGE);
             put("MISSION", MISSION_MESSAGE);
             put("ミッション", MISSION_MESSAGE);
             put("みっしょん", MISSION_MESSAGE);
