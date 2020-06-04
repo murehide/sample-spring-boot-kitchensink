@@ -28,6 +28,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
@@ -100,6 +103,119 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @LineMessageHandler
 public class KitchenSinkController {
+    private static final String MISSION_MESSAGE = "楽しむを世界へ";
+    private static final String PHILOSOPHY_MESSAGE = "信頼され愛される企業をめざし、\r\nたゆまぬ努力をしつづけます。\r\n"
+            + "一. 仕事を楽しむ\r\n"
+            + "一. 成長を楽しむ\r\n"
+            + "一. 挑戦を楽しむ\r\n"
+            + "一. サービスを楽しむ\r\n"
+            + "一. 感謝を楽しむ\r\n";
+    private static final String CORE_VALUE_01_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_02_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_03_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_04_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_05_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_06_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_07_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_08_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_09_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_10_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_ALL_MESSAGE = CORE_VALUE_01_MESSAGE + "\r\n"
+            + CORE_VALUE_02_MESSAGE + "\r\n"
+            + CORE_VALUE_03_MESSAGE + "\r\n"
+            + CORE_VALUE_04_MESSAGE + "\r\n"
+            + CORE_VALUE_05_MESSAGE + "\r\n"
+            + CORE_VALUE_06_MESSAGE + "\r\n"
+            + CORE_VALUE_07_MESSAGE + "\r\n"
+            + CORE_VALUE_08_MESSAGE + "\r\n"
+            + CORE_VALUE_09_MESSAGE + "\r\n"
+            + CORE_VALUE_10_MESSAGE + "\r\n";
+
+    private static final String OTHER_MESSAGE = "ようこそ!\r\nSpringLineBotへ!";
+    
+    private static final Map<String, String> MESSAGE_MAP = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+
+        {
+           put("misson", MISSION_MESSAGE);
+            put("MISSION", MISSION_MESSAGE);
+            put("ミッション", MISSION_MESSAGE);
+            put("みっしょん", MISSION_MESSAGE);
+
+            put("philosophy", PHILOSOPHY_MESSAGE);
+            put("PHILOSOPHY", PHILOSOPHY_MESSAGE);
+            put("けいえいりねん", PHILOSOPHY_MESSAGE);
+            put("経営理念", PHILOSOPHY_MESSAGE);
+
+            // コアバリュー1
+            put("corevalue1", CORE_VALUE_01_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_01_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_01_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_01_MESSAGE);
+
+            // コアバリュー2
+            put("corevalue2", CORE_VALUE_02_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_02_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_02_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_02_MESSAGE);
+
+            // コアバリュー3
+            put("corevalue3", CORE_VALUE_03_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_03_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_03_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_03_MESSAGE);
+
+            // コアバリュー4
+            put("corevalue4", CORE_VALUE_04_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_04_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_04_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_04_MESSAGE);          
+
+            // コアバリュー5
+            put("corevalue5", CORE_VALUE_05_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_05_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_05_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_05_MESSAGE);
+
+            // コアバリュー6
+            put("corevalue6", CORE_VALUE_06_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_06_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_06_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_06_MESSAGE);
+
+            // コアバリュー7
+            put("corevalue7", CORE_VALUE_07_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_07_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_07_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_07_MESSAGE);
+
+            // コアバリュー8
+            put("corevalue8", CORE_VALUE_08_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_08_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_08_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_08_MESSAGE);
+
+            // コアバリュー9
+            put("corevalue9", CORE_VALUE_09_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_09_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_09_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_09_MESSAGE);
+
+            // コアバリュー10
+            put("corevalue10", CORE_VALUE_10_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_10_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_10_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_10_MESSAGE);
+
+            // コアバリューすべて
+            put("corevalue", CORE_VALUE_ALL_MESSAGE);
+            put("COREVALUE", CORE_VALUE_ALL_MESSAGE);
+            put("こあばりゅー", CORE_VALUE_ALL_MESSAGE);
+            put("コアバリュー", CORE_VALUE_ALL_MESSAGE);
+
+        }
+    });
+
     @Autowired
     private LineMessagingClient lineMessagingClient;
 
@@ -559,12 +675,21 @@ public class KitchenSinkController {
                                       .build());
                 break;
             default:
-                log.info("Returns echo message {}: {}", replyToken, text);
+                log.info("Returns message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
-                        text
+                        createResponseMessage(text)
                 );
                 break;
+        }
+    }
+
+    public String createResponseMessage(String sendMessage) {
+
+        if(MESSAGE_MAP.containsKey(sendMessage)) {
+            return MESSAGE_MAP.get(sendMessage);
+        } else {
+            return  OTHER_MESSAGE;
         }
     }
 
