@@ -13,8 +13,7 @@ repositories {
 }
 
 dependencies {
-        implementation 'gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.2.4'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
 	// LINE SDK
 	implementation 'com.linecorp.bot:line-bot-spring-boot:3.5.0'
 	// project lombok
