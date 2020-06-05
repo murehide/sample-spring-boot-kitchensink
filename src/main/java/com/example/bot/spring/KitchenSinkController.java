@@ -445,6 +445,8 @@ public class KitchenSinkController {
                                             replyToken,
                                             Arrays.asList(new TextMessage("(from group)"),
                                                           new TextMessage(
+                                                                  "User id: " + userId),
+                                                          new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
                                                           new ImageMessage(profile.getPictureUrl(),
                                                                            profile.getPictureUrl()))
@@ -462,6 +464,8 @@ public class KitchenSinkController {
                                     this.reply(
                                             replyToken,
                                             Arrays.asList(new TextMessage(
+                                                                  "User id: " + userId),
+                                                          new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
                                                           new TextMessage("Status message: "
                                                                           + profile.getStatusMessage()))
