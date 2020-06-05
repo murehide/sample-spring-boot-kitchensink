@@ -615,7 +615,7 @@ public class KitchenSinkController {
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
                                 ))
                         ));
-                carouselTemplate.CarouselTemplateBuilder.imageSize() = "contain";
+                carouselTemplate.CarouselTemplateBuilder.imageSize("contain");
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
