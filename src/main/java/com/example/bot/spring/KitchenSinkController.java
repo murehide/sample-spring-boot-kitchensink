@@ -595,12 +595,83 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "apply": {
+            case "campaign": {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("/static/icon/apply.png"),
-                                                        new URIAction("立即辦卡",
-                                                                      URI.create("https://card.rakuten.com.tw/application/input.xhtml"), null)
+                                new ImageCarouselColumn(createUri("/static/icon/1122.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1122"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/1075.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1075"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/1124.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "installment": {
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(createUri("/static/icon/1123.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/1125.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/1126.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126"), null)
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "japan": {
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(createUri("/static/icon/1059.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1059"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/1087.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1087"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/972.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=972"), null)
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "merchant": {
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(createUri("/static/icon/d621.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d621"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/d622.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d622"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/d522.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d522"), null)
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
