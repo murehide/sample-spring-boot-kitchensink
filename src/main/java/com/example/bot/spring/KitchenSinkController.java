@@ -596,86 +596,82 @@ public class KitchenSinkController {
                 break;
             }
             case "campaign": {
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("/static/icon/1122.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1122"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/1075.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1075"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/1124.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
-                                )
+                                new CarouselColumn(createUri("/static/icon/1122.jpg", "【66金夏趴】樂天點數最高11%！", "於活動期間內，在樂天市場使用樂天信用卡購物累積滿額並登錄活動，即可獲得加碼11%樂天點數回饋！", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1122"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/1075.jpg", "【E 起同樂 一起饗樂】", "指定類別消費享最高10%刷卡金回饋", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1075"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/1124.jpg", "【蝦皮新手大禮包】領券即享首筆五折起 >>限量開搶中", "卡友於活動期間內首次註冊蝦皮會員，首購時輸入專屬優惠碼並使用樂天卡結帳，即享滿額現折NT$200！", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
+                                ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "installment": {
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("/static/icon/1123.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/1125.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/1126.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126"), null)
-                                )
+                                new CarouselColumn(createUri("/static/icon/1123.jpg", "【抽Dyson】夏天到了！抽Dyson空氣清淨機，再享5%回饋", "活動期間內登錄，申辦單筆消費分期6期以上，享5%刷卡金回饋(每戶最高可回饋1,500元刷卡金)，再抽Dyson空氣清淨機，筆數越多，中獎機率越高！", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/1125.jpg", "【500元回饋】分期一筆就享驚人回饋！", "活動期間內只要成功自動分期一筆且登錄就享500元刷卡金回饋！", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/1126.jpg", "【樂天就甘心】申辦帳單分期請您吃免費霜淇淋再折100！", "活動期間內線上申辦帳單分期成功並登錄，享刷卡金NT100元回饋、再送全家Fami原味霜淇淋一支！", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126"), null)
+                                ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "japan": {
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("/static/icon/1059.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1059"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/1087.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1087"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/972.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=972"), null)
-                                )
+                                new CarouselColumn(createUri("/static/icon/1059.jpg", "逛日本MITSUI OUTLET PARK名牌輕鬆購！送購物優惠券及精美小禮!", "卡友於日本全國MITSUI OUTLET PARK消費，出示兌換券及台灣樂天信用卡,即可換取精美小禮及合作店家所提供的優惠券。", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1059"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/1087.jpg", "BicCamera集團購物享最高免稅10%+7%OFF", "卡友於日本BicCamera集團購物，出示優惠券並刷台灣樂天信用卡，得享最高免稅10%+7%OFF。", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1087"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/972.jpg", "松本清免稅門市最高享免稅10%+7％OFF!", "卡友於日本松本清（Matsumoto KiYoshi）藥妝集團實體免稅門市購物，消費滿額享免稅10%+最高7%OFF。", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=972"), null)
+                                ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "merchant": {
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("/static/icon/d621.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d621"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/d622.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d622"), null)
-                                ),
-                                new ImageCarouselColumn(createUri("/static/icon/d522.jpg"),
-                                                        new URIAction("立即前往",
-                                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d522"), null)
-                                )
+                                new CarouselColumn(createUri("/static/icon/d621.jpg", "沐越Mu Viet越式料理", "每桌贈「青木瓜雞絲沙拉」乙份", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d621"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/d622.jpg", "享鴨", "每桌贈「干貝絲翡翠炊蛋」乙份	", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d622"), null)
+                                )),
+                                new CarouselColumn(createUri("/static/icon/d522.jpg", "青花驕麻辣鍋", "每桌贈美國牛培根乙份", Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d522"), null)
+                                ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
