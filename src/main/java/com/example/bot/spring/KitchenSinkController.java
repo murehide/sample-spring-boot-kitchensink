@@ -598,7 +598,7 @@ public class KitchenSinkController {
             case "apply": {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("https://image.card.tw.r10s.com/images/common/4.png"),
+                                new ImageCarouselColumn(createUri("/static/buttons/4.png"),
                                                         new URIAction("立即辦卡",
                                                                       URI.create("https://card.rakuten.com.tw/application/input.xhtml"), null)
                                 )
