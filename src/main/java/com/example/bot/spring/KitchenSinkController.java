@@ -572,6 +572,7 @@ public class KitchenSinkController {
                                                 .build()
                                 ))
                         ));
+                carouselTemplate = carouselTemplate.CarouselTemplateBuilder.imageSize("contain").build();
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
