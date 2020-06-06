@@ -220,6 +220,10 @@ public class KitchenSinkController {
 
         }
     });
+    
+    private byte[] byteRe;
+    
+    private String encrytStr="";
 
     @Autowired
     private LineMessagingClient lineMessagingClient;
@@ -431,8 +435,6 @@ public class KitchenSinkController {
             throws Exception {
         final String text = content.getText();
         final String userId = event.getSource().getUserId();
-        byte[] byteRe;
-        String encrytStr="";
         if (userId != null) {
             byteRe = enCrypt(userId,System.getenv("line.bot.channel-secret"));
             encrytStr = parseByte2HexStr(byteRe);
