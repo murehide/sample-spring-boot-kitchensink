@@ -860,8 +860,10 @@ public class KitchenSinkController {
         Cipher c;         
         byte[] cByte;  
         String str = content;  
-        keygen = KeyGenerator.getInstance("AES");  
-        keygen.init(128, new SecureRandom(strKey.getBytes())); 
+        keygen = KeyGenerator.getInstance("AES");
+        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG") ;
+        secureRandom.setSeed(strKey.getBytes());
+        keygen.init(128, secureRandom);
         desKey = keygen.generateKey();        
         c = Cipher.getInstance("AES");  
         c.init(Cipher.ENCRYPT_MODE, desKey); 
