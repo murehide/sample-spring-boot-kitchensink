@@ -432,7 +432,7 @@ public class KitchenSinkController {
         final String text = content.getText();
         final String userId = event.getSource().getUserId();
         byte[] byteRe;
-        String encrytStr;
+        String encrytStr="";
         if (userId != null) {
             byteRe = enCrypt(userId,System.getenv("line.bot.channel-secret"));
             encrytStr = parseByte2HexStr(byteRe);
