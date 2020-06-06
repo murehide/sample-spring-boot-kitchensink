@@ -437,7 +437,7 @@ public class KitchenSinkController {
                          event.getSource());
                 final String userId = event.getSource().getUserId();
                 if (userId != null) {
-                    byte[] byteRe = enCrypt(userId,"rakutenLine");
+                    byte[] byteRe = enCrypt(userId,System.getenv("line.bot.channel-secret"));
                     String encrytStr = parseByte2HexStr(byteRe);
                     if (event.getSource() instanceof GroupSource) {
                         lineMessagingClient
