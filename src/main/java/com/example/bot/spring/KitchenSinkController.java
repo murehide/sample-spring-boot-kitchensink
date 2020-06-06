@@ -226,9 +226,6 @@ public class KitchenSinkController {
 
     @Autowired
     private LineBlobClient lineBlobClient;
-    
-    @Autowired
-    private LineBotProperties lineBotProperties;
 
     @EventMapping
     public void handleTextMessageEvent(MessageEvent<TextMessageContent> event) throws Exception {
@@ -440,7 +437,7 @@ public class KitchenSinkController {
                          event.getSource());
                 final String userId = event.getSource().getUserId();
                 if (userId != null) {
-                    byte[] byteRe = enCrypt(userId,lineBotProperties.getChannelSecret());
+                    byte[] byteRe = enCrypt(userId,"rakutenLine");
                     String encrytStr = parseByte2HexStr(byteRe);
                     if (event.getSource() instanceof GroupSource) {
                         lineMessagingClient
