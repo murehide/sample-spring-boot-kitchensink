@@ -136,7 +136,7 @@ public class KitchenSinkController {
             + CORE_VALUE_09_MESSAGE + "\r\n"
             + CORE_VALUE_10_MESSAGE + "\r\n";
 
-    private static final String OTHER_MESSAGE = "ようこそ!\r\nSpringLineBotへ!";
+    private static final String OTHER_MESSAGE = "您還需要其他協助嗎?";
     
     private static final Map<String, String> MESSAGE_MAP = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
@@ -652,15 +652,15 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new CarouselColumn(createUri("/static/icon/1123.jpg"), "【抽Dyson】夏天到了！抽Dyson空氣清淨機，再享5%回饋", "申辦單筆消費分期6期以上，享5%刷卡金回饋，每戶最高可回饋1,500元刷卡金，再抽Dyson空氣清淨機！", Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123"), null)
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123&uid="+encrytStr), null)
                                 )),
                                 new CarouselColumn(createUri("/static/icon/1125.jpg"), "【500元回饋】分期一筆就享驚人回饋！", "活動期間內只要成功自動分期一筆且登錄就享500元刷卡金回饋！", Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125"), null)
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125&uid="+encrytStr), null)
                                 )),
                                 new CarouselColumn(createUri("/static/icon/1126.jpg"), "【樂天就甘心】申辦帳單分期請您吃免費霜淇淋再折100！", "活動期間內線上申辦帳單分期成功並登錄，享刷卡金NT100元回饋、再送全家Fami原味霜淇淋一支！", Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126"), null)
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126&uid="+encrytStr), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
