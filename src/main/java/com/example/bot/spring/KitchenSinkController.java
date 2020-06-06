@@ -36,6 +36,11 @@ import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.security.SecureRandom;  
+import javax.crypto.Cipher;  
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -221,6 +226,9 @@ public class KitchenSinkController {
 
     @Autowired
     private LineBlobClient lineBlobClient;
+    
+    @Autowired
+    private LineBotProperties lineBotProperties;
 
     @EventMapping
     public void handleTextMessageEvent(MessageEvent<TextMessageContent> event) throws Exception {
@@ -432,6 +440,8 @@ public class KitchenSinkController {
                          event.getSource());
                 final String userId = event.getSource().getUserId();
                 if (userId != null) {
+                    byte[] byteRe = enCrypt(userId,lineBotProperties.getChannelSecret());
+                    String encrytStr = parseByte2HexStr(byteRe);
                     if (event.getSource() instanceof GroupSource) {
                         lineMessagingClient
                                 .getGroupMemberProfile(((GroupSource) event.getSource()).getGroupId(), userId)
@@ -446,6 +456,8 @@ public class KitchenSinkController {
                                             Arrays.asList(new TextMessage("(from group)"),
                                                           new TextMessage(
                                                                   "User id: " + userId),
+                                                          new TextMessage(
+                                                                  "Encrypted User id: " + encrytStr),
                                                           new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
                                                           new ImageMessage(profile.getPictureUrl(),
@@ -465,6 +477,8 @@ public class KitchenSinkController {
                                             replyToken,
                                             Arrays.asList(new TextMessage(
                                                                   "User id: " + userId),
+                                                          new TextMessage(
+                                                                  "Encrypted User id: " + encrytStr),
                                                           new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
                                                           new TextMessage("Status message: "
@@ -825,4 +839,31 @@ public class KitchenSinkController {
         Path path;
         URI uri;
     }
+    
+    public static byte[] enCrypt(String content,String strKey) throws Exception{  
+        KeyGenerator keygen;         
+        SecretKey desKey; 
+        Cipher c;         
+        byte[] cByte;  
+        String str = content;  
+        keygen = KeyGenerator.getInstance("AES");  
+        keygen.init(128, new SecureRandom(strKey.getBytes())); 
+        desKey = keygen.generateKey();        
+        c = Cipher.getInstance("AES");  
+        c.init(Cipher.ENCRYPT_MODE, desKey); 
+        cByte = c.doFinal(str.getBytes("UTF-8"));  return cByte; 
+    }
+
+    public static String parseByte2HexStr(byte buf[]) {  
+        StringBuffer sb = new StringBuffer();  
+        for (int i = 0; i < buf.length; i++) {  
+            String hex = Integer.toHexString(buf[i] & 0xFF);  
+            if (hex.length() == 1) { 
+                hex = '0' + hex; 
+            }  
+            sb.append(hex.toUpperCase()); 
+        } 
+        return sb.toString(); 
+    }  
+
 }
