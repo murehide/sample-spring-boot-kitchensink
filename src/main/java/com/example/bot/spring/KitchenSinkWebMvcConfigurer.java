@@ -16,6 +16,8 @@
 
 package com.example.bot.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -23,8 +25,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
+@EnableConfigurationProperties(LineBotProperties.class)
 @Slf4j
 public class KitchenSinkWebMvcConfigurer implements WebMvcConfigurer {
+    @Autowired
+    private LineBotProperties lineBotProperties;
+    
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
