@@ -430,15 +430,19 @@ public class KitchenSinkController {
     private void handleTextContent(String replyToken, Event event, TextMessageContent content)
             throws Exception {
         final String text = content.getText();
+        final String userId = event.getSource().getUserId();
+        byte[] byteRe;
+        String encrytStr;
+        if (userId != null) {
+            byteRe = enCrypt(userId,System.getenv("line.bot.channel-secret"));
+            encrytStr = parseByte2HexStr(byteRe);
+        }
 
         switch (text) {
             case "profile": {
                 log.info("Invoking 'profile' command: source:{}",
                          event.getSource());
-                final String userId = event.getSource().getUserId();
-                if (userId != null) {
-                    byte[] byteRe = enCrypt(userId,System.getenv("line.bot.channel-secret"));
-                    String encrytStr = parseByte2HexStr(byteRe);
+               if (userId != null) {
                     if (event.getSource() instanceof GroupSource) {
                         lineMessagingClient
                                 .getGroupMemberProfile(((GroupSource) event.getSource()).getGroupId(), userId)
@@ -487,6 +491,17 @@ public class KitchenSinkController {
                 } else {
                     this.replyText(replyToken, "Bot can't use profile API without user ID");
                 }
+                break;
+            }
+            case "bind": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "確定要綁定嗎?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/corp/tax/apply.xhtml?uid="+encrytStr), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "bye": {
