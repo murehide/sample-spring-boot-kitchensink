@@ -46,7 +46,7 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
     public FlexMessage get() {
         final Image heroBlock =
                 Image.builder()
-                     .url(URI.create("https://example.com/cafe.jpg"))
+                     .url(URI.create("https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png"))
                      .size(ImageSize.FULL_WIDTH)
                      .aspectRatio(ImageAspectRatio.R20TO13)
                      .aspectMode(ImageAspectMode.Cover)
@@ -158,9 +158,9 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
 
     private Box createReviewBox() {
         final Icon goldStar =
-                Icon.builder().size(FlexFontSize.SM).url(URI.create("https://example.com/gold_star.png")).build();
+                Icon.builder().size(FlexFontSize.SM).url(URI.create("https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png")).build();
         final Icon grayStar =
-                Icon.builder().size(FlexFontSize.SM).url(URI.create("https://example.com/gray_star.png")).build();
+                Icon.builder().size(FlexFontSize.SM).url(URI.create("https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png")).build();
         final Text point =
                 Text.builder()
                     .text("4.0")
