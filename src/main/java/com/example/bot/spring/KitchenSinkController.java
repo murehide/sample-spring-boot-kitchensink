@@ -669,7 +669,7 @@ public class KitchenSinkController {
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
                         "推廣",
-                        "功能選擇",
+                        "選單",
                         Arrays.asList(
                                 new MessageAction("公司簡介",
                                                   "intro"),
@@ -689,7 +689,7 @@ public class KitchenSinkController {
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
                         "小幫手",
-                        "功能選擇",
+                        "選單",
                         Arrays.asList(
                                 new MessageAction("帳號資訊",
                                                   "profile"),
