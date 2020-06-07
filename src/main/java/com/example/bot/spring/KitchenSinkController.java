@@ -502,7 +502,7 @@ public class KitchenSinkController {
                             URI.create("https://card.rakuten.com.tw/corp/tax/apply.xhtml?uid="+encrytStr), null),
                         new MessageAction("否", "No")
                 );
-                TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("帳號綁定", confirmTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -643,7 +643,7 @@ public class KitchenSinkController {
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
                                 ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("最新優惠", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -663,7 +663,7 @@ public class KitchenSinkController {
                                                       URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126&uid="+encrytStr), null)
                                 ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("分期活動", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -683,7 +683,7 @@ public class KitchenSinkController {
                                                       URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=972"), null)
                                 ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("日本優惠", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -703,7 +703,7 @@ public class KitchenSinkController {
                                                       URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d522"), null)
                                 ))
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("國內特店", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
