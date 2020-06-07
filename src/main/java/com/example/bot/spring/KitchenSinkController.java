@@ -607,6 +607,32 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "corporate_card":
+                this.reply(replyToken, ImagemapMessage
+                        .builder()
+                        .baseUrl(createUri("/static/rich"))
+                        .altText("This is alt text")
+                        .baseSize(new ImagemapBaseSize(1040, 1040))
+                        .actions(Arrays.asList(
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section1")
+                                                 .area(new ImagemapArea(0, 0, 520, 520))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section2")
+                                                 .area(new ImagemapArea(520, 0, 520, 520))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section3")
+                                                 .area(new ImagemapArea(0, 520, 520, 520))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section4")
+                                                 .area(new ImagemapArea(0, 520, 520, 520))
+                                                 .build()
+                        ))
+                        .build());
+                break;
             case "help": {
                 URI imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
@@ -618,6 +644,10 @@ public class KitchenSinkController {
                                                   "profile"),
                                 new MessageAction("帳號綁定",
                                                   "bind"),
+                                new MessageAction("分期特約商家",
+                                                  "merchant_installment"),
+                                new MessageAction("公司卡",
+                                                  "corporate_card"),
                                 new URIAction("聯絡客服", URI.create("tel:225168518"), null),
                                 new URIAction("粉絲團", URI.create("https://www.facebook.com/twrakutencard/"), null)
                         ));
@@ -638,32 +668,6 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "imagemap":
-                this.reply(replyToken, ImagemapMessage
-                        .builder()
-                        .baseUrl(createUri("/static/rich"))
-                        .altText("This is alt text")
-                        .baseSize(new ImagemapBaseSize(1040, 1040))
-                        .actions(Arrays.asList(
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://store.line.me/family/manga/en")
-                                                 .area(new ImagemapArea(0, 0, 520, 520))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://store.line.me/family/music/en")
-                                                 .area(new ImagemapArea(520, 0, 520, 520))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://store.line.me/family/play/en")
-                                                 .area(new ImagemapArea(0, 520, 520, 520))
-                                                 .build(),
-                                MessageImagemapAction.builder()
-                                                     .text("URANAI!")
-                                                     .area(new ImagemapArea(520, 520, 520, 520))
-                                                     .build()
-                        ))
-                        .build());
-                break;
             case "imagemap_video":
                 this.reply(replyToken, ImagemapMessage
                         .builder()
