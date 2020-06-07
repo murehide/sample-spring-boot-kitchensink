@@ -93,7 +93,7 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                 Text.builder()
                     .text("台灣樂天信用卡股份有限公司")
                     .weight(TextWeight.BOLD)
-                    .size(FlexFontSize.XL)
+                    .size(FlexFontSize.LG)
                     .build();
 
         final Box review = createReviewBox();
@@ -116,14 +116,14 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                             .text("公司地址")
                             .color("#aaaaaa")
                             .size(FlexFontSize.SM)
-                            .flex(1)
+                            .flex(2)
                             .build(),
                         Text.builder()
                             .text("台北市中山區民生東路三段51號16樓")
                             .wrap(true)
                             .color("#666666")
                             .size(FlexFontSize.SM)
-                            .flex(5)
+                            .flex(4)
                             .build()
                 ))
                 .build();
@@ -136,14 +136,14 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                                .text("設立日期")
                                .color("#aaaaaa")
                                .size(FlexFontSize.SM)
-                               .flex(1)
+                               .flex(2)
                                .build(),
                            Text.builder()
                                .text("2014年6月18日")
                                .wrap(true)
                                .color("#666666")
                                .size(FlexFontSize.SM)
-                               .flex(5)
+                               .flex(4)
                                .build()
                    ))
                    .build();
@@ -156,14 +156,14 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                                .text("統一編號")
                                .color("#aaaaaa")
                                .size(FlexFontSize.SM)
-                               .flex(1)
+                               .flex(2)
                                .build(),
                            Text.builder()
                                .text("24558961")
                                .wrap(true)
                                .color("#666666")
                                .size(FlexFontSize.SM)
-                               .flex(5)
+                               .flex(4)
                                .build()
                    ))
                    .build();
