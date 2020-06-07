@@ -607,6 +607,9 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "intro":
+                this.reply(replyToken, new ExampleFlexMessageSupplier().get());
+                break;
             case "corporate_card":
                 this.reply(replyToken, ImagemapMessage
                         .builder()
@@ -668,6 +671,8 @@ public class KitchenSinkController {
                         "推廣",
                         "功能選擇",
                         Arrays.asList(
+                                new MessageAction("公司簡介",
+                                                  "intro"),
                                 new MessageAction("公司卡",
                                                   "corporate_card"),
                                 new MessageAction("分期特約商家",
@@ -710,9 +715,6 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "flex":
-                this.reply(replyToken, new ExampleFlexMessageSupplier().get());
-                break;
             case "quickreply":
                 this.reply(replyToken, new MessageWithQuickReplySupplier().get());
                 break;
