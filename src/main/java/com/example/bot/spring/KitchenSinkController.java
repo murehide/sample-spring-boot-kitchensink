@@ -602,7 +602,7 @@ public class KitchenSinkController {
                                                                       URI.create("https://shopee.tw/"), null)
                                 )
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                TemplateMessage templateMessage = new TemplateMessage("分期特約商家",
                                                                       imageCarouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
@@ -628,11 +628,27 @@ public class KitchenSinkController {
                                                  .build(),
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section4")
-                                                 .area(new ImagemapArea(0, 520, 520, 520))
+                                                 .area(new ImagemapArea(520, 520, 520, 520))
                                                  .build()
                         ))
                         .build());
                 break;
+            case "promotion": {
+                URI imageUrl = createUri("/static/buttons/1040.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        imageUrl,
+                        "推廣",
+                        "功能選擇",
+                        Arrays.asList(
+                                new MessageAction("公司卡",
+                                                  "corporate_card"),
+                                new MessageAction("分期特約商家",
+                                                  "merchant_installment")
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("推廣", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "help": {
                 URI imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
