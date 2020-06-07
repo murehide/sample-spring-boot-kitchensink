@@ -506,127 +506,6 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "bye": {
-                Source source = event.getSource();
-                if (source instanceof GroupSource) {
-                    this.replyText(replyToken, "Leaving group");
-                    lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
-                } else if (source instanceof RoomSource) {
-                    this.replyText(replyToken, "Leaving room");
-                    lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
-                } else {
-                    this.replyText(replyToken, "Bot can't leave from 1:1 chat");
-                }
-                break;
-            }
-            case "confirm": {
-                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                        "Do it?",
-                        new MessageAction("Yes", "Yes!"),
-                        new MessageAction("No", "No!")
-                );
-                TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-                this.reply(replyToken, templateMessage);
-                break;
-            }
-            case "buttons": {
-                URI imageUrl = createUri("/static/buttons/1040.jpg");
-                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
-                        imageUrl,
-                        "My button sample",
-                        "Hello, my button",
-                        Arrays.asList(
-                                new URIAction("Go to line.me",
-                                              URI.create("https://line.me"), null),
-                                new PostbackAction("Say hello1",
-                                                   "hello こんにちは"),
-                                new PostbackAction("言 hello2",
-                                                   "hello こんにちは",
-                                                   "hello こんにちは"),
-                                new MessageAction("Say message",
-                                                  "Rice=米")
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
-                this.reply(replyToken, templateMessage);
-                break;
-            }
-            case "carousel": {
-                URI imageUrl = createUri("/static/buttons/1040.jpg");
-                CarouselTemplate carouselTemplate = new CarouselTemplate(
-                        Arrays.asList(
-                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
-                                        new URIAction("Go to line.me",
-                                                      URI.create("https://line.me"), null),
-                                        new URIAction("Go to line.me",
-                                                      URI.create("https://line.me"), null),
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
-                                )),
-                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
-                                        new PostbackAction("言 hello2",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new PostbackAction("言 hello2",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
-                                )),
-                                new CarouselColumn(imageUrl, "Datetime Picker",
-                                                   "Please select a date, time or datetime", Arrays.asList(
-                                        DatetimePickerAction.OfLocalDatetime
-                                                .builder()
-                                                .label("Datetime")
-                                                .data("action=sel")
-                                                .initial(LocalDateTime.parse("2017-06-18T06:15"))
-                                                .min(LocalDateTime.parse("1900-01-01T00:00"))
-                                                .max(LocalDateTime.parse("2100-12-31T23:59"))
-                                                .build(),
-                                        DatetimePickerAction.OfLocalDate
-                                                .builder()
-                                                .label("Date")
-                                                .data("action=sel&only=date")
-                                                .initial(LocalDate.parse("2017-06-18"))
-                                                .min(LocalDate.parse("1900-01-01"))
-                                                .max(LocalDate.parse("2100-12-31"))
-                                                .build(),
-                                        DatetimePickerAction.OfLocalTime
-                                                .builder()
-                                                .label("Time")
-                                                .data("action=sel&only=time")
-                                                .initial(LocalTime.parse("06:15"))
-                                                .min(LocalTime.parse("00:00"))
-                                                .max(LocalTime.parse("23:59"))
-                                                .build()
-                                ))
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
-                this.reply(replyToken, templateMessage);
-                break;
-            }
-            case "image_carousel": {
-                URI imageUrl = createUri("/static/buttons/1040.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
-                        Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                                        new URIAction("Goto line.me",
-                                                                      URI.create("https://line.me"), null)
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new MessageAction("Say message",
-                                                                          "Rice=米")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new PostbackAction("言 hello2",
-                                                                           "hello こんにちは",
-                                                                           "hello こんにちは")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
-                this.reply(replyToken, templateMessage);
-                break;
-            }
             case "campaign": {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
@@ -707,11 +586,61 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "help": {
+                URI imageUrl = createUri("/static/buttons/1040.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        imageUrl,
+                        "小幫手",
+                        "功能選擇",
+                        Arrays.asList(
+                                new MessageAction("帳號資訊",
+                                                  "profile"),
+                                new MessageAction("帳號綁定",
+                                                  "bind"),
+                                new URIAction("聯絡客服", URI.create("tel:225168518"), null),
+                                new URIAction("粉絲團", URI.create("https://www.facebook.com/twrakutencard/"), null)
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("小幫手", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "bye": {
+                Source source = event.getSource();
+                if (source instanceof GroupSource) {
+                    this.replyText(replyToken, "Leaving group");
+                    lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
+                } else if (source instanceof RoomSource) {
+                    this.replyText(replyToken, "Leaving room");
+                    lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
+                } else {
+                    this.replyText(replyToken, "Bot can't leave from 1:1 chat");
+                }
+                break;
+            }
+            case "image_carousel": {
+                URI imageUrl = createUri("/static/buttons/1040.jpg");
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                                        new URIAction("Goto line.me",
+                                                                      URI.create("https://line.me"), null)
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new MessageAction("Say message",
+                                                                          "Rice=米")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new PostbackAction("言 hello2",
+                                                                           "hello こんにちは",
+                                                                           "hello こんにちは")
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "imagemap":
-                //            final String baseUrl,
-                //            final String altText,
-                //            final ImagemapBaseSize imagemapBaseSize,
-                //            final List<ImagemapAction> actions) {
                 this.reply(replyToken, ImagemapMessage
                         .builder()
                         .baseUrl(createUri("/static/rich"))
