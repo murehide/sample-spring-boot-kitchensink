@@ -689,7 +689,7 @@ public class KitchenSinkController {
                         .video(
                                 ImagemapVideo.builder()
                                              .originalContentUrl(
-                                                     URI.create("https://www.youtube.com/watch?v=NBnK1BhJ1gY&feature=youtu.be&scid=su_10383"))
+                                                     createUri("/static/imagemap_video/originalContent.mp4"))
                                              .previewImageUrl(
                                                      createUri("/static/imagemap_video/previewImage.jpg"))
                                              .area(new ImagemapArea(40, 46, 952, 536))
