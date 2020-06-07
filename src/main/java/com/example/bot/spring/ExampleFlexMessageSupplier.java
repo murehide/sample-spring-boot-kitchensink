@@ -46,11 +46,11 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
     public FlexMessage get() {
         final Image heroBlock =
                 Image.builder()
-                     .url(URI.create("https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png"))
+                     .url(URI.create("https://image.card.tw.r10s.com/images/common/landing/ad02/card2_v3.png"))
                      .size(ImageSize.FULL_WIDTH)
                      .aspectRatio(ImageAspectRatio.R20TO13)
                      .aspectMode(ImageAspectMode.Cover)
-                     .action(new URIAction("label", URI.create("http://example.com"), null))
+                     .action(new URIAction("label", URI.create("https://card.rakuten.com.tw/"), null))
                      .build();
 
         final Box bodyBlock = createBodyBlock();
@@ -62,7 +62,7 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                       .footer(footerBlock)
                       .build();
 
-        return new FlexMessage("ALT", bubble);
+        return new FlexMessage("公司介紹", bubble);
     }
 
     private Box createFooterBlock() {
@@ -71,14 +71,14 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                 .builder()
                 .style(ButtonStyle.LINK)
                 .height(ButtonHeight.SMALL)
-                .action(new URIAction("CALL", URI.create("tel:000000"), null))
+                .action(new URIAction("CALL", URI.create("tel:0225168518"), null))
                 .build();
         final Separator separator = Separator.builder().build();
         final Button websiteAction =
                 Button.builder()
                       .style(ButtonStyle.LINK)
                       .height(ButtonHeight.SMALL)
-                      .action(new URIAction("WEBSITE", URI.create("https://example.com"), null))
+                      .action(new URIAction("WEBSITE", URI.create("https://card.rakuten.com.tw/"), null))
                       .build();
 
         return Box.builder()
@@ -91,7 +91,7 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
     private Box createBodyBlock() {
         final Text title =
                 Text.builder()
-                    .text("Brown Cafe")
+                    .text("台灣樂天信用卡股份有限公司")
                     .weight(TextWeight.BOLD)
                     .size(FlexFontSize.XL)
                     .build();
@@ -102,7 +102,7 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
 
         return Box.builder()
                   .layout(FlexLayout.VERTICAL)
-                  .contents(asList(title, review, info))
+                  .contents(asList(title, info))
                   .build();
     }
 
@@ -113,13 +113,13 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                 .spacing(FlexMarginSize.SM)
                 .contents(asList(
                         Text.builder()
-                            .text("Place")
+                            .text("公司地址")
                             .color("#aaaaaa")
                             .size(FlexFontSize.SM)
                             .flex(1)
                             .build(),
                         Text.builder()
-                            .text("Shinjuku, Tokyo")
+                            .text("台北市中山區民生東路三段51號16樓")
                             .wrap(true)
                             .color("#666666")
                             .size(FlexFontSize.SM)
@@ -133,13 +133,33 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                    .spacing(FlexMarginSize.SM)
                    .contents(asList(
                            Text.builder()
-                               .text("Time")
+                               .text("設立日期")
                                .color("#aaaaaa")
                                .size(FlexFontSize.SM)
                                .flex(1)
                                .build(),
                            Text.builder()
-                               .text("10:00 - 23:00")
+                               .text("2014年6月18日")
+                               .wrap(true)
+                               .color("#666666")
+                               .size(FlexFontSize.SM)
+                               .flex(5)
+                               .build()
+                   ))
+                   .build();
+        final Box number =
+                Box.builder()
+                   .layout(FlexLayout.BASELINE)
+                   .spacing(FlexMarginSize.SM)
+                   .contents(asList(
+                           Text.builder()
+                               .text("統一編號")
+                               .color("#aaaaaa")
+                               .size(FlexFontSize.SM)
+                               .flex(1)
+                               .build(),
+                           Text.builder()
+                               .text("24558961")
                                .wrap(true)
                                .color("#666666")
                                .size(FlexFontSize.SM)
@@ -152,7 +172,7 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                   .layout(FlexLayout.VERTICAL)
                   .margin(FlexMarginSize.LG)
                   .spacing(FlexMarginSize.SM)
-                  .contents(asList(place, time))
+                  .contents(asList(place, time, number))
                   .build();
     }
 
