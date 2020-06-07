@@ -680,29 +680,29 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "imagemap_video":
+            case "wifi":
                 this.reply(replyToken, ImagemapMessage
                         .builder()
                         .baseUrl(createUri("/static/imagemap_video"))
-                        .altText("This is an imagemap with video")
+                        .altText("日韓5天Wi-Fi吃到飽")
                         .baseSize(new ImagemapBaseSize(722, 1040))
                         .video(
                                 ImagemapVideo.builder()
                                              .originalContentUrl(
-                                                     createUri("/static/imagemap_video/originalContent.mp4"))
+                                                     URI.create("https://www.youtube.com/watch?v=NBnK1BhJ1gY&feature=youtu.be&scid=su_10383"))
                                              .previewImageUrl(
                                                      createUri("/static/imagemap_video/previewImage.jpg"))
                                              .area(new ImagemapArea(40, 46, 952, 536))
                                              .externalLink(
                                                      new ImagemapExternalLink(
-                                                             URI.create("https://example.com/see_more.html"),
-                                                             "See More")
+                                                             URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=992"),
+                                                             "查看詳情")
                                              )
                                              .build()
                         )
                         .actions(singletonList(
                                 MessageImagemapAction.builder()
-                                                     .text("NIXIE CLOCK")
+                                                     .text("日韓5天Wi-Fi吃到飽")
                                                      .area(new ImagemapArea(260, 600, 450, 86))
                                                      .build()
                         ))
