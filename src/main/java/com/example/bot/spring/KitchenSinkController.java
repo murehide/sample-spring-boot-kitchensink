@@ -611,7 +611,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, ImagemapMessage
                         .builder()
                         .baseUrl(createUri("/static/rich"))
-                        .altText("This is alt text")
+                        .altText("公司卡")
                         .baseSize(new ImagemapBaseSize(1040, 1040))
                         .actions(Arrays.asList(
                                 URIImagemapAction.builder()
@@ -644,10 +644,6 @@ public class KitchenSinkController {
                                                   "profile"),
                                 new MessageAction("帳號綁定",
                                                   "bind"),
-                                new MessageAction("分期特約商家",
-                                                  "merchant_installment"),
-                                new MessageAction("公司卡",
-                                                  "corporate_card"),
                                 new URIAction("聯絡客服", URI.create("tel:225168518"), null),
                                 new URIAction("粉絲團", URI.create("https://www.facebook.com/twrakutencard/"), null)
                         ));
