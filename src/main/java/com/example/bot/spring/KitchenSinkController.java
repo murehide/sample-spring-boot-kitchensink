@@ -695,7 +695,7 @@ public class KitchenSinkController {
                                                   "profile"),
                                 new MessageAction("帳號綁定",
                                                   "bind"),
-                                new URIAction("聯絡客服", URI.create("tel:225168518"), null),
+                                new URIAction("聯絡客服", URI.create("tel:0225168518"), null),
                                 new URIAction("粉絲團", URI.create("https://www.facebook.com/twrakutencard/"), null)
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("小幫手", buttonsTemplate);
