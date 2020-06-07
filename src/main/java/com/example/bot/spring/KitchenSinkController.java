@@ -633,6 +633,34 @@ public class KitchenSinkController {
                         ))
                         .build());
                 break;
+            case "wifi":
+                this.reply(replyToken, ImagemapMessage
+                        .builder()
+                        .baseUrl(createUri("/static/imagemap_video"))
+                        .altText("日韓5天Wi-Fi吃到飽")
+                        .baseSize(new ImagemapBaseSize(722, 1040))
+                        .video(
+                                ImagemapVideo.builder()
+                                             .originalContentUrl(
+                                                     createUri("/static/imagemap_video/originalContent.mp4"))
+                                             .previewImageUrl(
+                                                     createUri("/static/imagemap_video/previewImage.jpg"))
+                                             .area(new ImagemapArea(40, 46, 952, 536))
+                                             .externalLink(
+                                                     new ImagemapExternalLink(
+                                                             URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=992"),
+                                                             "查看詳情")
+                                             )
+                                             .build()
+                        )
+                        .actions(singletonList(
+                                MessageImagemapAction.builder()
+                                                     .text("日韓5天Wi-Fi吃到飽")
+                                                     .area(new ImagemapArea(260, 600, 450, 86))
+                                                     .build()
+                        ))
+                        .build());
+                break;
             case "promotion": {
                 URI imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
@@ -643,7 +671,9 @@ public class KitchenSinkController {
                                 new MessageAction("公司卡",
                                                   "corporate_card"),
                                 new MessageAction("分期特約商家",
-                                                  "merchant_installment")
+                                                  "merchant_installment"),
+                                new MessageAction("日韓5天Wi-Fi吃到飽",
+                                                  "wifi")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("推廣", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
@@ -680,34 +710,6 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "wifi":
-                this.reply(replyToken, ImagemapMessage
-                        .builder()
-                        .baseUrl(createUri("/static/imagemap_video"))
-                        .altText("日韓5天Wi-Fi吃到飽")
-                        .baseSize(new ImagemapBaseSize(722, 1040))
-                        .video(
-                                ImagemapVideo.builder()
-                                             .originalContentUrl(
-                                                     createUri("/static/imagemap_video/originalContent.mp4"))
-                                             .previewImageUrl(
-                                                     createUri("/static/imagemap_video/previewImage.jpg"))
-                                             .area(new ImagemapArea(40, 46, 952, 536))
-                                             .externalLink(
-                                                     new ImagemapExternalLink(
-                                                             URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=992"),
-                                                             "查看詳情")
-                                             )
-                                             .build()
-                        )
-                        .actions(singletonList(
-                                MessageImagemapAction.builder()
-                                                     .text("日韓5天Wi-Fi吃到飽")
-                                                     .area(new ImagemapArea(260, 600, 450, 86))
-                                                     .build()
-                        ))
-                        .build());
-                break;
             case "flex":
                 this.reply(replyToken, new ExampleFlexMessageSupplier().get());
                 break;
