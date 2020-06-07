@@ -71,14 +71,14 @@ public class ExampleFlexMessageSupplier implements Supplier<FlexMessage> {
                 .builder()
                 .style(ButtonStyle.LINK)
                 .height(ButtonHeight.SMALL)
-                .action(new URIAction("CALL", URI.create("tel:0225168518"), null))
+                .action(new URIAction("客服專線", URI.create("tel:0225168518"), null))
                 .build();
         final Separator separator = Separator.builder().build();
         final Button websiteAction =
                 Button.builder()
                       .style(ButtonStyle.LINK)
                       .height(ButtonHeight.SMALL)
-                      .action(new URIAction("WEBSITE", URI.create("https://card.rakuten.com.tw/"), null))
+                      .action(new URIAction("官方網站", URI.create("https://card.rakuten.com.tw/"), null))
                       .build();
 
         return Box.builder()
