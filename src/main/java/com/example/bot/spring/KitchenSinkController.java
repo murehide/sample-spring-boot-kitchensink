@@ -586,6 +586,27 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "merchant_installment": {
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(createUri("/static/icon/store_33.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("http://www.rakuten.com.tw/"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/store_35.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://www.momoshop.com.tw/"), null)
+                                ),
+                                new ImageCarouselColumn(createUri("/static/icon/store_140.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create("https://shopee.tw/"), null)
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "help": {
                 URI imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
@@ -615,29 +636,6 @@ public class KitchenSinkController {
                 } else {
                     this.replyText(replyToken, "Bot can't leave from 1:1 chat");
                 }
-                break;
-            }
-            case "image_carousel": {
-                URI imageUrl = createUri("/static/buttons/1040.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
-                        Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                                        new URIAction("Goto line.me",
-                                                                      URI.create("https://line.me"), null)
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new MessageAction("Say message",
-                                                                          "Rice=米")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new PostbackAction("言 hello2",
-                                                                           "hello こんにちは",
-                                                                           "hello こんにちは")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
-                this.reply(replyToken, templateMessage);
                 break;
             }
             case "imagemap":
