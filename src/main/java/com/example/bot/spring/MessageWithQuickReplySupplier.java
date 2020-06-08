@@ -16,6 +16,7 @@
 
 package com.example.bot.spring;
 
+import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
