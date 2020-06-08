@@ -724,7 +724,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "activate": {
+            case "reupload": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "補上傳文件?",
                         new URIAction("是",
