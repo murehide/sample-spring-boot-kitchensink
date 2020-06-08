@@ -36,7 +36,7 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
     @Override
     public Message get() {
         final List<QuickReplyItem> items = Arrays.<QuickReplyItem>asList(
-                QuickReplyItem.builder()
+                /*QuickReplyItem.builder()
                               .action(new MessageAction("MessageAction", "MessageAction"))
                               .build(),
                 QuickReplyItem.builder()
@@ -54,6 +54,15 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
                                                     .text("PostbackAction clicked")
                                                     .data("{PostbackAction: true}")
                                                     .build())
+                              .build()*/
+                QuickReplyItem.builder()
+                              .action(new MessageAction("立即開卡", "activate"))
+                              .build(),
+                QuickReplyItem.builder()
+                              .action(new MessageAction("申請書重寄", "resend"))
+                              .build(),
+                QuickReplyItem.builder()
+                              .action(new MessageAction("文件補上傳", "reupload"))
                               .build()
         );
 
