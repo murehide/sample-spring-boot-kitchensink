@@ -499,7 +499,7 @@ public class KitchenSinkController {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "確定要綁定嗎?",
                         new URIAction("是",
-                            URI.create("https://card.rakuten.com.tw/corp/tax/apply.xhtml?uid="+encrytStr), null),
+                            URI.create("https://stg.card.rakuten.com.tw/corp/bind/apply.xhtml?uid="+encrytStr), null),
                         new MessageAction("否", "No")
                 );
                 TemplateMessage templateMessage = new TemplateMessage("帳號綁定", confirmTemplate);
