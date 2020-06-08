@@ -60,8 +60,8 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
                                                     .label("PostbackAction")
                                                     .text("PostbackAction clicked")
                                                     .data("{PostbackAction: true}")
-                                                    .build()*/)
-                              .build()
+                                                    .build())
+                              .build()*/
         );
 
         final QuickReply quickReply = QuickReply.items(items);
