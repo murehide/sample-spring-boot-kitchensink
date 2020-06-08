@@ -702,6 +702,39 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "activate": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "立即開卡?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/activation/"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("立即開卡", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "resend": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "重寄申請書?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/application/resend.xhtml"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("申請書重寄", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "activate": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "補上傳文件?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/application/reupload.xhtml"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("文件補上傳", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "shortcut":
                 this.reply(replyToken, new MessageWithQuickReplySupplier().get());
                 break;
