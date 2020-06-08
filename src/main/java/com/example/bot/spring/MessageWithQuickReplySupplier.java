@@ -37,23 +37,13 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
     public Message get() {
         final List<QuickReplyItem> items = Arrays.<QuickReplyItem>asList(
                 QuickReplyItem.builder()
-                              .action(new MessageAction("MessageAction", "MessageAction"))
+                              .action(new URIAction("1", URI.create("https://card.rakuten.com.tw/activation/"), null))
                               .build(),
                 QuickReplyItem.builder()
-                              .action(CameraAction.withLabel("CameraAction"))
+                              .action(new URIAction("2", URI.create("https://card.rakuten.com.tw/application/resend.xhtml"), null))
                               .build(),
                 QuickReplyItem.builder()
-                              .action(CameraRollAction.withLabel("CemeraRollAction"))
-                              .build(),
-                QuickReplyItem.builder()
-                              .action(LocationAction.withLabel("Location"))
-                              .build(),
-                QuickReplyItem.builder()
-                              .action(PostbackAction.builder()
-                                                    .label("PostbackAction")
-                                                    .text("PostbackAction clicked")
-                                                    .data("{PostbackAction: true}")
-                                                    .build())
+                              .action(new URIAction("3", URI.create("https://card.rakuten.com.tw/application/reupload.xhtml"), null))
                               .build()
         );
 
