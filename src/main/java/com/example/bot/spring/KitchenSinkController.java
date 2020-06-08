@@ -702,6 +702,9 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "shortcut":
+                this.reply(replyToken, new MessageWithQuickReplySupplier().get());
+                break;
             case "bye": {
                 Source source = event.getSource();
                 if (source instanceof GroupSource) {
@@ -715,9 +718,6 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "quickreply":
-                this.reply(replyToken, new MessageWithQuickReplySupplier().get());
-                break;
             case "no_notify":
                 this.reply(replyToken,
                            singletonList(new TextMessage("This message is send without a push notification")),
