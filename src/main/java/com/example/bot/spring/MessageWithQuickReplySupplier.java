@@ -35,6 +35,15 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
     public Message get() {
         final List<QuickReplyItem> items = Arrays.<QuickReplyItem>asList(
                 QuickReplyItem.builder()
+                              .action(new URIAction("立即開卡",URI.create("https://card.rakuten.com.tw/activation/"), null))
+                              .build(),
+                QuickReplyItem.builder()
+                              .action(new URIAction("申請書重寄",URI.create("https://card.rakuten.com.tw/application/resend.xhtml"), null))
+                              .build(),
+                QuickReplyItem.builder()
+                              .action(new URIAction("文件補上傳",URI.create("https://card.rakuten.com.tw/application/reupload.xhtml"), null))
+                              .build()
+                /*QuickReplyItem.builder()
                               .action(new MessageAction("MessageAction", "MessageAction"))
                               .build(),
                 QuickReplyItem.builder()
@@ -51,7 +60,7 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
                                                     .label("PostbackAction")
                                                     .text("PostbackAction clicked")
                                                     .data("{PostbackAction: true}")
-                                                    .build())
+                                                    .build()*/)
                               .build()
         );
 
@@ -59,7 +68,7 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
 
         return TextMessage
                 .builder()
-                .text("Message with QuickReply")
+                .text("快捷功能")
                 .quickReply(quickReply)
                 .build();
     }
