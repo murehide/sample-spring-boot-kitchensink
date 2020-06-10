@@ -108,13 +108,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @LineMessageHandler
 public class KitchenSinkController {
-    private static final String MISSION_MESSAGE = "楽しむを世界へ";
-    private static final String PHILOSOPHY_MESSAGE = "信頼され愛される企業をめざし、\r\nたゆまぬ努力をしつづけます。\r\n"
-            + "一. 仕事を楽しむ\r\n"
-            + "一. 成長を楽しむ\r\n"
-            + "一. 挑戦を楽しむ\r\n"
-            + "一. サービスを楽しむ\r\n"
-            + "一. 感謝を楽しむ\r\n";
     private static final String CORE_VALUE_01_MESSAGE = "1.常に前向きに行動しよう";
     private static final String CORE_VALUE_02_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
     private static final String CORE_VALUE_03_MESSAGE = "3.日本一のマナーを実践しよう";
@@ -125,16 +118,56 @@ public class KitchenSinkController {
     private static final String CORE_VALUE_08_MESSAGE = "8.素直で謙虚になろう";
     private static final String CORE_VALUE_09_MESSAGE = "9.家族のようなチームをつくろう";
     private static final String CORE_VALUE_10_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
-    private static final String CORE_VALUE_ALL_MESSAGE = CORE_VALUE_01_MESSAGE + "\r\n"
-            + CORE_VALUE_02_MESSAGE + "\r\n"
-            + CORE_VALUE_03_MESSAGE + "\r\n"
-            + CORE_VALUE_04_MESSAGE + "\r\n"
-            + CORE_VALUE_05_MESSAGE + "\r\n"
-            + CORE_VALUE_06_MESSAGE + "\r\n"
-            + CORE_VALUE_07_MESSAGE + "\r\n"
-            + CORE_VALUE_08_MESSAGE + "\r\n"
-            + CORE_VALUE_09_MESSAGE + "\r\n"
-            + CORE_VALUE_10_MESSAGE + "\r\n";
+    private static final String CORE_VALUE_11_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_12_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_13_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_14_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_15_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_16_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_17_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_18_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_19_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_20_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_21_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_22_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_23_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_24_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_25_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_26_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_27_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_28_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_29_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_30_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_31_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_32_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_33_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_34_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_35_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_36_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_37_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_38_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_39_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_40_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_41_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_42_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_43_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_44_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_45_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_46_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_47_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_48_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_49_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_50_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_51_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_52_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_53_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_54_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_55_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_56_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_57_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_58_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_59_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_60_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
 
     private static final String OTHER_MESSAGE = "您還需要其他協助嗎?";
     
@@ -142,82 +175,305 @@ public class KitchenSinkController {
         private static final long serialVersionUID = 1L;
 
         {
-           put("mission", MISSION_MESSAGE);
-            put("MISSION", MISSION_MESSAGE);
-            put("ミッション", MISSION_MESSAGE);
-            put("みっしょん", MISSION_MESSAGE);
-
-            put("philosophy", PHILOSOPHY_MESSAGE);
-            put("PHILOSOPHY", PHILOSOPHY_MESSAGE);
-            put("けいえいりねん", PHILOSOPHY_MESSAGE);
-            put("経営理念", PHILOSOPHY_MESSAGE);
-
-            // コアバリュー1
             put("corevalue1", CORE_VALUE_01_MESSAGE);
             put("COREVALUE1", CORE_VALUE_01_MESSAGE);
             put("こあばりゅー1", CORE_VALUE_01_MESSAGE);
             put("コアバリュー1", CORE_VALUE_01_MESSAGE);
 
-            // コアバリュー2
             put("corevalue2", CORE_VALUE_02_MESSAGE);
             put("COREVALUE2", CORE_VALUE_02_MESSAGE);
             put("こあばりゅー2", CORE_VALUE_02_MESSAGE);
             put("コアバリュー2", CORE_VALUE_02_MESSAGE);
 
-            // コアバリュー3
             put("corevalue3", CORE_VALUE_03_MESSAGE);
             put("COREVALUE3", CORE_VALUE_03_MESSAGE);
             put("こあばりゅー3", CORE_VALUE_03_MESSAGE);
             put("コアバリュー3", CORE_VALUE_03_MESSAGE);
 
-            // コアバリュー4
             put("corevalue4", CORE_VALUE_04_MESSAGE);
             put("COREVALUE4", CORE_VALUE_04_MESSAGE);
             put("こあばりゅー4", CORE_VALUE_04_MESSAGE);
             put("コアバリュー4", CORE_VALUE_04_MESSAGE);          
 
-            // コアバリュー5
             put("corevalue5", CORE_VALUE_05_MESSAGE);
             put("COREVALUE5", CORE_VALUE_05_MESSAGE);
             put("こあばりゅー5", CORE_VALUE_05_MESSAGE);
             put("コアバリュー5", CORE_VALUE_05_MESSAGE);
 
-            // コアバリュー6
             put("corevalue6", CORE_VALUE_06_MESSAGE);
             put("COREVALUE6", CORE_VALUE_06_MESSAGE);
             put("こあばりゅー6", CORE_VALUE_06_MESSAGE);
             put("コアバリュー6", CORE_VALUE_06_MESSAGE);
 
-            // コアバリュー7
             put("corevalue7", CORE_VALUE_07_MESSAGE);
             put("COREVALUE7", CORE_VALUE_07_MESSAGE);
             put("こあばりゅー7", CORE_VALUE_07_MESSAGE);
             put("コアバリュー7", CORE_VALUE_07_MESSAGE);
 
-            // コアバリュー8
             put("corevalue8", CORE_VALUE_08_MESSAGE);
             put("COREVALUE8", CORE_VALUE_08_MESSAGE);
             put("こあばりゅー8", CORE_VALUE_08_MESSAGE);
             put("コアバリュー8", CORE_VALUE_08_MESSAGE);
 
-            // コアバリュー9
             put("corevalue9", CORE_VALUE_09_MESSAGE);
             put("COREVALUE9", CORE_VALUE_09_MESSAGE);
             put("こあばりゅー9", CORE_VALUE_09_MESSAGE);
             put("コアバリュー9", CORE_VALUE_09_MESSAGE);
 
-            // コアバリュー10
             put("corevalue10", CORE_VALUE_10_MESSAGE);
             put("COREVALUE10", CORE_VALUE_10_MESSAGE);
             put("こあばりゅー10", CORE_VALUE_10_MESSAGE);
             put("コアバリュー10", CORE_VALUE_10_MESSAGE);
 
-            // コアバリューすべて
-            put("corevalue", CORE_VALUE_ALL_MESSAGE);
-            put("COREVALUE", CORE_VALUE_ALL_MESSAGE);
-            put("こあばりゅー", CORE_VALUE_ALL_MESSAGE);
-            put("コアバリュー", CORE_VALUE_ALL_MESSAGE);
+            put("corevalue1", CORE_VALUE_11_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_11_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_11_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_11_MESSAGE);
 
+            put("corevalue2", CORE_VALUE_12_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_12_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_12_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_12_MESSAGE);
+
+            put("corevalue3", CORE_VALUE_13_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_13_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_13_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_13_MESSAGE);
+
+            put("corevalue4", CORE_VALUE_14_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_14_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_14_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_14_MESSAGE);          
+
+            put("corevalue5", CORE_VALUE_15_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_15_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_15_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_15_MESSAGE);
+
+            put("corevalue6", CORE_VALUE_16_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_16_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_16_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_16_MESSAGE);
+
+            put("corevalue7", CORE_VALUE_17_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_17_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_17_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_17_MESSAGE);
+
+            put("corevalue8", CORE_VALUE_18_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_18_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_18_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_18_MESSAGE);
+
+            put("corevalue9", CORE_VALUE_19_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_19_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_19_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_19_MESSAGE);
+
+            put("corevalue10", CORE_VALUE_20_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_20_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_20_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_20_MESSAGE);
+            
+            put("corevalue1", CORE_VALUE_21_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_21_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_21_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_21_MESSAGE);
+
+            put("corevalue2", CORE_VALUE_22_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_22_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_22_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_22_MESSAGE);
+
+            put("corevalue3", CORE_VALUE_23_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_23_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_23_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_23_MESSAGE);
+
+            put("corevalue4", CORE_VALUE_24_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_24_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_24_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_24_MESSAGE);          
+
+            put("corevalue5", CORE_VALUE_25_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_25_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_25_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_25_MESSAGE);
+
+            put("corevalue6", CORE_VALUE_26_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_26_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_26_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_26_MESSAGE);
+
+            put("corevalue7", CORE_VALUE_27_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_27_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_27_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_27_MESSAGE);
+
+            put("corevalue8", CORE_VALUE_28_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_28_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_28_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_28_MESSAGE);
+
+            put("corevalue9", CORE_VALUE_29_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_29_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_29_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_29_MESSAGE);
+
+            put("corevalue10", CORE_VALUE_30_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_30_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_30_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_30_MESSAGE);
+            
+            put("corevalue1", CORE_VALUE_31_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_31_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_31_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_31_MESSAGE);
+
+            put("corevalue2", CORE_VALUE_32_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_32_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_32_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_32_MESSAGE);
+
+            put("corevalue3", CORE_VALUE_33_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_33_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_33_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_33_MESSAGE);
+
+            put("corevalue4", CORE_VALUE_34_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_34_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_34_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_34_MESSAGE);          
+
+            put("corevalue5", CORE_VALUE_35_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_35_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_35_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_35_MESSAGE);
+
+            put("corevalue6", CORE_VALUE_36_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_36_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_36_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_36_MESSAGE);
+
+            put("corevalue7", CORE_VALUE_37_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_37_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_37_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_37_MESSAGE);
+
+            put("corevalue8", CORE_VALUE_38_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_38_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_38_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_38_MESSAGE);
+
+            put("corevalue9", CORE_VALUE_39_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_39_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_39_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_39_MESSAGE);
+
+            put("corevalue10", CORE_VALUE_40_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_40_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_40_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_40_MESSAGE);
+            
+            put("corevalue1", CORE_VALUE_41_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_41_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_41_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_41_MESSAGE);
+
+            put("corevalue2", CORE_VALUE_42_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_42_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_42_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_42_MESSAGE);
+
+            put("corevalue3", CORE_VALUE_43_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_43_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_43_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_43_MESSAGE);
+
+            put("corevalue4", CORE_VALUE_44_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_44_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_44_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_44_MESSAGE);          
+
+            put("corevalue5", CORE_VALUE_45_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_45_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_45_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_45_MESSAGE);
+
+            put("corevalue6", CORE_VALUE_46_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_46_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_46_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_46_MESSAGE);
+
+            put("corevalue7", CORE_VALUE_47_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_47_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_47_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_47_MESSAGE);
+
+            put("corevalue8", CORE_VALUE_48_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_48_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_48_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_48_MESSAGE);
+
+            put("corevalue9", CORE_VALUE_49_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_49_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_49_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_49_MESSAGE);
+
+            put("corevalue10", CORE_VALUE_50_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_50_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_50_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_50_MESSAGE);
+            
+            put("corevalue1", CORE_VALUE_51_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_51_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_51_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_51_MESSAGE);
+
+            put("corevalue2", CORE_VALUE_52_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_52_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_52_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_52_MESSAGE);
+
+            put("corevalue3", CORE_VALUE_53_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_53_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_53_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_53_MESSAGE);
+
+            put("corevalue4", CORE_VALUE_54_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_54_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_54_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_54_MESSAGE);          
+
+            put("corevalue5", CORE_VALUE_55_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_55_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_55_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_55_MESSAGE);
+
+            put("corevalue6", CORE_VALUE_56_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_56_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_56_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_56_MESSAGE);
+
+            put("corevalue7", CORE_VALUE_57_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_57_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_57_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_57_MESSAGE);
+
+            put("corevalue8", CORE_VALUE_58_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_58_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_58_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_58_MESSAGE);
+
+            put("corevalue9", CORE_VALUE_59_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_59_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_59_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_59_MESSAGE);
+
+            put("corevalue10", CORE_VALUE_60_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_60_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_60_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_60_MESSAGE);
         }
     });
     
