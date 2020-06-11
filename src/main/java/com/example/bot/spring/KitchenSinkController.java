@@ -969,6 +969,17 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "activate": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "進入會員服務?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/auth/"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("會員服務", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "resend": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "重寄申請書?",
