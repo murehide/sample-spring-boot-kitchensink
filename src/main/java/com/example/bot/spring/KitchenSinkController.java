@@ -169,7 +169,7 @@ public class KitchenSinkController {
     private static final String CORE_VALUE_59_MESSAGE = "9.家族のようなチームをつくろう";
     private static final String CORE_VALUE_60_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
 
-    private static final String OTHER_MESSAGE = "您還需要其他協助嗎?";
+    private static final String OTHER_MESSAGE = "若您的問題尚未獲得解答 \n煩請致電本公司24小時客服專線 \n(02)2516-8518 \n0800-505-058(限市話) \n由客服專員為您服務,謝謝您!";
     
     private static final Map<String, String> MESSAGE_MAP = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
@@ -1045,11 +1045,134 @@ public class KitchenSinkController {
 
     public String createResponseMessage(String sendMessage) {
 
-        if(MESSAGE_MAP.containsKey(sendMessage)) {
-            return MESSAGE_MAP.get(sendMessage);
+        if(sendMessage.containsValue(CORE_VALUE_01_MESSAGE)) {
+            return CORE_VALUE_01_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_02_MESSAGE)) {
+            return CORE_VALUE_02_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_03_MESSAGE)) {
+            return CORE_VALUE_03_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_04_MESSAGE)) {
+            return CORE_VALUE_04_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_05_MESSAGE)) {
+            return CORE_VALUE_05_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_06_MESSAGE)) {
+            return CORE_VALUE_06_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_07_MESSAGE)) {
+            return CORE_VALUE_07_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_08_MESSAGE)) {
+            return CORE_VALUE_08_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_09_MESSAGE)) {
+            return CORE_VALUE_09_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_10_MESSAGE)) {
+            return CORE_VALUE_10_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_11_MESSAGE)) {
+            return CORE_VALUE_11_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_12_MESSAGE)) {
+            return CORE_VALUE_12_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_13_MESSAGE)) {
+            return CORE_VALUE_13_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_14_MESSAGE)) {
+            return CORE_VALUE_14_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_15_MESSAGE)) {
+            return CORE_VALUE_15_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_16_MESSAGE)) {
+            return CORE_VALUE_16_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_17_MESSAGE)) {
+            return CORE_VALUE_17_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_18_MESSAGE)) {
+            return CORE_VALUE_18_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_19_MESSAGE)) {
+            return CORE_VALUE_19_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_20_MESSAGE)) {
+            return CORE_VALUE_20_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_21_MESSAGE)) {
+            return CORE_VALUE_21_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_22_MESSAGE)) {
+            return CORE_VALUE_22_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_23_MESSAGE)) {
+            return CORE_VALUE_23_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_24_MESSAGE)) {
+            return CORE_VALUE_24_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_25_MESSAGE)) {
+            return CORE_VALUE_25_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_26_MESSAGE)) {
+            return CORE_VALUE_26_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_27_MESSAGE)) {
+            return CORE_VALUE_27_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_28_MESSAGE)) {
+            return CORE_VALUE_28_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_29_MESSAGE)) {
+            return CORE_VALUE_29_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_30_MESSAGE)) {
+            return CORE_VALUE_30_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_31_MESSAGE)) {
+            return CORE_VALUE_31_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_32_MESSAGE)) {
+            return CORE_VALUE_32_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_33_MESSAGE)) {
+            return CORE_VALUE_33_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_34_MESSAGE)) {
+            return CORE_VALUE_34_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_35_MESSAGE)) {
+            return CORE_VALUE_35_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_36_MESSAGE)) {
+            return CORE_VALUE_36_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_37_MESSAGE)) {
+            return CORE_VALUE_37_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_38_MESSAGE)) {
+            return CORE_VALUE_38_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_39_MESSAGE)) {
+            return CORE_VALUE_39_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_40_MESSAGE)) {
+            return CORE_VALUE_40_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_41_MESSAGE)) {
+            return CORE_VALUE_41_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_42_MESSAGE)) {
+            return CORE_VALUE_42_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_43_MESSAGE)) {
+            return CORE_VALUE_43_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_44_MESSAGE)) {
+            return CORE_VALUE_44_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_45_MESSAGE)) {
+            return CORE_VALUE_45_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_46_MESSAGE)) {
+            return CORE_VALUE_46_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_47_MESSAGE)) {
+            return CORE_VALUE_47_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_48_MESSAGE)) {
+            return CORE_VALUE_48_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_49_MESSAGE)) {
+            return CORE_VALUE_49_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_50_MESSAGE)) {
+            return CORE_VALUE_50_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_51_MESSAGE)) {
+            return CORE_VALUE_51_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_52_MESSAGE)) {
+            return CORE_VALUE_52_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_53_MESSAGE)) {
+            return CORE_VALUE_53_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_54_MESSAGE)) {
+            return CORE_VALUE_54_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_55_MESSAGE)) {
+            return CORE_VALUE_55_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_56_MESSAGE)) {
+            return CORE_VALUE_56_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_57_MESSAGE)) {
+            return CORE_VALUE_57_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_58_MESSAGE)) {
+            return CORE_VALUE_58_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_59_MESSAGE)) {
+            return CORE_VALUE_59_MESSAGE;
+        } if(sendMessage.containsValue(CORE_VALUE_60_MESSAGE)) {
+            return CORE_VALUE_60_MESSAGE;
         } else {
             return  OTHER_MESSAGE;
         }
+        /*if(MESSAGE_MAP.containsKey(sendMessage)) {
+            return MESSAGE_MAP.get(sendMessage);
+        } else {
+            return  OTHER_MESSAGE;
+        }*/
     }
 
     private static URI createUri(String path) {
