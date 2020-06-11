@@ -1281,361 +1281,361 @@ public class KitchenSinkController {
     }
 
     public String createResponseMessage(String sendMessage) {
-        list = new ArrayList<String>(MESSAGE_MAP.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_01_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP2.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP2.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_02_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP3.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP3.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_03_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP4.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP4.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_04_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP5.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP5.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_05_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP6.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP6.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_06_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP7.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP7.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_07_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP8.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP8.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_08_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP9.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP9.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_09_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP10.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP10.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_10_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP11.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP11.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_11_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP12.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP12.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_12_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP13.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP13.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_13_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP14.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP14.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_14_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP15.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP15.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_15_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP16.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP16.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_16_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP17.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP17.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_17_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP18.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP18.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_18_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP19.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP19.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_19_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP20.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP20.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_20_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP21.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP21.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_21_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP22.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP22.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_22_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP23.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP23.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_23_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP24.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP24.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_24_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP25.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP25.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_25_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP26.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP26.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_26_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP27.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP27.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_27_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP28.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP28.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_28_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP29.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP29.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_29_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP30.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP30.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_30_MESSAGE;
             }
         }
-               list = new ArrayList<String>(MESSAGE_MAP31.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP31.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_31_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP32.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP32.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_32_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP33.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP33.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_33_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP34.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP34.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_34_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP35.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP35.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_35_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP36.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP36.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_36_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP37.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP37.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_37_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP38.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP38.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_38_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP39.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP39.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_39_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP40.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP40.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_40_MESSAGE;
             }
         }
-               list = new ArrayList<String>(MESSAGE_MAP41.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP41.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_41_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP42.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP42.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_42_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP43.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP43.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_43_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP44.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP44.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_44_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP45.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP45.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_45_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP46.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP46.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_46_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP47.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP47.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_47_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP48.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP48.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_48_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP49.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP49.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_49_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP50.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP50.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_50_MESSAGE;
             }
         }
-               list = new ArrayList<String>(MESSAGE_MAP51.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP51.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_51_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP52.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP52.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_52_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP53.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP53.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_53_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP54.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP54.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_54_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP55.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP55.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_55_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP56.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP56.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_56_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP57.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP57.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_57_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP58.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP58.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_58_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP59.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP59.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_59_MESSAGE;
             }
         }
-        list = new ArrayList<String>(MESSAGE_MAP60.keySet())
+        list = new ArrayList<String>(MESSAGE_MAP60.keySet());
         for(String str: list) {
             if(sendMessage.contains(str) {
                 return CORE_VALUE_60_MESSAGE;
