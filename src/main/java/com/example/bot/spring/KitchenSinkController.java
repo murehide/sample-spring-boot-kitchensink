@@ -170,6 +170,16 @@ public class KitchenSinkController {
     private static final String CORE_VALUE_58_MESSAGE = "8.素直で謙虚になろう";
     private static final String CORE_VALUE_59_MESSAGE = "9.家族のようなチームをつくろう";
     private static final String CORE_VALUE_60_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_61_MESSAGE = "1.常に前向きに行動しよう";
+    private static final String CORE_VALUE_62_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
+    private static final String CORE_VALUE_63_MESSAGE = "3.日本一のマナーを実践しよう";
+    private static final String CORE_VALUE_64_MESSAGE = "4.NO.1をつくろう";
+    private static final String CORE_VALUE_65_MESSAGE = "5.スピードを追求し喜びを与えよう";
+    private static final String CORE_VALUE_66_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
+    private static final String CORE_VALUE_67_MESSAGE = "7.自分力を磨こう";
+    private static final String CORE_VALUE_68_MESSAGE = "8.素直で謙虚になろう";
+    private static final String CORE_VALUE_69_MESSAGE = "9.家族のようなチームをつくろう";
+    private static final String CORE_VALUE_70_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
 
     private static final String OTHER_MESSAGE = "若您的問題尚未獲得解答 \n煩請致電本公司24小時客服專線 \n(02)2516-8518 \n0800-505-058(限市話) \n由客服專員為您服務,謝謝您!";
     
@@ -603,6 +613,96 @@ public class KitchenSinkController {
             put("COREVALUE10", CORE_VALUE_60_MESSAGE);
             put("こあばりゅー10", CORE_VALUE_60_MESSAGE);
             put("コアバリュー10", CORE_VALUE_60_MESSAGE);
+         }
+    });
+        private static final Map<String, String> MESSAGE_MAP61 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue1", CORE_VALUE_61_MESSAGE);
+            put("COREVALUE1", CORE_VALUE_61_MESSAGE);
+            put("こあばりゅー1", CORE_VALUE_61_MESSAGE);
+            put("コアバリュー1", CORE_VALUE_61_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP62 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue2", CORE_VALUE_62_MESSAGE);
+            put("COREVALUE2", CORE_VALUE_62_MESSAGE);
+            put("こあばりゅー2", CORE_VALUE_62_MESSAGE);
+            put("コアバリュー2", CORE_VALUE_62_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP63 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue3", CORE_VALUE_63_MESSAGE);
+            put("COREVALUE3", CORE_VALUE_63_MESSAGE);
+            put("こあばりゅー3", CORE_VALUE_63_MESSAGE);
+            put("コアバリュー3", CORE_VALUE_63_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP64 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue4", CORE_VALUE_64_MESSAGE);
+            put("COREVALUE4", CORE_VALUE_64_MESSAGE);
+            put("こあばりゅー4", CORE_VALUE_64_MESSAGE);
+            put("コアバリュー4", CORE_VALUE_64_MESSAGE);          
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP65 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue5", CORE_VALUE_65_MESSAGE);
+            put("COREVALUE5", CORE_VALUE_65_MESSAGE);
+            put("こあばりゅー5", CORE_VALUE_65_MESSAGE);
+            put("コアバリュー5", CORE_VALUE_65_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP66 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue6", CORE_VALUE_66_MESSAGE);
+            put("COREVALUE6", CORE_VALUE_66_MESSAGE);
+            put("こあばりゅー6", CORE_VALUE_66_MESSAGE);
+            put("コアバリュー6", CORE_VALUE_66_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP67 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue7", CORE_VALUE_67_MESSAGE);
+            put("COREVALUE7", CORE_VALUE_67_MESSAGE);
+            put("こあばりゅー7", CORE_VALUE_67_MESSAGE);
+            put("コアバリュー7", CORE_VALUE_67_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP68 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue8", CORE_VALUE_68_MESSAGE);
+            put("COREVALUE8", CORE_VALUE_68_MESSAGE);
+            put("こあばりゅー8", CORE_VALUE_68_MESSAGE);
+            put("コアバリュー8", CORE_VALUE_68_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP69 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue9", CORE_VALUE_69_MESSAGE);
+            put("COREVALUE9", CORE_VALUE_69_MESSAGE);
+            put("こあばりゅー9", CORE_VALUE_69_MESSAGE);
+            put("コアバリュー9", CORE_VALUE_69_MESSAGE);
+         }
+    });
+    private static final Map<String, String> MESSAGE_MAP70 = Collections.unmodifiableMap(new HashMap<String, String>(){
+        private static final long serialVersionUID = 1L;
+        {
+            put("corevalue10", CORE_VALUE_70_MESSAGE);
+            put("COREVALUE10", CORE_VALUE_70_MESSAGE);
+            put("こあばりゅー10", CORE_VALUE_70_MESSAGE);
+            put("コアバリュー10", CORE_VALUE_70_MESSAGE);
          }
     });
     
