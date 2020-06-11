@@ -59,6 +59,9 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
                               .action(new MessageAction("立即開卡", "activate"))
                               .build(),
                 QuickReplyItem.builder()
+                              .action(new MessageAction("會員服務", "member"))
+                              .build(),
+                QuickReplyItem.builder()
                               .action(new MessageAction("申請書重寄", "resend"))
                               .build(),
                 QuickReplyItem.builder()
