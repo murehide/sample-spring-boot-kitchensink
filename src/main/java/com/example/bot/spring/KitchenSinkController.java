@@ -110,56 +110,56 @@ import lombok.extern.slf4j.Slf4j;
 @LineMessageHandler
 public class KitchenSinkController {
     List<String> list;
-    private static final String CORE_VALUE_01_MESSAGE = "1.常に前向きに行動しよう";
-    private static final String CORE_VALUE_02_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
-    private static final String CORE_VALUE_03_MESSAGE = "3.日本一のマナーを実践しよう";
-    private static final String CORE_VALUE_04_MESSAGE = "4.NO.1をつくろう";
-    private static final String CORE_VALUE_05_MESSAGE = "5.スピードを追求し喜びを与えよう";
-    private static final String CORE_VALUE_06_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
-    private static final String CORE_VALUE_07_MESSAGE = "7.自分力を磨こう";
-    private static final String CORE_VALUE_08_MESSAGE = "8.素直で謙虚になろう";
-    private static final String CORE_VALUE_09_MESSAGE = "9.家族のようなチームをつくろう";
-    private static final String CORE_VALUE_10_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
-    private static final String CORE_VALUE_11_MESSAGE = "1.常に前向きに行動しよう";
-    private static final String CORE_VALUE_12_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
-    private static final String CORE_VALUE_13_MESSAGE = "3.日本一のマナーを実践しよう";
-    private static final String CORE_VALUE_14_MESSAGE = "4.NO.1をつくろう";
-    private static final String CORE_VALUE_15_MESSAGE = "5.スピードを追求し喜びを与えよう";
-    private static final String CORE_VALUE_16_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
-    private static final String CORE_VALUE_17_MESSAGE = "7.自分力を磨こう";
-    private static final String CORE_VALUE_18_MESSAGE = "8.素直で謙虚になろう";
-    private static final String CORE_VALUE_19_MESSAGE = "9.家族のようなチームをつくろう";
-    private static final String CORE_VALUE_20_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
-    private static final String CORE_VALUE_21_MESSAGE = "1.常に前向きに行動しよう";
-    private static final String CORE_VALUE_22_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
-    private static final String CORE_VALUE_23_MESSAGE = "3.日本一のマナーを実践しよう";
-    private static final String CORE_VALUE_24_MESSAGE = "4.NO.1をつくろう";
-    private static final String CORE_VALUE_25_MESSAGE = "5.スピードを追求し喜びを与えよう";
-    private static final String CORE_VALUE_26_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
-    private static final String CORE_VALUE_27_MESSAGE = "7.自分力を磨こう";
-    private static final String CORE_VALUE_28_MESSAGE = "8.素直で謙虚になろう";
-    private static final String CORE_VALUE_29_MESSAGE = "9.家族のようなチームをつくろう";
-    private static final String CORE_VALUE_30_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
-    private static final String CORE_VALUE_31_MESSAGE = "1.常に前向きに行動しよう";
-    private static final String CORE_VALUE_32_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
-    private static final String CORE_VALUE_33_MESSAGE = "3.日本一のマナーを実践しよう";
-    private static final String CORE_VALUE_34_MESSAGE = "4.NO.1をつくろう";
-    private static final String CORE_VALUE_35_MESSAGE = "5.スピードを追求し喜びを与えよう";
-    private static final String CORE_VALUE_36_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
-    private static final String CORE_VALUE_37_MESSAGE = "7.自分力を磨こう";
-    private static final String CORE_VALUE_38_MESSAGE = "8.素直で謙虚になろう";
-    private static final String CORE_VALUE_39_MESSAGE = "9.家族のようなチームをつくろう";
-    private static final String CORE_VALUE_40_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
-    private static final String CORE_VALUE_41_MESSAGE = "1.常に前向きに行動しよう";
-    private static final String CORE_VALUE_42_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
-    private static final String CORE_VALUE_43_MESSAGE = "3.日本一のマナーを実践しよう";
-    private static final String CORE_VALUE_44_MESSAGE = "4.NO.1をつくろう";
-    private static final String CORE_VALUE_45_MESSAGE = "5.スピードを追求し喜びを与えよう";
-    private static final String CORE_VALUE_46_MESSAGE = "6.全ての人にワクワクを仕掛けよう";
-    private static final String CORE_VALUE_47_MESSAGE = "7.自分力を磨こう";
-    private static final String CORE_VALUE_48_MESSAGE = "8.素直で謙虚になろう";
-    private static final String CORE_VALUE_49_MESSAGE = "9.家族のようなチームをつくろう";
-    private static final String CORE_VALUE_50_MESSAGE = "10.夢・希望を強く思い続け現実にしよう";
+    private static final String CORE_VALUE_01_MESSAGE = "於台灣樂天信用卡公司官網線上申請並進行動態密碼驗證和他行信用卡資訊驗證，且同時註冊或登錄樂天市場會員資料後，上傳身分證正反面影本及財力證明以利進行審核。 若您有其他文件相關問題，煩請致電本公司24小時客服專線  \n(02)2516-8518  \n0800-505-058(限市話)  \n由客服專員為您服務,謝謝您!";
+    private static final String CORE_VALUE_02_MESSAGE = "於台灣樂天信用卡公司官網線上申請時若未進行他行信用卡資訊驗證，本公司會於次日寄出申請書給您。";
+    private static final String CORE_VALUE_03_MESSAGE = "於台灣樂天信用卡公司官網進入申請書重寄，本公司會於次日寄出申請書給您。";
+    private static final String CORE_VALUE_04_MESSAGE = "紙本申請書若超過14天未寄回，可於台灣樂天信用卡公司官網重新申請。";
+    private static final String CORE_VALUE_05_MESSAGE = "若超過30天上傳文件仍未補齊，會視為取消申請，可於台灣樂天信用卡公司官網重新申請，並需準備身分證正反面影本及財力證明。";
+    private static final String CORE_VALUE_06_MESSAGE = "請於台灣樂天信用卡公司官網重新申請，並需準備身分證正反面影本及財力證明。";
+    private static final String CORE_VALUE_07_MESSAGE = "本公司採線上申辦的方式。";
+    private static final String CORE_VALUE_08_MESSAGE = "審核過程若是需要補件，將發送郵件通知。";
+    private static final String CORE_VALUE_09_MESSAGE = "審核結果僅依照客戶所附上之所有財力證明及客戶與所有銀行往來之信用紀錄/借貸金額/信用卡張數多寡，使用時間長短/收入比/負債比…等等原因綜合考量，很抱歉，此次未達核卡標準";
+    private static final String CORE_VALUE_10_MESSAGE = "我們提供以下管道讓您啟用卡片的服務:1、樂天信用卡官網提供線上開卡服務。2、您亦可透過語音開卡專線，若您所在地電話號碼為6碼請撥打41-1111按100 #；7碼或8碼請撥：(02)412-1111按100 #。提醒您，正附卡需分別進行開卡才能消費。";
+    private static final String CORE_VALUE_11_MESSAGE = "您可於周一至週五上班時間來電(02)2508-7218查詢申辦進度。";
+    private static final String CORE_VALUE_12_MESSAGE = "本公司上班時間為早上9點至下午6點。";
+    private static final String CORE_VALUE_13_MESSAGE = "您好，樂天信用卡目前無提供此服務 。 ";
+    private static final String CORE_VALUE_14_MESSAGE = "在您持卡有效期間內樂天信用卡為免年費的。";
+    private static final String CORE_VALUE_15_MESSAGE = "煩請您透過查詢專線(02)2508-7218 選擇語音服務即可轉接專人服務為您處理 。";
+    private static final String CORE_VALUE_16_MESSAGE = "您可於周一至週五上班時間來電(02)2508-7218查詢進度。";
+    private static final String CORE_VALUE_17_MESSAGE = "附卡申請人與正卡關係必須為：父母、配偶、子女、兄弟姊妹或配偶父母，且年滿十五歲以上；申請時請填寫正、附卡人資料，附上正、附卡人身分證正反影本，及正、附卡人簽名。";
+    private static final String CORE_VALUE_18_MESSAGE = "樂天信用卡官網辦卡頁面或會員服務選擇索取附卡申請書後,我們會盡快寄出申請書給您! ";
+    private static final String CORE_VALUE_19_MESSAGE = "詳情請參閱官網: https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=950";
+    private static final String CORE_VALUE_20_MESSAGE = "有關日本國外交易手續費活動請連結下列網址，點選最新優惠活動→國外交易手續費回饋  \nhttps://card.rakuten.com.tw/corp/campaign/?openExternalBrowser=1  \n或致電樂天信用卡24小時客服中心(02)2516-8518將由客服人員為您査詢說明";
+    private static final String CORE_VALUE_21_MESSAGE = "日本國外交易手續費待日幣交易完成繳款後，次月以刷卡金方式回饋。";
+    private static final String CORE_VALUE_22_MESSAGE = "本公司會於次月以刷卡金方式回饋。 ";
+    private static final String CORE_VALUE_23_MESSAGE = "您要永久調高您的信用卡額度，只要您持卡滿9個月，繳款記錄正常，請致電本公司24小時客服專線  \n(02)2516-8518  \n0800-505-058(限市話)  \n將由客服專員為您服務。";
+    private static final String CORE_VALUE_24_MESSAGE = "台灣樂天信用卡公司所發行的信用卡最低額度為五萬元◦額度高低將依照申請人所附的資料決定◦";
+    private static final String CORE_VALUE_25_MESSAGE = "不好意思，目前申辦樂天信用卡一個人只能申請一種卡別。";
+    private static final String CORE_VALUE_26_MESSAGE = "本公司部分活動是採登錄制 。";
+    private static final String CORE_VALUE_27_MESSAGE = "公司每季（1月、4月、7月、10月）定期依本公司之持卡人卡片繳款記錄、持卡人卡片使用情形及聯合徵信中心之債信記錄、負債情形、授信、強制停卡或拒絶往來等信用紀錄為綜合評分，並考量本公司資金成本、營運成本（含營運利潤）等訂定持卡人循環信用利率差別定價（以下簡稱「差別利率」）。";
+    private static final String CORE_VALUE_28_MESSAGE = "持台灣樂天信用卡及預借現金密碼至全球貼有Visa、MasterCard、JCB商標，或國內貼有NCCCNET梅花閃電標誌的自動櫃員機(ATM) 預借現金。若無預借現金密碼之客戶，可撥打本公司24小時客服專線(02)2516-8518、0800-505-058 (限市話)申請預借現金密碼。預借現金手續費為每筆預借現金X 3.5%+ NT$ 150。其他相關細節請見本公司官網:  https://card.rakuten.com.tw/corp/finance/#sec02?openExternalBrowser=1";
+    private static final String CORE_VALUE_29_MESSAGE = "您可以選擇下列的任一種方式繳款：  \n・e-BILL 全國繳費網  \n・使用全省華南銀行及郵局自動扣繳或臨櫃繳款  \n・自動櫃員機轉帳/繳費  \n・全省7-ELEVEN便利商店繳款  \n 於2~3個工作天後可於「信用卡會員服務」查詢。";
+    private static final String CORE_VALUE_30_MESSAGE = "您可至樂天信用卡官網下載自動扣款的授權書或致電我們24小時客服專線  \n(02)2516-8518  \n0800-505-058(限市話)  \n由客服專員為您服務.謝謝您!";
+    private static final String CORE_VALUE_31_MESSAGE = "您可至樂天信用卡官網下載取消轉帳扣款授權書，或來電信用卡背面24小時客服專線: (02) 2516-8518或0800-505-058(限市話)，將有專人為您服務。";
+    private static final String CORE_VALUE_32_MESSAGE = "請於https://card.rakuten.com.tw/auth/進行新卡友註冊。";
+    private static final String CORE_VALUE_33_MESSAGE = "樂天信用卡安全認證帳號是您在登入使用會員服務系統時所使用的帳號，與您本來持有的樂天會員帳號不同。透過此帳號的設定可以加強您使用信用卡會員服務系統的安全性，提供您更具安全防護之環境, 並保障您的帳戶安全。 設定格式需為6~32位英、數字混合，不可含有符號如_ - . ^ $ [ ] * + ? | ( ) ! # % & = @ ; : < > 。 ";
+    private static final String CORE_VALUE_34_MESSAGE = "請於https://card.rakuten.com.tw/auth/進行忘記帳號/忘記密碼。";
+    private static final String CORE_VALUE_35_MESSAGE = "新戶於活動期間內申辦樂天信用卡正卡，核卡後於指定時間內，不限金額首次刷樂天信用卡，即可享租用《Horizon-WiFi》日本行動上網分享器5日免費優惠。";
+    private static final String CORE_VALUE_36_MESSAGE = "於樂天市場的消費將會轉為樂天點數回饋於您的樂天帳號";
+    private static final String CORE_VALUE_37_MESSAGE = "本公司有最新優惠，日本優惠，國內特店等優惠";
+    private static final String CORE_VALUE_38_MESSAGE = "請參閱https://card.rakuten.com.tw/corp/campaign/";
+    private static final String CORE_VALUE_39_MESSAGE = "請參閱https://card.rakuten.com.tw/corp/japan-benefit/";
+    private static final String CORE_VALUE_40_MESSAGE = "請參閱https://card.rakuten.com.tw/corp/merchant/";
+    private static final String CORE_VALUE_41_MESSAGE = "正卡持卡人可登入「信用卡會員服務」申辦電子帳單服務。或於線上服務選單之各項表單下載專區，下載電子帳單申請單，正卡持卡人填妥後寄回本公司。 ";
+    private static final String CORE_VALUE_42_MESSAGE = "紙本帳單是採平信寄出，若您在繳款日前仍未收到帳單，請致電本公司24小時客服專線  \n(02)2516-8518  \n0800-505-058(限市話)。  \n---\n您的問題已獲得解答了嗎？";
+    private static final String CORE_VALUE_43_MESSAGE = "有關保險相關事宜，提供您保險公司免付費電話0800-088-800 (24hrs)，煩請逕行確認，謝謝。  \n活動官網： https://card.rakuten.com.tw/corp/product/insurance.xhtml?openExternalBrowser=1 ";
+    private static final String CORE_VALUE_44_MESSAGE = "請稍後再次嘗試，若仍舊未改善，請電我們24小時客服專線(02)2516-8518  0800-505-058(限市話) 由客服專員為您服務.謝謝您!";
+    private static final String CORE_VALUE_45_MESSAGE = "您可於https://card.rakuten.com.tw/members/statement/billed/查看繳費方式和繳費期限";
+    private static final String CORE_VALUE_46_MESSAGE = "您可於https://card.rakuten.com.tw/members/statement/unbilled/查看交易明細";
+    private static final String CORE_VALUE_47_MESSAGE = "您可於ATM輸入銀行代號008 華南銀行 和銷帳編號9519801150767980進行匯款，繳款記錄可於2至3個工作天後於https://card.rakuten.com.tw/members/statement/history/查詢";
+    private static final String CORE_VALUE_48_MESSAGE = "如果您對消費有疑問，本公司將代您向收單機構申請調閱簽帳單影本供您核對。並收取調閱簽單費用每筆新臺幣100元。  \n---\n您的問題已獲得解答了嗎？";
+    private static final String CORE_VALUE_49_MESSAGE = "有可能是您的信用卡尚未開卡、卡片晶片問題或可用額度不夠…等，詳細情況請您致電樂天信用卡24小時客服中心 (02)2516-8518將由客服人員為您査詢說明。 ";
+    private static final String CORE_VALUE_50_MESSAGE = "卡片可於日本樂天市場消費，所獲得的日本樂天點數可轉換為台灣樂天點數，詳情請參閱https://point.rakuten.com.tw/";
     private static final String CORE_VALUE_51_MESSAGE = "1.常に前向きに行動しよう";
     private static final String CORE_VALUE_52_MESSAGE = "2.何事にも一生懸命、一所懸命やろう";
     private static final String CORE_VALUE_53_MESSAGE = "3.日本一のマナーを実践しよう";
@@ -176,451 +176,343 @@ public class KitchenSinkController {
     private static final Map<String, String> MESSAGE_MAP = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue1", CORE_VALUE_01_MESSAGE);
-            put("COREVALUE1", CORE_VALUE_01_MESSAGE);
-            put("こあばりゅー1", CORE_VALUE_01_MESSAGE);
-            put("コアバリュー1", CORE_VALUE_01_MESSAGE);
+            put("辦卡", CORE_VALUE_01_MESSAGE);
+            put("申辦信用卡", CORE_VALUE_01_MESSAGE);
+            put("申請信用卡", CORE_VALUE_01_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP2 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue2", CORE_VALUE_02_MESSAGE);
-            put("COREVALUE2", CORE_VALUE_02_MESSAGE);
-            put("こあばりゅー2", CORE_VALUE_02_MESSAGE);
-            put("コアバリュー2", CORE_VALUE_02_MESSAGE);
+            put("信用卡申請書", CORE_VALUE_02_MESSAGE);
+            put("申請書", CORE_VALUE_02_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP3 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue3", CORE_VALUE_03_MESSAGE);
-            put("COREVALUE3", CORE_VALUE_03_MESSAGE);
-            put("こあばりゅー3", CORE_VALUE_03_MESSAGE);
-            put("コアバリュー3", CORE_VALUE_03_MESSAGE);
+            put("沒收到申請書", CORE_VALUE_03_MESSAGE);
+            put("補寄", CORE_VALUE_03_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP4 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue4", CORE_VALUE_04_MESSAGE);
-            put("COREVALUE4", CORE_VALUE_04_MESSAGE);
-            put("こあばりゅー4", CORE_VALUE_04_MESSAGE);
-            put("コアバリュー4", CORE_VALUE_04_MESSAGE);          
+            put("申請次數超過限制", CORE_VALUE_04_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP5 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue5", CORE_VALUE_05_MESSAGE);
-            put("COREVALUE5", CORE_VALUE_05_MESSAGE);
-            put("こあばりゅー5", CORE_VALUE_05_MESSAGE);
-            put("コアバリュー5", CORE_VALUE_05_MESSAGE);
+            put("再申請", CORE_VALUE_05_MESSAGE);
+            put("未回復", CORE_VALUE_05_MESSAGE);
+            put("重新申請", CORE_VALUE_05_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP6 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue6", CORE_VALUE_06_MESSAGE);
-            put("COREVALUE6", CORE_VALUE_06_MESSAGE);
-            put("こあばりゅー6", CORE_VALUE_06_MESSAGE);
-            put("コアバリュー6", CORE_VALUE_06_MESSAGE);
+            put("申請書還可用嗎", CORE_VALUE_06_MESSAGE);
+            put("申請單還可以使用嗎", CORE_VALUE_06_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP7 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue7", CORE_VALUE_07_MESSAGE);
-            put("COREVALUE7", CORE_VALUE_07_MESSAGE);
-            put("こあばりゅー7", CORE_VALUE_07_MESSAGE);
-            put("コアバリュー7", CORE_VALUE_07_MESSAGE);
+            put("申辦地點", CORE_VALUE_07_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP8 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue8", CORE_VALUE_08_MESSAGE);
-            put("COREVALUE8", CORE_VALUE_08_MESSAGE);
-            put("こあばりゅー8", CORE_VALUE_08_MESSAGE);
-            put("コアバリュー8", CORE_VALUE_08_MESSAGE);
+            put("補件", CORE_VALUE_08_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP9 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue9", CORE_VALUE_09_MESSAGE);
-            put("COREVALUE9", CORE_VALUE_09_MESSAGE);
-            put("こあばりゅー9", CORE_VALUE_09_MESSAGE);
-            put("コアバリュー9", CORE_VALUE_09_MESSAGE);
+            put("沒有通過", CORE_VALUE_09_MESSAGE);
+            put("無法通過", CORE_VALUE_09_MESSAGE);
+            put("沒有核過", CORE_VALUE_09_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP10 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue10", CORE_VALUE_10_MESSAGE);
-            put("COREVALUE10", CORE_VALUE_10_MESSAGE);
-            put("こあばりゅー10", CORE_VALUE_10_MESSAGE);
-            put("コアバリュー10", CORE_VALUE_10_MESSAGE);
+            put("開卡", CORE_VALUE_10_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP11 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue1", CORE_VALUE_11_MESSAGE);
-            put("COREVALUE1", CORE_VALUE_11_MESSAGE);
-            put("こあばりゅー1", CORE_VALUE_11_MESSAGE);
-            put("コアバリュー1", CORE_VALUE_11_MESSAGE);
+            put("電話打不進去", CORE_VALUE_11_MESSAGE);
+            put("忙線", CORE_VALUE_11_MESSAGE);
+            put("專人", CORE_VALUE_11_MESSAGE);
+            put("客服專線", CORE_VALUE_11_MESSAGE);
+            put("客服電話", CORE_VALUE_11_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP12 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue2", CORE_VALUE_12_MESSAGE);
-            put("COREVALUE2", CORE_VALUE_12_MESSAGE);
-            put("こあばりゅー2", CORE_VALUE_12_MESSAGE);
-            put("コアバリュー2", CORE_VALUE_12_MESSAGE);
+            put("上班時間", CORE_VALUE_12_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP13 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue3", CORE_VALUE_13_MESSAGE);
-            put("COREVALUE3", CORE_VALUE_13_MESSAGE);
-            put("こあばりゅー3", CORE_VALUE_13_MESSAGE);
-            put("コアバリュー3", CORE_VALUE_13_MESSAGE);
+            put("機場停車", CORE_VALUE_13_MESSAGE);
+            put("免費巴士", CORE_VALUE_13_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP14 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue4", CORE_VALUE_14_MESSAGE);
-            put("COREVALUE4", CORE_VALUE_14_MESSAGE);
-            put("こあばりゅー4", CORE_VALUE_14_MESSAGE);
-            put("コアバリュー4", CORE_VALUE_14_MESSAGE);          
+            put("年費", CORE_VALUE_14_MESSAGE);     
          }
     });
     private static final Map<String, String> MESSAGE_MAP15 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue5", CORE_VALUE_15_MESSAGE);
-            put("COREVALUE5", CORE_VALUE_15_MESSAGE);
-            put("こあばりゅー5", CORE_VALUE_15_MESSAGE);
-            put("コアバリュー5", CORE_VALUE_15_MESSAGE);
+            put("申請進度", CORE_VALUE_15_MESSAGE);
+            put("財力證明", CORE_VALUE_15_MESSAGE);
+            put("辦卡資格", CORE_VALUE_15_MESSAGE);
+            put("辦卡進度", CORE_VALUE_15_MESSAGE);
+            put("審核", CORE_VALUE_15_MESSAGE);
+            put("申辦進度", CORE_VALUE_15_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP16 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue6", CORE_VALUE_16_MESSAGE);
-            put("COREVALUE6", CORE_VALUE_16_MESSAGE);
-            put("こあばりゅー6", CORE_VALUE_16_MESSAGE);
-            put("コアバリュー6", CORE_VALUE_16_MESSAGE);
+            put("已寄出嗎", CORE_VALUE_16_MESSAGE);
+            put("幾天會收到", CORE_VALUE_16_MESSAGE);
+            put("什麼時候會寄", CORE_VALUE_16_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP17 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue7", CORE_VALUE_17_MESSAGE);
-            put("COREVALUE7", CORE_VALUE_17_MESSAGE);
-            put("こあばりゅー7", CORE_VALUE_17_MESSAGE);
-            put("コアバリュー7", CORE_VALUE_17_MESSAGE);
+            put("附卡", CORE_VALUE_17_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP18 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue8", CORE_VALUE_18_MESSAGE);
-            put("COREVALUE8", CORE_VALUE_18_MESSAGE);
-            put("こあばりゅー8", CORE_VALUE_18_MESSAGE);
-            put("コアバリュー8", CORE_VALUE_18_MESSAGE);
+            put("附卡申請書", CORE_VALUE_18_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP19 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue9", CORE_VALUE_19_MESSAGE);
-            put("COREVALUE9", CORE_VALUE_19_MESSAGE);
-            put("こあばりゅー9", CORE_VALUE_19_MESSAGE);
-            put("コアバリュー9", CORE_VALUE_19_MESSAGE);
+            put("貴賓室", CORE_VALUE_19_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP20 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue10", CORE_VALUE_20_MESSAGE);
-            put("COREVALUE10", CORE_VALUE_20_MESSAGE);
-            put("こあばりゅー10", CORE_VALUE_20_MESSAGE);
-            put("コアバリュー10", CORE_VALUE_20_MESSAGE);
+            put("國外交易手續費", CORE_VALUE_20_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP21 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue1", CORE_VALUE_21_MESSAGE);
-            put("COREVALUE1", CORE_VALUE_21_MESSAGE);
-            put("こあばりゅー1", CORE_VALUE_21_MESSAGE);
-            put("コアバリュー1", CORE_VALUE_21_MESSAGE);
+            put("手續費回饋", CORE_VALUE_21_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP22 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue2", CORE_VALUE_22_MESSAGE);
-            put("COREVALUE2", CORE_VALUE_22_MESSAGE);
-            put("こあばりゅー2", CORE_VALUE_22_MESSAGE);
-            put("コアバリュー2", CORE_VALUE_22_MESSAGE);
+            put("現金回饋", CORE_VALUE_22_MESSAGE);
          }
     });
    private static final Map<String, String> MESSAGE_MAP23 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue3", CORE_VALUE_23_MESSAGE);
-            put("COREVALUE3", CORE_VALUE_23_MESSAGE);
-            put("こあばりゅー3", CORE_VALUE_23_MESSAGE);
-            put("コアバリュー3", CORE_VALUE_23_MESSAGE);
+            put("提高信用卡額度", CORE_VALUE_23_MESSAGE);
+            put("調高額度", CORE_VALUE_23_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP24 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue4", CORE_VALUE_24_MESSAGE);
-            put("COREVALUE4", CORE_VALUE_24_MESSAGE);
-            put("こあばりゅー4", CORE_VALUE_24_MESSAGE);
-            put("コアバリュー4", CORE_VALUE_24_MESSAGE);          
+            put("查詢信用卡額度", CORE_VALUE_24_MESSAGE);       
          }
     });
     private static final Map<String, String> MESSAGE_MAP25 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue5", CORE_VALUE_25_MESSAGE);
-            put("COREVALUE5", CORE_VALUE_25_MESSAGE);
-            put("こあばりゅー5", CORE_VALUE_25_MESSAGE);
-            put("コアバリュー5", CORE_VALUE_25_MESSAGE);
+            put("再申辦", CORE_VALUE_25_MESSAGE);
+            put("另外申請", CORE_VALUE_25_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP26 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue6", CORE_VALUE_26_MESSAGE);
-            put("COREVALUE6", CORE_VALUE_26_MESSAGE);
-            put("こあばりゅー6", CORE_VALUE_26_MESSAGE);
-            put("コアバリュー6", CORE_VALUE_26_MESSAGE);
+            put("活動已登入", CORE_VALUE_26_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP27 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue7", CORE_VALUE_27_MESSAGE);
-            put("COREVALUE7", CORE_VALUE_27_MESSAGE);
-            put("こあばりゅー7", CORE_VALUE_27_MESSAGE);
-            put("コアバリュー7", CORE_VALUE_27_MESSAGE);
+            put("循環利率", CORE_VALUE_27_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP28 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue8", CORE_VALUE_28_MESSAGE);
-            put("COREVALUE8", CORE_VALUE_28_MESSAGE);
-            put("こあばりゅー8", CORE_VALUE_28_MESSAGE);
-            put("コアバリュー8", CORE_VALUE_28_MESSAGE);
+            put("預借現金", CORE_VALUE_28_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP29 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue9", CORE_VALUE_29_MESSAGE);
-            put("COREVALUE9", CORE_VALUE_29_MESSAGE);
-            put("こあばりゅー9", CORE_VALUE_29_MESSAGE);
-            put("コアバリュー9", CORE_VALUE_29_MESSAGE);
+            put("繳款", CORE_VALUE_29_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP30 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue10", CORE_VALUE_30_MESSAGE);
-            put("COREVALUE10", CORE_VALUE_30_MESSAGE);
-            put("こあばりゅー10", CORE_VALUE_30_MESSAGE);
-            put("コアバリュー10", CORE_VALUE_30_MESSAGE);
+            put("自動扣款", CORE_VALUE_30_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP31 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue1", CORE_VALUE_31_MESSAGE);
-            put("COREVALUE1", CORE_VALUE_31_MESSAGE);
-            put("こあばりゅー1", CORE_VALUE_31_MESSAGE);
-            put("コアバリュー1", CORE_VALUE_31_MESSAGE);
+            put("取消轉帳扣款", CORE_VALUE_31_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP32 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue2", CORE_VALUE_32_MESSAGE);
-            put("COREVALUE2", CORE_VALUE_32_MESSAGE);
-            put("こあばりゅー2", CORE_VALUE_32_MESSAGE);
-            put("コアバリュー2", CORE_VALUE_32_MESSAGE);
+            put("無法註冊會員", CORE_VALUE_32_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP33 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue3", CORE_VALUE_33_MESSAGE);
-            put("COREVALUE3", CORE_VALUE_33_MESSAGE);
-            put("こあばりゅー3", CORE_VALUE_33_MESSAGE);
-            put("コアバリュー3", CORE_VALUE_33_MESSAGE);
+            put("申辦帳號", CORE_VALUE_33_MESSAGE);
+            put("樂天信用卡認證", CORE_VALUE_33_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP34 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue4", CORE_VALUE_34_MESSAGE);
-            put("COREVALUE4", CORE_VALUE_34_MESSAGE);
-            put("こあばりゅー4", CORE_VALUE_34_MESSAGE);
-            put("コアバリュー4", CORE_VALUE_34_MESSAGE);          
+            put("忘記帳號", CORE_VALUE_34_MESSAGE);
+            put("忘記密碼", CORE_VALUE_34_MESSAGE);
+            put("修改帳號", CORE_VALUE_34_MESSAGE);
+            put("修改密碼", CORE_VALUE_34_MESSAGE);          
          }
     });
     private static final Map<String, String> MESSAGE_MAP35 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue5", CORE_VALUE_35_MESSAGE);
-            put("COREVALUE5", CORE_VALUE_35_MESSAGE);
-            put("こあばりゅー5", CORE_VALUE_35_MESSAGE);
-            put("コアバリュー5", CORE_VALUE_35_MESSAGE);
+            put("WiFi", CORE_VALUE_35_MESSAGE);
+            put("Wi-Fi", CORE_VALUE_35_MESSAGE);
+            put("wifi", CORE_VALUE_35_MESSAGE);
+            put("Wifi", CORE_VALUE_35_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP36 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue6", CORE_VALUE_36_MESSAGE);
-            put("COREVALUE6", CORE_VALUE_36_MESSAGE);
-            put("こあばりゅー6", CORE_VALUE_36_MESSAGE);
-            put("コアバリュー6", CORE_VALUE_36_MESSAGE);
+            put("樂天帳號", CORE_VALUE_36_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP37 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue7", CORE_VALUE_37_MESSAGE);
-            put("COREVALUE7", CORE_VALUE_37_MESSAGE);
-            put("こあばりゅー7", CORE_VALUE_37_MESSAGE);
-            put("コアバリュー7", CORE_VALUE_37_MESSAGE);
+            put("有什麼優惠", CORE_VALUE_37_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP38 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue8", CORE_VALUE_38_MESSAGE);
-            put("COREVALUE8", CORE_VALUE_38_MESSAGE);
-            put("こあばりゅー8", CORE_VALUE_38_MESSAGE);
-            put("コアバリュー8", CORE_VALUE_38_MESSAGE);
+            put("最新優惠", CORE_VALUE_38_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP39 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue9", CORE_VALUE_39_MESSAGE);
-            put("COREVALUE9", CORE_VALUE_39_MESSAGE);
-            put("こあばりゅー9", CORE_VALUE_39_MESSAGE);
-            put("コアバリュー9", CORE_VALUE_39_MESSAGE);
+            put("日本優惠", CORE_VALUE_39_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP40 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue10", CORE_VALUE_40_MESSAGE);
-            put("COREVALUE10", CORE_VALUE_40_MESSAGE);
-            put("こあばりゅー10", CORE_VALUE_40_MESSAGE);
-            put("コアバリュー10", CORE_VALUE_40_MESSAGE);
+            put("國內特店", CORE_VALUE_40_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP41 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue1", CORE_VALUE_41_MESSAGE);
-            put("COREVALUE1", CORE_VALUE_41_MESSAGE);
-            put("こあばりゅー1", CORE_VALUE_41_MESSAGE);
-            put("コアバリュー1", CORE_VALUE_41_MESSAGE);
+            put("電子帳單", CORE_VALUE_41_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP42 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue2", CORE_VALUE_42_MESSAGE);
-            put("COREVALUE2", CORE_VALUE_42_MESSAGE);
-            put("こあばりゅー2", CORE_VALUE_42_MESSAGE);
-            put("コアバリュー2", CORE_VALUE_42_MESSAGE);
+            put("紙本帳單", CORE_VALUE_42_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP43 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue3", CORE_VALUE_43_MESSAGE);
-            put("COREVALUE3", CORE_VALUE_43_MESSAGE);
-            put("こあばりゅー3", CORE_VALUE_43_MESSAGE);
-            put("コアバリュー3", CORE_VALUE_43_MESSAGE);
+            put("旅遊平安險", CORE_VALUE_43_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP44 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue4", CORE_VALUE_44_MESSAGE);
-            put("COREVALUE4", CORE_VALUE_44_MESSAGE);
-            put("こあばりゅー4", CORE_VALUE_44_MESSAGE);
-            put("コアバリュー4", CORE_VALUE_44_MESSAGE);          
+            put("無法登入", CORE_VALUE_44_MESSAGE);         
          }
     });
     private static final Map<String, String> MESSAGE_MAP45 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue5", CORE_VALUE_45_MESSAGE);
-            put("COREVALUE5", CORE_VALUE_45_MESSAGE);
-            put("こあばりゅー5", CORE_VALUE_45_MESSAGE);
-            put("コアバリュー5", CORE_VALUE_45_MESSAGE);
+            put("繳費方式", CORE_VALUE_45_MESSAGE);
+            put("繳費期限", CORE_VALUE_45_MESSAGE);
+            put("繳款方式", CORE_VALUE_45_MESSAGE);
+            put("繳款期限", CORE_VALUE_45_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP46 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue6", CORE_VALUE_46_MESSAGE);
-            put("COREVALUE6", CORE_VALUE_46_MESSAGE);
-            put("こあばりゅー6", CORE_VALUE_46_MESSAGE);
-            put("コアバリュー6", CORE_VALUE_46_MESSAGE);
+            put("未入帳", CORE_VALUE_46_MESSAGE);
+            put("未出帳", CORE_VALUE_46_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP47 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue7", CORE_VALUE_47_MESSAGE);
-            put("COREVALUE7", CORE_VALUE_47_MESSAGE);
-            put("こあばりゅー7", CORE_VALUE_47_MESSAGE);
-            put("コアバリュー7", CORE_VALUE_47_MESSAGE);
+            put("匯款", CORE_VALUE_47_MESSAGE);
+            put("轉帳", CORE_VALUE_47_MESSAGE);
+            put("繳費紀錄", CORE_VALUE_47_MESSAGE);
+            put("繳款紀錄", CORE_VALUE_47_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP48 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue8", CORE_VALUE_48_MESSAGE);
-            put("COREVALUE8", CORE_VALUE_48_MESSAGE);
-            put("こあばりゅー8", CORE_VALUE_48_MESSAGE);
-            put("コアバリュー8", CORE_VALUE_48_MESSAGE);
+            put("交易明細", CORE_VALUE_48_MESSAGE);
+            put("消費明細", CORE_VALUE_48_MESSAGE);
+            put("交易問題", CORE_VALUE_48_MESSAGE);
+            put("消費問題", CORE_VALUE_48_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP49 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue9", CORE_VALUE_49_MESSAGE);
-            put("COREVALUE9", CORE_VALUE_49_MESSAGE);
-            put("こあばりゅー9", CORE_VALUE_49_MESSAGE);
-            put("コアバリュー9", CORE_VALUE_49_MESSAGE);
+            put("無法在日本刷卡", CORE_VALUE_49_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP50 = Collections.unmodifiableMap(new HashMap<String, String>(){
         private static final long serialVersionUID = 1L;
         {
-            put("corevalue10", CORE_VALUE_50_MESSAGE);
-            put("COREVALUE10", CORE_VALUE_50_MESSAGE);
-            put("こあばりゅー10", CORE_VALUE_50_MESSAGE);
-            put("コアバリュー10", CORE_VALUE_50_MESSAGE);
+            put("日本的樂天購物網站", CORE_VALUE_50_MESSAGE);
+            put("日本樂天購物網站", CORE_VALUE_50_MESSAGE);
+            put("日本樂天市場", CORE_VALUE_50_MESSAGE);
          }
     });
     private static final Map<String, String> MESSAGE_MAP51 = Collections.unmodifiableMap(new HashMap<String, String>(){
