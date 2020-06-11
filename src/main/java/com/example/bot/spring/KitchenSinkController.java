@@ -969,7 +969,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "activate": {
+            case "member": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "進入會員服務?",
                         new URIAction("是",
