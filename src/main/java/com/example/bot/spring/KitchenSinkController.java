@@ -1416,6 +1416,7 @@ public class KitchenSinkController {
     }
 
     public String createResponseMessage(String sendMessage) {
+        responseText = "";
         list = new ArrayList<String>(MESSAGE_MAP.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
