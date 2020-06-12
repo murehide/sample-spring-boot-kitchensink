@@ -110,6 +110,7 @@ import lombok.extern.slf4j.Slf4j;
 @LineMessageHandler
 public class KitchenSinkController {
     private String responseText = "";
+    private String flag = "";
     List<String> list;
     private static final String CORE_VALUE_01_MESSAGE = "於台灣樂天信用卡公司官網線上申請並進行動態密碼驗證和他行信用卡資訊驗證，且同時註冊或登錄樂天市場會員資料後，上傳身分證正反面影本及財力證明以利進行審核。 若您有其他文件相關問題，煩請致電本公司24小時客服專線  \n(02)2516-8518  \n0800-505-058(限市話)  \n由客服專員為您服務,謝謝您!\n\n";
     private static final String CORE_VALUE_02_MESSAGE = "於台灣樂天信用卡公司官網線上申請時若未進行他行信用卡資訊驗證，本公司會於次日寄出申請書給您。\n\n";
@@ -1418,667 +1419,952 @@ public class KitchenSinkController {
         list = new ArrayList<String>(MESSAGE_MAP.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_01_MESSAGE;
+                flag = "1";
                 break;
             }
+        }
+        if("1".equals(flag)) {
+            responseText = responseText + CORE_VALUE_01_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP2.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_02_MESSAGE;
+                flag = "2";
                 break;
             }
+        }
+        if("2".equals(flag)) {
+            responseText = responseText + CORE_VALUE_02_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP3.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_03_MESSAGE;
+                flag = "3";
                 break;
             }
+        }
+        if("3".equals(flag)) {
+            responseText = responseText + CORE_VALUE_03_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP4.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_04_MESSAGE;
+                flag = "4";
                 break;
             }
+        }
+        if("4".equals(flag)) {
+            responseText = responseText + CORE_VALUE_04_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP5.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_05_MESSAGE;
+                flag = "5";
                 break;
             }
+        }
+        if("5".equals(flag)) {
+            responseText = responseText + CORE_VALUE_05_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP6.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_06_MESSAGE;
+                flag = "6";
                 break;
             }
+        }
+        if("6".equals(flag)) {
+            responseText = responseText + CORE_VALUE_06_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP7.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_07_MESSAGE;
+                flag = "7";
                 break;
             }
+        }
+        if("7".equals(flag)) {
+            responseText = responseText + CORE_VALUE_07_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP8.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_08_MESSAGE;
+                flag = "8";
                 break;
             }
+        }
+        if("8".equals(flag)) {
+            responseText = responseText + CORE_VALUE_08_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP9.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_09_MESSAGE;
+                flag = "9";
                 break;
             }
+        }
+        if("9".equals(flag)) {
+            responseText = responseText + CORE_VALUE_09_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP10.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_10_MESSAGE;
+                flag = "10";
                 break;
             }
+        }
+        if("10".equals(flag)) {
+            responseText = responseText + CORE_VALUE_10_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP11.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_11_MESSAGE;
+                flag = "11";
                 break;
             }
+        }
+        if("11".equals(flag)) {
+            responseText = responseText + CORE_VALUE_11_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP12.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_12_MESSAGE;
+                flag = "12";
                 break;
             }
+        }
+        if("12".equals(flag)) {
+            responseText = responseText + CORE_VALUE_12_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP13.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_13_MESSAGE;
+                flag = "13";
                 break;
             }
+        }
+        if("13".equals(flag)) {
+            responseText = responseText + CORE_VALUE_13_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP14.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_14_MESSAGE;
+                flag = "14";
                 break;
             }
+        }
+        if("14".equals(flag)) {
+            responseText = responseText + CORE_VALUE_14_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP15.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_15_MESSAGE;
+                flag = "15";
                 break;
             }
+        }
+        if("15".equals(flag)) {
+            responseText = responseText + CORE_VALUE_15_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP16.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_16_MESSAGE;
+                flag = "16";
                 break;
             }
+        }
+        if("16".equals(flag)) {
+            responseText = responseText + CORE_VALUE_16_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP17.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_17_MESSAGE;
+                flag = "17";
                 break;
             }
+        }
+        if("17".equals(flag)) {
+            responseText = responseText + CORE_VALUE_17_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP18.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_18_MESSAGE;
+                flag = "18";
                 break;
             }
+        }
+        if("18".equals(flag)) {
+            responseText = responseText + CORE_VALUE_18_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP19.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_19_MESSAGE;
+                flag = "19";
                 break;
             }
+        }
+        if("19".equals(flag)) {
+            responseText = responseText + CORE_VALUE_19_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP20.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_20_MESSAGE;
+                flag = "20";
                 break;
             }
+        }
+        if("20".equals(flag)) {
+            responseText = responseText + CORE_VALUE_20_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP21.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_21_MESSAGE;
+                flag = "21";
                 break;
             }
+        }
+        if("21".equals(flag)) {
+            responseText = responseText + CORE_VALUE_21_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP22.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_22_MESSAGE;
+                flag = "22";
                 break;
             }
+        }
+        if("22".equals(flag)) {
+            responseText = responseText + CORE_VALUE_22_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP23.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_23_MESSAGE;
+                flag = "23";
                 break;
             }
+        }
+        if("23".equals(flag)) {
+            responseText = responseText + CORE_VALUE_23_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP24.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_24_MESSAGE;
+                flag = "24";
                 break;
             }
+        }
+        if("24".equals(flag)) {
+            responseText = responseText + CORE_VALUE_24_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP25.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_25_MESSAGE;
+                flag = "25";
                 break;
             }
+        }
+        if("25".equals(flag)) {
+            responseText = responseText + CORE_VALUE_25_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP26.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_26_MESSAGE;
+                flag = "26";
                 break;
             }
+        }
+        if("26".equals(flag)) {
+            responseText = responseText + CORE_VALUE_26_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP27.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_27_MESSAGE;
+                flag = "27";
                 break;
             }
+        }
+        if("27".equals(flag)) {
+            responseText = responseText + CORE_VALUE_27_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP28.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_28_MESSAGE;
+                flag = "28";
                 break;
             }
+        }
+        if("28".equals(flag)) {
+            responseText = responseText + CORE_VALUE_28_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP29.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_29_MESSAGE;
+                flag = "29";
                 break;
             }
+        }
+        if("29".equals(flag)) {
+            responseText = responseText + CORE_VALUE_29_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP30.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_30_MESSAGE;
+                flag = "30";
                 break;
             }
+        }
+        if("30".equals(flag)) {
+            responseText = responseText + CORE_VALUE_30_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP31.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_31_MESSAGE;
+                flag = "31";
                 break;
             }
+        }
+        if("31".equals(flag)) {
+            responseText = responseText + CORE_VALUE_31_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP32.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_32_MESSAGE;
+                flag = "32";
                 break;
             }
+        }
+        if("32".equals(flag)) {
+            responseText = responseText + CORE_VALUE_32_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP33.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_33_MESSAGE;
+                flag = "33";
                 break;
             }
+        }
+        if("33".equals(flag)) {
+            responseText = responseText + CORE_VALUE_33_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP34.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_34_MESSAGE;
+                flag = "34";
                 break;
             }
+        }
+        if("34".equals(flag)) {
+            responseText = responseText + CORE_VALUE_34_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP35.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_35_MESSAGE;
+                flag = "35";
                 break;
             }
+        }
+        if("35".equals(flag)) {
+            responseText = responseText + CORE_VALUE_35_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP36.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_36_MESSAGE;
+                flag = "36";
                 break;
             }
+        }
+        if("36".equals(flag)) {
+            responseText = responseText + CORE_VALUE_36_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP37.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_37_MESSAGE;
+                flag = "37";
                 break;
             }
+        }
+        if("37".equals(flag)) {
+            responseText = responseText + CORE_VALUE_37_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP38.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_38_MESSAGE;
+                flag = "38";
                 break;
             }
+        }
+        if("38".equals(flag)) {
+            responseText = responseText + CORE_VALUE_38_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP39.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_39_MESSAGE;
+                flag = "39";
                 break;
             }
+        }
+        if("39".equals(flag)) {
+            responseText = responseText + CORE_VALUE_39_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP40.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_40_MESSAGE;
+                flag = "40";
                 break;
             }
+        }
+        if("40".equals(flag)) {
+            responseText = responseText + CORE_VALUE_40_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP41.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_41_MESSAGE;
+                flag = "41";
                 break;
             }
+        }
+        if("41".equals(flag)) {
+            responseText = responseText + CORE_VALUE_41_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP42.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_42_MESSAGE;
+                flag = "42";
                 break;
             }
+        }
+        if("42".equals(flag)) {
+            responseText = responseText + CORE_VALUE_42_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP43.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_43_MESSAGE;
+                flag = "43";
                 break;
             }
+        }
+        if("43".equals(flag)) {
+            responseText = responseText + CORE_VALUE_43_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP44.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_44_MESSAGE;
+                flag = "44";
                 break;
             }
+        }
+        if("44".equals(flag)) {
+            responseText = responseText + CORE_VALUE_44_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP45.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_45_MESSAGE;
+                flag = "45";
                 break;
             }
+        }
+        if("45".equals(flag)) {
+            responseText = responseText + CORE_VALUE_45_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP46.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_46_MESSAGE;
+                flag = "46";
                 break;
             }
+        }
+        if("46".equals(flag)) {
+            responseText = responseText + CORE_VALUE_46_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP47.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_47_MESSAGE;
+                flag = "47";
                 break;
             }
+        }
+        if("47".equals(flag)) {
+            responseText = responseText + CORE_VALUE_47_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP48.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_48_MESSAGE;
+                flag = "48";
                 break;
             }
+        }
+        if("48".equals(flag)) {
+            responseText = responseText + CORE_VALUE_48_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP49.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_49_MESSAGE;
+                flag = "49";
                 break;
             }
+        }
+        if("49".equals(flag)) {
+            responseText = responseText + CORE_VALUE_49_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP50.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_50_MESSAGE;
+                flag = "50";
                 break;
             }
+        }
+        if("50".equals(flag)) {
+            responseText = responseText + CORE_VALUE_50_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP51.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_51_MESSAGE;
+                flag = "51";
                 break;
             }
+        }
+        if("51".equals(flag)) {
+            responseText = responseText + CORE_VALUE_51_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP52.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_52_MESSAGE;
+                flag = "52";
                 break;
             }
+        }
+        if("52".equals(flag)) {
+            responseText = responseText + CORE_VALUE_52_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP53.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_53_MESSAGE;
+                flag = "53";
                 break;
             }
+        }
+        if("53".equals(flag)) {
+            responseText = responseText + CORE_VALUE_53_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP54.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_54_MESSAGE;
+                flag = "54";
                 break;
             }
+        }
+        if("54".equals(flag)) {
+            responseText = responseText + CORE_VALUE_54_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP55.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_55_MESSAGE;
+                flag = "55";
                 break;
             }
+        }
+        if("55".equals(flag)) {
+            responseText = responseText + CORE_VALUE_55_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP56.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_56_MESSAGE;
+                flag = "56";
                 break;
             }
+        }
+        if("56".equals(flag)) {
+            responseText = responseText + CORE_VALUE_56_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP57.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_57_MESSAGE;
+                flag = "57";
                 break;
             }
+        }
+        if("57".equals(flag)) {
+            responseText = responseText + CORE_VALUE_57_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP58.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_58_MESSAGE;
+                flag = "58";
                 break;
             }
+        }
+        if("58".equals(flag)) {
+            responseText = responseText + CORE_VALUE_58_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP59.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_59_MESSAGE;
+                flag = "59";
                 break;
             }
+        }
+        if("59".equals(flag)) {
+            responseText = responseText + CORE_VALUE_59_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP60.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_60_MESSAGE;
+                flag = "60";
                 break;
             }
+        }
+        if("60".equals(flag)) {
+            responseText = responseText + CORE_VALUE_60_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP61.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_61_MESSAGE;
+                flag = "61";
                 break;
             }
+        }
+        if("61".equals(flag)) {
+            responseText = responseText + CORE_VALUE_61_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP62.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_62_MESSAGE;
+                flag = "62";
                 break;
             }
+        }
+        if("62".equals(flag)) {
+            responseText = responseText + CORE_VALUE_62_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP63.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_63_MESSAGE;
+                flag = "63";
                 break;
             }
+        }
+        if("63".equals(flag)) {
+            responseText = responseText + CORE_VALUE_63_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP64.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_64_MESSAGE;
+                flag = "64";
                 break;
             }
+        }
+        if("64".equals(flag)) {
+            responseText = responseText + CORE_VALUE_64_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP65.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_65_MESSAGE;
+                flag = "65";
                 break;
             }
+        }
+        if("65".equals(flag)) {
+            responseText = responseText + CORE_VALUE_65_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP66.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_66_MESSAGE;
+                flag = "66";
                 break;
             }
+        }
+        if("66".equals(flag)) {
+            responseText = responseText + CORE_VALUE_66_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP67.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_67_MESSAGE;
+                flag = "67";
                 break;
             }
+        }
+        if("67".equals(flag)) {
+            responseText = responseText + CORE_VALUE_67_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP68.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_68_MESSAGE;
+                flag = "68";
                 break;
             }
+        }
+        if("68".equals(flag)) {
+            responseText = responseText + CORE_VALUE_68_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP69.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_69_MESSAGE;
+                flag = "69";
                 break;
             }
+        }
+        if("69".equals(flag)) {
+            responseText = responseText + CORE_VALUE_69_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP70.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_70_MESSAGE;
+                flag = "70";
                 break;
             }
+        }
+        if("70".equals(flag)) {
+            responseText = responseText + CORE_VALUE_70_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP71.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_71_MESSAGE;
+                flag = "71";
                 break;
             }
+        }
+        if("71".equals(flag)) {
+            responseText = responseText + CORE_VALUE_71_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP72.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_72_MESSAGE;
+                flag = "72";
                 break;
             }
+        }
+        if("72".equals(flag)) {
+            responseText = responseText + CORE_VALUE_72_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP73.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_73_MESSAGE;
+                flag = "73";
                 break;
             }
+        }
+        if("73".equals(flag)) {
+            responseText = responseText + CORE_VALUE_73_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP74.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_74_MESSAGE;
+                flag = "74";
                 break;
             }
+        }
+        if("74".equals(flag)) {
+            responseText = responseText + CORE_VALUE_74_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP75.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_75_MESSAGE;
+                flag = "75";
                 break;
             }
+        }
+        if("75".equals(flag)) {
+            responseText = responseText + CORE_VALUE_75_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP76.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_76_MESSAGE;
+                flag = "76";
                 break;
             }
+        }
+        if("76".equals(flag)) {
+            responseText = responseText + CORE_VALUE_76_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP77.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_77_MESSAGE;
+                flag = "77";
                 break;
             }
+        }
+        if("77".equals(flag)) {
+            responseText = responseText + CORE_VALUE_77_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP78.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_78_MESSAGE;
+                flag = "78";
                 break;
             }
+        }
+        if("78".equals(flag)) {
+            responseText = responseText + CORE_VALUE_78_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP79.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_79_MESSAGE;
+                flag = "79";
                 break;
             }
+        }
+        if("79".equals(flag)) {
+            responseText = responseText + CORE_VALUE_79_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP80.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_80_MESSAGE;
+                flag = "80";
                 break;
             }
+        }
+        if("80".equals(flag)) {
+            responseText = responseText + CORE_VALUE_80_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP81.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_81_MESSAGE;
+                flag = "81";
                 break;
             }
+        }
+        if("81".equals(flag)) {
+            responseText = responseText + CORE_VALUE_81_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP82.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_82_MESSAGE;
+                flag = "82";
                 break;
             }
+        }
+        if("82".equals(flag)) {
+            responseText = responseText + CORE_VALUE_82_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP83.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_83_MESSAGE;
+                flag = "83";
                 break;
             }
+        }
+        if("83".equals(flag)) {
+            responseText = responseText + CORE_VALUE_83_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP84.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_84_MESSAGE;
+                flag = "84";
                 break;
             }
+        }
+        if("84".equals(flag)) {
+            responseText = responseText + CORE_VALUE_84_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP85.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_85_MESSAGE;
+                flag = "85";
                 break;
             }
+        }
+        if("85".equals(flag)) {
+            responseText = responseText + CORE_VALUE_85_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP86.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_86_MESSAGE;
+                flag = "86";
                 break;
             }
+        }
+        if("86".equals(flag)) {
+            responseText = responseText + CORE_VALUE_86_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP87.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_87_MESSAGE;
+                flag = "87";
                 break;
             }
+        }
+        if("87".equals(flag)) {
+            responseText = responseText + CORE_VALUE_87_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP88.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_88_MESSAGE;
+                flag = "88";
                 break;
             }
+        }
+        if("88".equals(flag)) {
+            responseText = responseText + CORE_VALUE_88_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP89.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_89_MESSAGE;
+                flag = "89";
                 break;
             }
+        }
+        if("89".equals(flag)) {
+            responseText = responseText + CORE_VALUE_89_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP90.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_90_MESSAGE;
+                flag = "90";
                 break;
             }
+        }
+        if("90".equals(flag)) {
+            responseText = responseText + CORE_VALUE_90_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP91.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_91_MESSAGE;
+                flag = "91";
                 break;
             }
+        }
+        if("91".equals(flag)) {
+            responseText = responseText + CORE_VALUE_91_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP92.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_92_MESSAGE;
+                flag = "92";
                 break;
             }
+        }
+        if("92".equals(flag)) {
+            responseText = responseText + CORE_VALUE_92_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP93.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_93_MESSAGE;
+                flag = "93";
                 break;
             }
+        }
+        if("93".equals(flag)) {
+            responseText = responseText + CORE_VALUE_93_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP94.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_94_MESSAGE;
+                flag = "94";
                 break;
             }
+        }
+        if("94".equals(flag)) {
+            responseText = responseText + CORE_VALUE_94_MESSAGE;
         }
         list = new ArrayList<String>(MESSAGE_MAP95.keySet());
         for(String str: list) {
             if(sendMessage.contains(str)) {
-                responseText = responseText + CORE_VALUE_95_MESSAGE;
+                flag = "95";
                 break;
             }
+        }
+        if("95".equals(flag)) {
+            responseText = responseText + CORE_VALUE_95_MESSAGE;
         }
         if(responseText!=null) {
             return responseText;
