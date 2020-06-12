@@ -2368,14 +2368,14 @@ public class KitchenSinkController {
             responseText = responseText + CORE_VALUE_95_MESSAGE + " \n\n";
         }
         if(responseText!=null) {
-            return responseText;
+            return responseText.substring(0, responseText.lastIndexOf("\n\n"));
         } else {
             return OTHER_MESSAGE;
         }
         /*if(MESSAGE_MAP.containsKey(sendMessage)) {
             return MESSAGE_MAP.get(sendMessage);
         } else {
-            return  OTHER_MESSAGE;
+            return OTHER_MESSAGE;
         }*/
     }
 
