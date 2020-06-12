@@ -1774,6 +1774,216 @@ public class KitchenSinkController {
                 return CORE_VALUE_60_MESSAGE;
             }
         }
+        list = new ArrayList<String>(MESSAGE_MAP61.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_61_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP62.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_62_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP63.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_63_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP64.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_64_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP65.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_65_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP66.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_66_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP67.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_67_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP68.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_68_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP69.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_69_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP70.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_70_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP71.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_71_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP72.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_72_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP73.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_73_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP74.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_74_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP75.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_75_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP76.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_76_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP77.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_77_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP78.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_78_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP79.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_79_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP80.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_80_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP81.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_81_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP82.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_82_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP83.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_83_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP84.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_84_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP85.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_85_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP86.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_86_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP87.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_87_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP88.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_88_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP89.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_89_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP90.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_90_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP91.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_91_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP92.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_92_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP93.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_93_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP94.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_94_MESSAGE;
+            }
+        }
+        list = new ArrayList<String>(MESSAGE_MAP95.keySet());
+        for(String str: list) {
+            if(sendMessage.contains(str)) {
+                return CORE_VALUE_95_MESSAGE;
+            }
+        }
         return  OTHER_MESSAGE;
         /*if(MESSAGE_MAP.containsKey(sendMessage)) {
             return MESSAGE_MAP.get(sendMessage);
