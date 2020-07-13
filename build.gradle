@@ -20,7 +20,7 @@ dependencies {
 	implementation 'com.linecorp.bot:line-bot-spring-boot:3.5.0'
 	implementation 'org.springframework.data:spring-data-jpa:2.3.1.RELEASE'
 	implementation 'javax.persistence:javax.persistence-api:2.2'
-        implementation 'com.vaadin:flow:3.1.2'
+        implementation 'com.vaadin:flow-component-base:2.1.0'
 	// project lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
