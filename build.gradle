@@ -23,6 +23,8 @@ dependencies {
         implementation 'com.vaadin:flow-data:3.1.2'
 	implementation 'com.vaadin:vaadin-button-flow:3.1.0'
 	implementation 'com.vaadin:vaadin-icons-flow:3.1.0'
+	implementation 'com.vaadin:vaadin-ordered-layout-flow:3.1.0'
+	implementation 'com.vaadin:vaadin-text-field-flow:3.1.1'
 	implementation 'com.vaadin:vaadin-grid-flow:5.1.1'
 	
 	// project lombok
