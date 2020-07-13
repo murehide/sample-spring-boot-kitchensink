@@ -18,7 +18,7 @@ public class Menu {
     protected Menu() {
     }
 
-    public Employee(String name, String menuId) {
+    public Menu(String name, String menuId) {
         this.name = name;
         this.menuId = menuId;
     }
