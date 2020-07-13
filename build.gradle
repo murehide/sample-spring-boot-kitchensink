@@ -18,15 +18,6 @@ dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
 	// LINE SDK
 	implementation 'com.linecorp.bot:line-bot-spring-boot:3.5.0'
-	implementation 'org.springframework.data:spring-data-jpa:2.3.1.RELEASE'
-	implementation 'javax.persistence:javax.persistence-api:2.2'
-        implementation 'com.vaadin:flow-data:3.1.2'
-	implementation 'com.vaadin:vaadin-button-flow:3.1.0'
-	implementation 'com.vaadin:vaadin-icons-flow:3.1.0'
-	implementation 'com.vaadin:vaadin-ordered-layout-flow:3.1.0'
-	implementation 'com.vaadin:vaadin-text-field-flow:3.1.1'
-	implementation 'com.vaadin:vaadin-grid-flow:5.1.1'
-	implementation 'com.vaadin:vaadin-spring:13.0.2'
 	// project lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
