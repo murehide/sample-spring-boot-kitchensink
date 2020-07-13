@@ -18,6 +18,7 @@ dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
 	// LINE SDK
 	implementation 'com.linecorp.bot:line-bot-spring-boot:3.5.0'
+	implementation 'javax.persistence:javax.persistence-api:2.2'
         implementation 'com.vaadin:flow:3.1.2'
 	// project lombok
 	compileOnly 'org.projectlombok:lombok'
