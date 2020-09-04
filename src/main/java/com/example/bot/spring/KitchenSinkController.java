@@ -1137,15 +1137,15 @@ public class KitchenSinkController {
             case "campaign": {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(createUri("/static/icon/1122.jpg"), "【66金夏趴】樂天點數最高11%！", "於活動期間內，在樂天市場使用樂天信用卡購物累積滿額並登錄活動，即可獲得加碼11%樂天點數回饋！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1122/banner/710x310.jpg"), "【66金夏趴】樂天點數最高11%！", "於活動期間內，在樂天市場使用樂天信用卡購物累積滿額並登錄活動，即可獲得加碼11%樂天點數回饋！", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1122"), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/1075.jpg"), "【E 起同樂 一起饗樂】", "指定類別消費享最高10%刷卡金回饋", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1075/banner/710x310.jpg"), "【E 起同樂 一起饗樂】", "指定類別消費享最高10%刷卡金回饋", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1075"), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/1124.jpg"), "【蝦皮新手大禮包】領券即享首筆五折起 >>限量開搶中", "卡友於活動期間內首次註冊蝦皮會員，首購時輸入專屬優惠碼並使用樂天卡結帳，即享滿額現折NT$200！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1124/banner/710x310.jpg"), "【蝦皮新手大禮包】領券即享首筆五折起 >>限量開搶中", "卡友於活動期間內首次註冊蝦皮會員，首購時輸入專屬優惠碼並使用樂天卡結帳，即享滿額現折NT$200！", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
                                 ))
@@ -1157,15 +1157,15 @@ public class KitchenSinkController {
             case "installment": {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(createUri("/static/icon/1123.jpg"), "【抽Dyson】夏天到了！抽Dyson空氣清淨機，再享5%回饋", "申辦單筆消費分期6期以上，享5%刷卡金回饋，每戶最高可回饋1,500元刷卡金，再抽Dyson空氣清淨機！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1123/banner/710x310.jpg"), "【抽Dyson】夏天到了！抽Dyson空氣清淨機，再享5%回饋", "申辦單筆消費分期6期以上，享5%刷卡金回饋，每戶最高可回饋1,500元刷卡金，再抽Dyson空氣清淨機！", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123&uid="+encrytStr), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/1125.jpg"), "【500元回饋】分期一筆就享驚人回饋！", "活動期間內只要成功自動分期一筆且登錄就享500元刷卡金回饋！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1125/banner/710x310.jpg"), "【500元回饋】分期一筆就享驚人回饋！", "活動期間內只要成功自動分期一筆且登錄就享500元刷卡金回饋！", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125&uid="+encrytStr), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/1126.jpg"), "【樂天就甘心】申辦帳單分期請您吃免費霜淇淋再折100！", "活動期間內線上申辦帳單分期成功並登錄，享刷卡金NT100元回饋、再送全家Fami原味霜淇淋一支！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1126/banner/710x310.jpg"), "【樂天就甘心】申辦帳單分期請您吃免費霜淇淋再折100！", "活動期間內線上申辦帳單分期成功並登錄，享刷卡金NT100元回饋、再送全家Fami原味霜淇淋一支！", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126&uid="+encrytStr), null)
                                 ))
