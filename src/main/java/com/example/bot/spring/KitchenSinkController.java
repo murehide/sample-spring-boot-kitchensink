@@ -1243,7 +1243,7 @@ public class KitchenSinkController {
                 String inDesc3 = "";
                 int count=0;
                 for (int i=0;i<list1.size();i++) {
-                    if("c".equals(list1.getJsonObject(i).getString("genreType"))) {
+                    if(list1.getJsonObject(i)!=null && "c".equals(list1.getJsonObject(i).getString("genreType"))) {
                         if(count==0) {
                             inCode1=list1.getJsonObject(i).getString("campaignCode");
                             inName1=list1.getJsonObject(i).getString("campaignName");
@@ -1274,6 +1274,7 @@ public class KitchenSinkController {
                             if(inDesc3.length()>=60){
                                 inDesc3=inDesc3.substring(0,60);
                             }
+                            break;
                         }
                         count++;
                     }
