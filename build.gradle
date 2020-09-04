@@ -16,6 +16,7 @@ dependencies {
         implementation 'com.google.guava:guava:28.2-jre'
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.glassfish:javax.json:1.1.4'
 	// LINE SDK
 	implementation 'com.linecorp.bot:line-bot-spring-boot:3.5.0'
 	// project lombok
