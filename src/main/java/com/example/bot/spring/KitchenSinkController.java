@@ -1197,15 +1197,15 @@ public class KitchenSinkController {
             case "merchant": {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(createUri("/static/icon/d621.jpg"), "沐越Mu Viet越式料理", "每桌贈「青木瓜雞絲沙拉」乙份", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/d621/400x250.jpg"), "沐越Mu Viet越式料理", "每桌贈「青木瓜雞絲沙拉」乙份", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d621"), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/d622.jpg"), "享鴨", "每桌贈「干貝絲翡翠炊蛋」乙份	", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/d622/400x250.jpg"), "享鴨", "每桌贈「干貝絲翡翠炊蛋」乙份	", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d622"), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/d522.jpg"), "青花驕麻辣鍋", "每桌贈美國牛培根乙份", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/d522/400x250.jpg"), "青花驕麻辣鍋", "每桌贈美國牛培根乙份", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d522"), null)
                                 ))
@@ -1217,15 +1217,15 @@ public class KitchenSinkController {
             case "merchant_installment": {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(createUri("/static/icon/store_33.jpg"),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/store_155/200x162.jpg"),
                                                         new URIAction("立即前往",
                                                                       URI.create("http://www.rakuten.com.tw/"), null)
                                 ),
-                                new ImageCarouselColumn(createUri("/static/icon/store_35.jpg"),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/store_35/200x162.jpg"),
                                                         new URIAction("立即前往",
                                                                       URI.create("https://www.momoshop.com.tw/"), null)
                                 ),
-                                new ImageCarouselColumn(createUri("/static/icon/store_140.jpg"),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/store_140/200x162.jpg"),
                                                         new URIAction("立即前往",
                                                                       URI.create("https://shopee.tw/"), null)
                                 )
