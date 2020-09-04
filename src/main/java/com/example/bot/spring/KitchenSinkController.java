@@ -1299,19 +1299,61 @@ public class KitchenSinkController {
                 break;
             }
             case "merchant": {
+                URL url3 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master/merchant/recommendation");
+                HttpsURLConnection conn3 = (HttpsURLConnection) url3.openConnection();
+                conn3.setRequestMethod("GET");
+                conn3.setRequestProperty("Content-Type", "application/json");
+                conn3.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+                conn3.setDoOutput(true);
+                conn3.setDoInput(true);
+                int responseCode3 = conn3.getResponseCode();
+                String line3;
+                String responseData3 = "";
+                BufferedReader reader3 = new BufferedReader(new InputStreamReader(conn3.getInputStream()));
+                while ((line3 = reader3.readLine()) != null) {
+                    responseData3 += line3;
+                }
+                JsonArray list3 = Json.createReader(new StringReader(responseData3)).readArray();
+                String meCode1=list3.getJsonObject(0).getString("campaignCode");
+                String meName1=list3.getJsonObject(0).getString("campaignName");
+                if(meName1.length()>=60){
+                    meName1=meName1.substring(0,60);
+                }
+                String meDesc1=list3.getJsonObject(0).getString("campaignDescription");
+                if(meDesc1.length()>=60){
+                    meDesc1=meDesc1.substring(0,60);
+                }
+                String meCode2=list3.getJsonObject(1).getString("campaignCode");
+                String meName2=list3.getJsonObject(1).getString("campaignName");
+                if(meName2.length()>=60){
+                    meName2=meName2.substring(0,60);
+                }
+                String meDesc2=list3.getJsonObject(1).getString("campaignDescription");
+                if(meDesc2.length()>=60){
+                    meDesc2=meDesc2.substring(0,60);
+                }
+                String meCode3=list3.getJsonObject(2).getString("campaignCode");
+                String meName3=list3.getJsonObject(2).getString("campaignName");
+                if(meName3.length()>=60){
+                    meName3=meName3.substring(0,60);
+                }
+                String meDesc3=list3.getJsonObject(2).getString("campaignDescription");
+                if(meDesc3.length()>=60){
+                    meDesc3=meDesc3.substring(0,60);
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/d621/400x250.jpg"), "沐越Mu Viet越式料理", "每桌贈「青木瓜雞絲沙拉」乙份", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode1+"/400x250.jpg"), meName1, meDesc1, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d621"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code="+meCode1), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/d622/400x250.jpg"), "享鴨", "每桌贈「干貝絲翡翠炊蛋」乙份	", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode2+"/400x250.jpg"), meName2, meDesc2, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d622"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code="+meCode2), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/d522/400x250.jpg"), "青花驕麻辣鍋", "每桌贈美國牛培根乙份", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode3+"/400x250.jpg"), meName3, meDesc3, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code=d522"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code="+meCode3), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("國內特店", carouselTemplate);
