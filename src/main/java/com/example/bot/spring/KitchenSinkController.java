@@ -1172,13 +1172,31 @@ while ((line = reader.readLine()) != null) {
 JsonArray list = Json.createReader(new StringReader(responseData)).readArray();
 String twCode1=list.getJsonObject(0).getString("campaignCode");
 String twName1=list.getJsonObject(0).getString("campaignName");
+                if(twName1.length()>=60){
+                    twName1=twName1.substring(0,60);
+                }
 String twDesc1=list.getJsonObject(0).getString("campaignDescription");
+                if(twDesc1.length()>=60){
+                    twDesc1=twDesc1.substring(0,60);
+                }
 String twCode2=list.getJsonObject(1).getString("campaignCode");
 String twName2=list.getJsonObject(1).getString("campaignName");
+                if(twName2.length()>=60){
+                    twName2=twName2.substring(0,60);
+                }
 String twDesc2=list.getJsonObject(1).getString("campaignDescription");
+                 if(twDesc2.length()>=60){
+                    twDesc2=twDesc2.substring(0,60);
+                 }
 String twCode3=list.getJsonObject(2).getString("campaignCode");
 String twName3=list.getJsonObject(2).getString("campaignName");
+                if(twName3.length()>=60){
+                    twName3=twName3.substring(0,60);
+                }
 String twDesc3=list.getJsonObject(2).getString("campaignDescription");
+                 if(twDesc3.length()>=60){
+                    twDesc3=twDesc3.substring(0,60);
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode1+"/banner/710x310.jpg"), twName1, twDesc1, Arrays.asList(
