@@ -18,6 +18,8 @@ package com.example.bot.spring;
 
 import static java.util.Collections.singletonList;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UncheckedIOException;
@@ -41,7 +43,10 @@ import java.security.SecureRandom;
 import javax.crypto.Cipher;  
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.net.ssl.HttpsURLConnection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -1135,19 +1140,43 @@ public class KitchenSinkController {
                 break;
             }
             case "campaign": {
+                URL url = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master");
+HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+conn.setRequestMethod("GET");
+conn.setRequestProperty("Content-Type", "application/json");
+conn.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+conn.setDoOutput(true);
+conn.setDoInput(true);
+int responseCode = conn.getResponseCode();
+String line;
+String responseData = "";
+BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+while ((line = reader.readLine()) != null) {
+    responseData += line;
+}
+JsonArray list = Json.createReader(new StringReader(responseData)).readArray();
+twCode1=list.getJsonObject(0).getString("campaignCode");
+twName1=list.getJsonObject(0).getString("campaignName");
+twDesc1=list.getJsonObject(0).getString("campaignDescription");
+twCode2=list.getJsonObject(1).getString("campaignCode");
+twName2=list.getJsonObject(1).getString("campaignName");
+twDesc2=list.getJsonObject(1).getString("campaignDescription");
+twCode3=list.getJsonObject(2).getString("campaignCode");
+twName3=list.getJsonObject(2).getString("campaignName");
+twDesc3=list.getJsonObject(2).getString("campaignDescription");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1122/banner/710x310.jpg"), "【66金夏趴】樂天點數最高11%！", "於活動期間內，在樂天市場使用樂天信用卡購物累積滿額並登錄活動，即可獲得加碼11%樂天點數回饋！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode1+"/banner/710x310.jpg"), twName1, twDesc1, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1122"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode1), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1075/banner/710x310.jpg"), "【E 起同樂 一起饗樂】", "指定類別消費享最高10%刷卡金回饋", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode2+"/banner/710x310.jpg"), twName2, twDesc2, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1075"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode2), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1124/banner/710x310.jpg"), "【蝦皮新手大禮包】領券即享首筆五折起 >>限量開搶中", "卡友於活動期間內首次註冊蝦皮會員，首購時輸入專屬優惠碼並使用樂天卡結帳，即享滿額現折NT$200！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode3+"/banner/710x310.jpg"), twName3, twDesc3, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode3), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("最新優惠", carouselTemplate);
