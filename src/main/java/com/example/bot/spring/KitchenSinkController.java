@@ -1177,15 +1177,15 @@ public class KitchenSinkController {
             case "japan": {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(createUri("/static/icon/1059.jpg"), "逛日本MITSUI OUTLET PARK名牌輕鬆購！送購物優惠券及精美小禮!", "出示兌換券及台灣樂天信用卡,即可換取精美小禮及合作店家所提供的優惠券。", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1059/banner/710x310.jpg"), "逛日本MITSUI OUTLET PARK名牌輕鬆購！送購物優惠券及精美小禮!", "出示兌換券及台灣樂天信用卡,即可換取精美小禮及合作店家所提供的優惠券。", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1059"), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/1087.jpg"), "BicCamera集團購物享最高免稅10%+7%OFF", "出示優惠券並刷台灣樂天信用卡，得享最高免稅10%+7%OFF。", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1087/banner/710x310.jpg"), "BicCamera集團購物享最高免稅10%+7%OFF", "出示優惠券並刷台灣樂天信用卡，得享最高免稅10%+7%OFF。", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1087"), null)
                                 )),
-                                new CarouselColumn(createUri("/static/icon/972.jpg"), "松本清免稅門市最高享免稅10%+7％OFF!", "實體免稅門市購物，消費滿額享免稅10%+最高7%OFF。", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/972/banner/710x310.jpg"), "松本清免稅門市最高享免稅10%+7％OFF!", "實體免稅門市購物，消費滿額享免稅10%+最高7%OFF。", Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=972"), null)
                                 ))
