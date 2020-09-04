@@ -1266,7 +1266,7 @@ public class KitchenSinkController {
                         }
                     }
                 }
-                url1 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/latest-merchant");
+                url1 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master/latest-merchant");
                 conn1 = (HttpsURLConnection) url1.openConnection();
                 conn1.setRequestMethod("GET");
                 conn1.setRequestProperty("Content-Type", "application/json");
