@@ -1157,7 +1157,6 @@ public class KitchenSinkController {
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
                                 ))
                         ));
-                        ));
                 TemplateMessage templateMessage = new TemplateMessage("最新優惠", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
