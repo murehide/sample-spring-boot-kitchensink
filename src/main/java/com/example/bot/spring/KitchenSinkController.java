@@ -1241,39 +1241,41 @@ public class KitchenSinkController {
                 String inCode3 = "";
                 String inName3 = "";
                 String inDesc3 = "";
+                int count=0;
                 for (int i=0;i<list1.size();i++) {
-                    if(list1.getJsonObject(i).getString("preparationFlag")!=null && "5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                        inCode1=list1.getJsonObject(i).getString("campaignCode");
-                        inName1=list1.getJsonObject(i).getString("campaignName");
-                        if(inName1.length()>=60){
-                            inName1=inName1.substring(0,60);
+                    if("c".equals(list1.getJsonObject(i).getString("genreType"))) {
+                        if(count==0) {
+                            inCode1=list1.getJsonObject(i).getString("campaignCode");
+                            inName1=list1.getJsonObject(i).getString("campaignName");
+                            if(inName1.length()>=60){
+                                inName1=inName1.substring(0,60);
+                            }
+                            inDesc1=list1.getJsonObject(i).getString("campaignDescription");
+                            if(inDesc1.length()>=60){
+                                inDesc1=inDesc1.substring(0,60);
+                            }
+                        } else if(count==1) {
+                            inCode2=list1.getJsonObject(i).getString("campaignCode");
+                            inName2=list1.getJsonObject(i).getString("campaignName");
+                            if(inName2.length()>=60){
+                                inName2=inName2.substring(0,60);
+                            }
+                            inDesc2=list1.getJsonObject(i).getString("campaignDescription");
+                            if(inDesc2.length()>=60){
+                                inDesc2=inDesc2.substring(0,60);
+                            }
+                        } else if(count==2) {
+                            inCode3=list1.getJsonObject(i).getString("campaignCode");
+                            inName3=list1.getJsonObject(i).getString("campaignName");
+                            if(inName3.length()>=60){
+                                inName3=inName3.substring(0,60);
+                            }
+                            inDesc3=list1.getJsonObject(i).getString("campaignDescription");
+                            if(inDesc3.length()>=60){
+                                inDesc3=inDesc3.substring(0,60);
+                            }
                         }
-                        inDesc1=list1.getJsonObject(i).getString("campaignDescription");
-                        if(inDesc1.length()>=60){
-                            inDesc1=inDesc1.substring(0,60);
-                        }
-                    }
-                    if(list1.getJsonObject(i).getString("preparationFlag")!=null && "27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                        inCode2=list1.getJsonObject(i).getString("campaignCode");
-                        inName2=list1.getJsonObject(i).getString("campaignName");
-                        if(inName2.length()>=60){
-                            inName2=inName2.substring(0,60);
-                        }
-                        inDesc2=list1.getJsonObject(i).getString("campaignDescription");
-                        if(inDesc2.length()>=60){
-                            inDesc2=inDesc2.substring(0,60);
-                        }
-                    }
-                    if(list1.getJsonObject(i).getString("preparationFlag")!=null && "12".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                        inCode3=list1.getJsonObject(i).getString("campaignCode");
-                        inName3=list1.getJsonObject(i).getString("campaignName");
-                        if(inName3.length()>=60){
-                            inName3=inName3.substring(0,60);
-                        }
-                        inDesc3=list1.getJsonObject(i).getString("campaignDescription");
-                        if(inDesc3.length()>=60){
-                            inDesc3=inDesc3.substring(0,60);
-                        }
+                        count++;
                     }
                 }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
