@@ -1155,19 +1155,43 @@ public class KitchenSinkController {
                 break;
             }
             case "campaign": {
+                URL url = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master");
+HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+conn.setRequestMethod("GET");
+conn.setRequestProperty("Content-Type", "application/json");
+conn.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+conn.setDoOutput(true);
+conn.setDoInput(true);
+int responseCode = conn.getResponseCode();
+String line;
+String responseData = "";
+BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+while ((line = reader.readLine()) != null) {
+    responseData += line;
+}
+JsonArray list = Json.createReader(new StringReader(responseData)).readArray();
+String twCode1=list.getJsonObject(0).getString("campaignCode");
+String twName1=list.getJsonObject(0).getString("campaignName");
+String twDesc1=list.getJsonObject(0).getString("campaignDescription");
+String twCode2=list.getJsonObject(1).getString("campaignCode");
+String twName2=list.getJsonObject(1).getString("campaignName");
+String twDesc2=list.getJsonObject(1).getString("campaignDescription");
+String twCode3=list.getJsonObject(2).getString("campaignCode");
+String twName3=list.getJsonObject(2).getString("campaignName");
+String twDesc3=list.getJsonObject(2).getString("campaignDescription");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1122/banner/710x310.jpg"), "【66金夏趴】樂天點數最高11%！", "於活動期間內，在樂天市場使用樂天信用卡購物累積滿額並登錄活動，即可獲得加碼11%樂天點數回饋！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode1+"/banner/710x310.jpg"), twName1, twDesc1, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1122"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode1), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1075/banner/710x310.jpg"), "【E 起同樂 一起饗樂】", "指定類別消費享最高10%刷卡金回饋", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode2+"/banner/710x310.jpg"), twName2, twDesc2, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1075"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode2), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1124/banner/710x310.jpg"), "【蝦皮新手大禮包】領券即享首筆五折起 >>限量開搶中", "卡友於活動期間內首次註冊蝦皮會員，首購時輸入專屬優惠碼並使用樂天卡結帳，即享滿額現折NT$200！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode3+"/banner/710x310.jpg"), twName3, twDesc3, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1124"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode3), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("最新優惠", carouselTemplate);
