@@ -1242,7 +1242,7 @@ public class KitchenSinkController {
                 String inName3 = "";
                 String inDesc3 = "";
                 for (int i=0;i<list1.size();i++) {
-                    if("5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
+                    if(list1.getJsonObject(i).getString("preparationFlag")!=null && "5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
                         inCode1=list1.getJsonObject(i).getString("campaignCode");
                         inName1=list1.getJsonObject(i).getString("campaignName");
                         if(inName1.length()>=60){
@@ -1253,7 +1253,7 @@ public class KitchenSinkController {
                             inDesc1=inDesc1.substring(0,60);
                         }
                     }
-                    if("27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
+                    if(list1.getJsonObject(i).getString("preparationFlag")!=null && "27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
                         inCode2=list1.getJsonObject(i).getString("campaignCode");
                         inName2=list1.getJsonObject(i).getString("campaignName");
                         if(inName2.length()>=60){
@@ -1264,7 +1264,7 @@ public class KitchenSinkController {
                             inDesc2=inDesc2.substring(0,60);
                         }
                     }
-                    if("12".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
+                    if(list1.getJsonObject(i).getString("preparationFlag")!=null && "12".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
                         inCode3=list1.getJsonObject(i).getString("campaignCode");
                         inName3=list1.getJsonObject(i).getString("campaignName");
                         if(inName3.length()>=60){
