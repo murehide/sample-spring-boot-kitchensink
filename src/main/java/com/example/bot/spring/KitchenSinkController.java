@@ -1244,7 +1244,7 @@ public class KitchenSinkController {
                 for (int i=0;i<list1.size();i++) {
                     if("5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
                         inCode1=list1.getJsonObject(i).getString("campaignCode");
-                        inwName1=list1.getJsonObject(i).getString("campaignName");
+                        inName1=list1.getJsonObject(i).getString("campaignName");
                         if(inName1.length()>=60){
                             inName1=inName1.substring(0,60);
                         }
