@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UncheckedIOException;
 import java.net.URI;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
@@ -1155,15 +1156,15 @@ while ((line = reader.readLine()) != null) {
     responseData += line;
 }
 JsonArray list = Json.createReader(new StringReader(responseData)).readArray();
-twCode1=list.getJsonObject(0).getString("campaignCode");
-twName1=list.getJsonObject(0).getString("campaignName");
-twDesc1=list.getJsonObject(0).getString("campaignDescription");
-twCode2=list.getJsonObject(1).getString("campaignCode");
-twName2=list.getJsonObject(1).getString("campaignName");
-twDesc2=list.getJsonObject(1).getString("campaignDescription");
-twCode3=list.getJsonObject(2).getString("campaignCode");
-twName3=list.getJsonObject(2).getString("campaignName");
-twDesc3=list.getJsonObject(2).getString("campaignDescription");
+String twCode1=list.getJsonObject(0).getString("campaignCode");
+String twName1=list.getJsonObject(0).getString("campaignName");
+String twDesc1=list.getJsonObject(0).getString("campaignDescription");
+String twCode2=list.getJsonObject(1).getString("campaignCode");
+String twName2=list.getJsonObject(1).getString("campaignName");
+String twDesc2=list.getJsonObject(1).getString("campaignDescription");
+String twCode3=list.getJsonObject(2).getString("campaignCode");
+String twName3=list.getJsonObject(2).getString("campaignName");
+String twDesc3=list.getJsonObject(2).getString("campaignDescription");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode1+"/banner/710x310.jpg"), twName1, twDesc1, Arrays.asList(
