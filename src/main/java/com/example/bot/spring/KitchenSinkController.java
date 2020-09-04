@@ -1376,11 +1376,11 @@ public class KitchenSinkController {
                     responseData4 += line4;
                 }
                 JsonArray list4 = Json.createReader(new StringReader(responseData4)).readArray();
-                String miCode1=list4.getJsonObject(0).json.getString("merchantArea);
+                String miCode1=list4.getJsonObject(0).json.getString("merchantArea");
                 String miUrl1=list4.getJsonObject(0).json.getString("merchantUrl");
-                String miCode2=list4.getJsonObject(1).json.getString("merchantArea);
+                String miCode2=list4.getJsonObject(1).json.getString("merchantArea");
                 String miUrl2=list4.getJsonObject(1).json.getString("merchantUrl");
-                String miCode3=list4.getJsonObject(2).json.getString("merchantArea);
+                String miCode3=list4.getJsonObject(2).json.getString("merchantArea");
                 String miUrl3=list4.getJsonObject(2).json.getString("merchantUrl");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
