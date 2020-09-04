@@ -1361,19 +1361,40 @@ public class KitchenSinkController {
                 break;
             }
             case "merchant_installment": {
+                URL url4 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/merchant-installment");
+                HttpsURLConnection conn4 = (HttpsURLConnection) url4.openConnection();
+                conn4.setRequestMethod("GET");
+                conn4.setRequestProperty("Content-Type", "application/json");
+                conn4.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+                conn4.setDoOutput(true);
+                conn4.setDoInput(true);
+                int responseCode4 = conn4.getResponseCode();
+                String line4;
+                String responseData4 = "";
+                BufferedReader reader4 = new BufferedReader(new InputStreamReader(conn4.getInputStream()));
+                while ((line4 = reader4.readLine()) != null) {
+                    responseData4 += line4;
+                }
+                JsonArray list4 = Json.createReader(new StringReader(responseData4)).readArray();
+                String miCode1=list4.getJsonObject(0).json.getString("merchantArea);
+                String miUrl1=list4.getJsonObject(0).json.getString("merchantUrl");
+                String miCode2=list4.getJsonObject(1).json.getString("merchantArea);
+                String miUrl2=list4.getJsonObject(1).json.getString("merchantUrl");
+                String miCode3=list4.getJsonObject(2).json.getString("merchantArea);
+                String miUrl3=list4.getJsonObject(2).json.getString("merchantUrl");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/store_155/200x162.jpg"),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode1+"/200x162.jpg"),
                                                         new URIAction("立即前往",
-                                                                      URI.create("http://www.rakuten.com.tw/"), null)
+                                                                      URI.create(miUrl1), null)
                                 ),
-                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/store_35/200x162.jpg"),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode2+"/200x162.jpg"),
                                                         new URIAction("立即前往",
-                                                                      URI.create("https://www.momoshop.com.tw/"), null)
+                                                                      URI.create(miUrl2), null)
                                 ),
-                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/store_140/200x162.jpg"),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode3+"/200x162.jpg"),
                                                         new URIAction("立即前往",
-                                                                      URI.create("https://shopee.tw/"), null)
+                                                                      URI.create(miUrl3), null)
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("分期特約商家",
