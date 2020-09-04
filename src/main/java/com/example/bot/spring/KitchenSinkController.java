@@ -1232,36 +1232,45 @@ public class KitchenSinkController {
                     responseData1 += line1;
                 }
                 JsonArray list1 = Json.createReader(new StringReader(responseData1)).readArray();
+                String inCode1 = "";
+                String inwName1 = "";
+                String inDesc1 = "";
+                String inCode2 = "";
+                String inwName2 = "";
+                String inDesc2 = "";
+                String inCode3 = "";
+                String inwName3 = "";
+                String inDesc3 = "";
                 for (int i=0;i<list1.size();i++) {
                     if("5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                        String inCode1=list1.getJsonObject(i).getString("campaignCode");
-                        String inwName1=list1.getJsonObject(i).getString("campaignName");
+                        inCode1=list1.getJsonObject(i).getString("campaignCode");
+                        inwName1=list1.getJsonObject(i).getString("campaignName");
                         if(inName1.length()>=60){
                             inName1=inName1.substring(0,60);
                         }
-                        String inDesc1=list1.getJsonObject(i).getString("campaignDescription");
+                        inDesc1=list1.getJsonObject(i).getString("campaignDescription");
                         if(inDesc1.length()>=60){
                             inDesc1=inDesc1.substring(0,60);
                         }
                     }
                     if("27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                        String inCode2=list1.getJsonObject(i).getString("campaignCode");
-                        String inName2=list1.getJsonObject(i).getString("campaignName");
+                        inCode2=list1.getJsonObject(i).getString("campaignCode");
+                        inName2=list1.getJsonObject(i).getString("campaignName");
                         if(inName2.length()>=60){
                             inName2=inName2.substring(0,60);
                         }
-                        String inDesc2=list1.getJsonObject(i).getString("campaignDescription");
+                        inDesc2=list1.getJsonObject(i).getString("campaignDescription");
                         if(inDesc2.length()>=60){
                             inDesc2=inDesc2.substring(0,60);
                         }
                     }
                     if("12".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                        String inCode3=list1.getJsonObject(i).getString("campaignCode");
-                        String inName3=list1.getJsonObject(i).getString("campaignName");
+                        inCode3=list1.getJsonObject(i).getString("campaignCode");
+                        inName3=list1.getJsonObject(i).getString("campaignName");
                         if(inName3.length()>=60){
                             inName3=inName3.substring(0,60);
                         }
-                        String inDesc3=list1.getJsonObject(i).getString("campaignDescription");
+                        inDesc3=list1.getJsonObject(i).getString("campaignDescription");
                         if(inDesc3.length()>=60){
                             inDesc3=inDesc3.substring(0,60);
                         }
