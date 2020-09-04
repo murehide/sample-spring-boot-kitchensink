@@ -1233,13 +1233,13 @@ public class KitchenSinkController {
                 }
                 JsonArray list1 = Json.createReader(new StringReader(responseData1)).readArray();
                 String inCode1 = "";
-                String inwName1 = "";
+                String inName1 = "";
                 String inDesc1 = "";
                 String inCode2 = "";
-                String inwName2 = "";
+                String inName2 = "";
                 String inDesc2 = "";
                 String inCode3 = "";
-                String inwName3 = "";
+                String inName3 = "";
                 String inDesc3 = "";
                 for (int i=0;i<list1.size();i++) {
                     if("5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
