@@ -1156,44 +1156,44 @@ public class KitchenSinkController {
             }
             case "campaign": {
                 URL url = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master");
-HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
-conn.setRequestMethod("GET");
-conn.setRequestProperty("Content-Type", "application/json");
-conn.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
-conn.setDoOutput(true);
-conn.setDoInput(true);
-int responseCode = conn.getResponseCode();
-String line;
-String responseData = "";
-BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-while ((line = reader.readLine()) != null) {
-    responseData += line;
-}
-JsonArray list = Json.createReader(new StringReader(responseData)).readArray();
-String twCode1=list.getJsonObject(0).getString("campaignCode");
-String twName1=list.getJsonObject(0).getString("campaignName");
+                HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                conn.setRequestProperty("Content-Type", "application/json");
+                conn.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+                conn.setDoOutput(true);
+                conn.setDoInput(true);
+                int responseCode = conn.getResponseCode();
+                String line;
+                String responseData = "";
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseData += line;
+                }
+                JsonArray list = Json.createReader(new StringReader(responseData)).readArray();
+                String twCode1=list.getJsonObject(0).getString("campaignCode");
+                String twName1=list.getJsonObject(0).getString("campaignName");
                 if(twName1.length()>=60){
                     twName1=twName1.substring(0,60);
                 }
-String twDesc1=list.getJsonObject(0).getString("campaignDescription");
+                String twDesc1=list.getJsonObject(0).getString("campaignDescription");
                 if(twDesc1.length()>=60){
                     twDesc1=twDesc1.substring(0,60);
                 }
-String twCode2=list.getJsonObject(1).getString("campaignCode");
-String twName2=list.getJsonObject(1).getString("campaignName");
+                String twCode2=list.getJsonObject(1).getString("campaignCode");
+                String twName2=list.getJsonObject(1).getString("campaignName");
                 if(twName2.length()>=60){
                     twName2=twName2.substring(0,60);
                 }
-String twDesc2=list.getJsonObject(1).getString("campaignDescription");
+                String twDesc2=list.getJsonObject(1).getString("campaignDescription");
                  if(twDesc2.length()>=60){
                     twDesc2=twDesc2.substring(0,60);
                  }
-String twCode3=list.getJsonObject(2).getString("campaignCode");
-String twName3=list.getJsonObject(2).getString("campaignName");
+                String twCode3=list.getJsonObject(2).getString("campaignCode");
+                String twName3=list.getJsonObject(2).getString("campaignName");
                 if(twName3.length()>=60){
                     twName3=twName3.substring(0,60);
                 }
-String twDesc3=list.getJsonObject(2).getString("campaignDescription");
+                String twDesc3=list.getJsonObject(2).getString("campaignDescription");
                  if(twDesc3.length()>=60){
                     twDesc3=twDesc3.substring(0,60);
                 }
@@ -1237,19 +1237,61 @@ String twDesc3=list.getJsonObject(2).getString("campaignDescription");
                 break;
             }
             case "japan": {
+                URL url2 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master/japan-benefit/all");
+                HttpsURLConnection conn2 = (HttpsURLConnection) url2.openConnection();
+                conn2.setRequestMethod("GET");
+                conn2.setRequestProperty("Content-Type", "application/json");
+                conn2.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+                conn2.setDoOutput(true);
+                conn2.setDoInput(true);
+                int responseCode2 = conn2.getResponseCode();
+                String line2;
+                String responseData2 = "";
+                BufferedReader reader2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
+                while ((line2 = reader2.readLine()) != null) {
+                    responseData2 += line2;
+                }
+                JsonArray list2 = Json.createReader(new StringReader(responseData2)).readArray();
+                String jpCode1=list2.getJsonObject(0).getString("campaignCode");
+                String jpName1=list2.getJsonObject(0).getString("campaignName");
+                if(jpName1.length()>=60){
+                    jpName1=jpName1.substring(0,60);
+                }
+                String jpDesc1=list2.getJsonObject(0).getString("campaignDescription");
+                if(jpDesc1.length()>=60){
+                    jpDesc1=jpDesc1.substring(0,60);
+                }
+                String jpCode2=list2.getJsonObject(1).getString("campaignCode");
+                String jpName2=list2.getJsonObject(1).getString("campaignName");
+                if(jpName2.length()>=60){
+                    jpName2=jpName2.substring(0,60);
+                }
+                String jpDesc2=list2.getJsonObject(1).getString("campaignDescription");
+                if(jpDesc2.length()>=60){
+                    jpDesc2=jpDesc2.substring(0,60);
+                }
+                String jpCode3=list2.getJsonObject(2).getString("campaignCode");
+                String jpName3=list2.getJsonObject(2).getString("campaignName");
+                if(jpName3.length()>=60){
+                    jpName3=jpName3.substring(0,60);
+                }
+                String jpDesc3=list2.getJsonObject(2).getString("campaignDescription");
+                if(jpDesc3.length()>=60){
+                    jpDesc3=jpDesc3.substring(0,60);
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1059/banner/710x310.jpg"), "逛日本MITSUI OUTLET PARK名牌輕鬆購！送購物優惠券及精美小禮!", "出示兌換券及台灣樂天信用卡,即可換取精美小禮及合作店家所提供的優惠券。", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode1+"/banner/710x310.jpg"), jpName1, jpDesc1, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1059"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code="+jpCode1), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1087/banner/710x310.jpg"), "BicCamera集團購物享最高免稅10%+7%OFF", "出示優惠券並刷台灣樂天信用卡，得享最高免稅10%+7%OFF。", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode2+"/banner/710x310.jpg"), jpName2, jpDesc2, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=1087"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code="+jpCode2), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/972/banner/710x310.jpg"), "松本清免稅門市最高享免稅10%+7％OFF!", "實體免稅門市購物，消費滿額享免稅10%+最高7%OFF。", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode3+"/banner/710x310.jpg"), jpName3, jpDesc3, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=972"), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code="+jpCode3), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("日本優惠", carouselTemplate);
