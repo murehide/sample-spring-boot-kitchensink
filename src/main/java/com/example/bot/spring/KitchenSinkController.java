@@ -1217,19 +1217,69 @@ public class KitchenSinkController {
                 break;
             }
             case "installment": {
+                URL url1 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master");
+                HttpsURLConnection conn1 = (HttpsURLConnection) url1.openConnection();
+                conn1.setRequestMethod("GET");
+                conn1.setRequestProperty("Content-Type", "application/json");
+                conn1.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
+                conn1.setDoOutput(true);
+                conn1.setDoInput(true);
+                int responseCode1 = conn1.getResponseCode();
+                String line1;
+                String responseData1 = "";
+                BufferedReader reader1 = new BufferedReader(new InputStreamReader(conn1.getInputStream()));
+                while ((line1 = reader1.readLine()) != null) {
+                    responseData1 += line1;
+                }
+                JsonArray list1 = Json.createReader(new StringReader(responseData1)).readArray();
+                for (int i=0;i<list1.size();i++) {
+                    if("5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
+                        String inCode1=list1.getJsonObject(i).getString("campaignCode");
+                        String inwName1=list1.getJsonObject(i).getString("campaignName");
+                        if(inName1.length()>=60){
+                            inName1=inName1.substring(0,60);
+                        }
+                        String inDesc1=list1.getJsonObject(i).getString("campaignDescription");
+                        if(inDesc1.length()>=60){
+                            inDesc1=inDesc1.substring(0,60);
+                        }
+                    }
+                    if("27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
+                        String inCode2=list1.getJsonObject(i).getString("campaignCode");
+                        String inName2=list1.getJsonObject(i).getString("campaignName");
+                        if(inName2.length()>=60){
+                            inName2=inName2.substring(0,60);
+                        }
+                        String inDesc2=list1.getJsonObject(i).getString("campaignDescription");
+                        if(inDesc2.length()>=60){
+                            inDesc2=inDesc2.substring(0,60);
+                        }
+                    }
+                    if("12".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
+                        String inCode3=list1.getJsonObject(i).getString("campaignCode");
+                        String inName3=list1.getJsonObject(i).getString("campaignName");
+                        if(inName3.length()>=60){
+                            inName3=inName3.substring(0,60);
+                        }
+                        String inDesc3=list1.getJsonObject(i).getString("campaignDescription");
+                        if(inDesc3.length()>=60){
+                            inDesc3=inDesc3.substring(0,60);
+                        }
+                    }
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1123/banner/710x310.jpg"), "【抽Dyson】夏天到了！抽Dyson空氣清淨機，再享5%回饋", "申辦單筆消費分期6期以上，享5%刷卡金回饋，每戶最高可回饋1,500元刷卡金，再抽Dyson空氣清淨機！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode1+"/banner/710x310.jpg"), inName1, inDesc1, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1123&uid="+encrytStr), null)
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode1+"&uid="+encrytStr), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1125/banner/710x310.jpg"), "【500元回饋】分期一筆就享驚人回饋！", "活動期間內只要成功自動分期一筆且登錄就享500元刷卡金回饋！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode2+"/banner/710x310.jpg"), inName2, inDesc2, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1125&uid="+encrytStr), null)
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode2+"&uid="+encrytStr), null)
                                 )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/1126/banner/710x310.jpg"), "【樂天就甘心】申辦帳單分期請您吃免費霜淇淋再折100！", "活動期間內線上申辦帳單分期成功並登錄，享刷卡金NT100元回饋、再送全家Fami原味霜淇淋一支！", Arrays.asList(
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode3+"/banner/710x310.jpg"), inName3, inDesc3, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code=1126&uid="+encrytStr), null)
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode3+"&uid="+encrytStr), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("分期活動", carouselTemplate);
