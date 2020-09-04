@@ -17,6 +17,8 @@ dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.glassfish:javax.json:1.1.4'
+	implementation 'org.apache.httpcomponents:httpcore:4.3.3'
+	implementation 'org.apache.httpcomponents:httpclient:4.3.6'
 	// LINE SDK
 	implementation 'com.linecorp.bot:line-bot-spring-boot:3.5.0'
 	// project lombok
