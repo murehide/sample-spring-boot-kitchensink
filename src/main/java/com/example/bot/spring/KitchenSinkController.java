@@ -1241,10 +1241,9 @@ public class KitchenSinkController {
                 String inCode3 = "";
                 String inName3 = "";
                 String inDesc3 = "";
-                int count=0;
                 for (int i=0;i<list1.size();i++) {
-                    if(list1.getJsonObject(i)!=null && "c".equals(list1.getJsonObject(i).getString("genreType"))) {
-                        if(count==0) {
+                    if(!"0".equals(list1.getJsonObject(i).getString("choiceSeq"))) {
+                        if("5".equals(list1.getJsonObject(i).getString("preparationFlag")) {
                             inCode1=list1.getJsonObject(i).getString("campaignCode");
                             inName1=list1.getJsonObject(i).getString("campaignName");
                             if(inName1.length()>=60){
@@ -1254,7 +1253,7 @@ public class KitchenSinkController {
                             if(inDesc1.length()>=60){
                                 inDesc1=inDesc1.substring(0,60);
                             }
-                        } else if(count==1) {
+                        } else if("27".equals(list1.getJsonObject(i).getString("preparationFlag")) {
                             inCode2=list1.getJsonObject(i).getString("campaignCode");
                             inName2=list1.getJsonObject(i).getString("campaignName");
                             if(inName2.length()>=60){
@@ -1264,19 +1263,7 @@ public class KitchenSinkController {
                             if(inDesc2.length()>=60){
                                 inDesc2=inDesc2.substring(0,60);
                             }
-                        } else if(count==2) {
-                            inCode3=list1.getJsonObject(i).getString("campaignCode");
-                            inName3=list1.getJsonObject(i).getString("campaignName");
-                            if(inName3.length()>=60){
-                                inName3=inName3.substring(0,60);
-                            }
-                            inDesc3=list1.getJsonObject(i).getString("campaignDescription");
-                            if(inDesc3.length()>=60){
-                                inDesc3=inDesc3.substring(0,60);
-                            }
-                            break;
                         }
-                        count++;
                     }
                 }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
@@ -1288,10 +1275,6 @@ public class KitchenSinkController {
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode2+"/banner/710x310.jpg"), inName2, inDesc2, Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode2+"&uid="+encrytStr), null)
-                                )),
-                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode3+"/banner/710x310.jpg"), inName3, inDesc3, Arrays.asList(
-                                        new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode3+"&uid="+encrytStr), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("分期活動", carouselTemplate);
