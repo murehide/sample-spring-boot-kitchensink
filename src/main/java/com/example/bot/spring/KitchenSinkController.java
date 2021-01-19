@@ -1315,15 +1315,15 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode1+"/banner/710x310.jpg"), inName1, inDesc1, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode1+"&uid="+encrytStr), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+inCode1), null)
                                 )),
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode2+"/banner/710x310.jpg"), inName2, inDesc2, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode2+"&uid="+encrytStr), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+inCode2), null)
                                 )),
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode3+"/banner/710x310.jpg"), inName3, inDesc3, Arrays.asList(
                                         new URIAction("立即前往",
-                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode3+"&uid="+encrytStr), null)
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+inCode3), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("分期活動", carouselTemplate);
@@ -1666,10 +1666,10 @@ public class KitchenSinkController {
                                                   "campaign"),
                                 new MessageAction("分期活動",
                                                   "installment"),
-                                new MessageAction("日本優惠",
-                                                  "japan"),
                                 new MessageAction("國內特店",
-                                                  "merchant")
+                                                  "merchant"),
+                                new MessageAction("帳務查詢",
+                                                  "bill")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("卡友優惠", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
@@ -1717,6 +1717,18 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "bill": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "進入帳務查詢?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/members/statement/billed/index.xhtml?uid="+encrytStr), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("帳務查詢", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }    
+                uid="+encrytStr
             case "resend": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "重寄申請書?",
