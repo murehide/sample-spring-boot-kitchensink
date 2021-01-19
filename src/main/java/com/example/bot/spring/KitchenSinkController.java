@@ -1269,7 +1269,7 @@ public class KitchenSinkController {
                 String inDesc3 = "";
                 int count = 1;
                 for (int i=0;i<list1.size();i++) {
-                    if("5".equals(list1.getJsonObject(i).getString("preparationFlag")) || "9".equals(list1.getJsonObject(i).getString("preparationFlag") || "27".equals(list1.getJsonObject(i).getString("preparationFlag")) {
+                    if("5".equals(list1.getJsonObject(i).getString("preparationFlag")) || "9".equals(list1.getJsonObject(i).getString("preparationFlag")) || "27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
                         switch(count) {
                             case 1:
                                 inCode1=list1.getJsonObject(i).getString("campaignCode");
