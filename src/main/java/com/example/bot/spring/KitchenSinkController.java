@@ -1727,8 +1727,7 @@ public class KitchenSinkController {
                 TemplateMessage templateMessage = new TemplateMessage("帳務查詢", confirmTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
-            }    
-                uid="+encrytStr
+            }
             case "resend": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "重寄申請書?",
