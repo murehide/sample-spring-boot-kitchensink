@@ -1269,8 +1269,7 @@ public class KitchenSinkController {
                 String inDesc3 = "";
                 int count = 1;
                 for (int i=0;i<list1.size();i++) {
-                    if(!list1.getJsonObject(i).isNull("preparationFlag") &&
-                        ("5".equals(list1.getJsonObject(i).getString("preparationFlag")) || "9".equals(list1.getJsonObject(i).getString("preparationFlag")) || "27".equals(list1.getJsonObject(i).getString("preparationFlag")))) {
+                    if(list1.getJsonObject(i).getString("campaignDescription").contains("分期")) {
                         switch(count) {
                             case 1:
                                 inCode1=list1.getJsonObject(i).getString("campaignCode");
@@ -1308,6 +1307,18 @@ public class KitchenSinkController {
                                 }
                                 count++;
                                 break;
+                            case 4:
+                                inCode4=list1.getJsonObject(i).getString("campaignCode");
+                                inName4=list1.getJsonObject(i).getString("campaignName");
+                                if(inName4.length()>=60){
+                                    inName4=inName4.substring(0,60);
+                                }
+                                inDesc4=list1.getJsonObject(i).getString("campaignDescription");
+                                if(inDesc4.length()>=60){
+                                    inDesc4=inDesc4.substring(0,60);
+                                }
+                                count++;
+                                break;
                         }
                         
                     }
@@ -1325,6 +1336,10 @@ public class KitchenSinkController {
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode3+"/banner/710x310.jpg"), inName3, inDesc3, Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode3+"&uid="+encrytStr), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+inCode4+"/banner/710x310.jpg"), inName4, inDesc4, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/members/campaign/cpn.xhtml?code="+inCode4+"&uid="+encrytStr), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("分期活動", carouselTemplate);
