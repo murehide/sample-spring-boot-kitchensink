@@ -1267,6 +1267,9 @@ public class KitchenSinkController {
                 String inCode3 = "";
                 String inName3 = "";
                 String inDesc3 = "";
+                String inCode4 = "";
+                String inName4 = "";
+                String inDesc4 = "";
                 int count = 1;
                 for (int i=0;i<list1.size();i++) {
                     if(list1.getJsonObject(i).getString("campaignDescription").contains("分期")) {
