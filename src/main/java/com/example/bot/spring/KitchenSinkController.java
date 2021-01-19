@@ -1284,24 +1284,24 @@ public class KitchenSinkController {
                                 count++;
                                 break;
                             case 2:
-                                inCode2=list2.getJsonObject(i).getString("campaignCode");
-                                inName2=list2.getJsonObject(i).getString("campaignName");
+                                inCode2=list1.getJsonObject(i).getString("campaignCode");
+                                inName2=list1.getJsonObject(i).getString("campaignName");
                                 if(inName2.length()>=60){
                                     inName2=inName2.substring(0,60);
                                 }
-                                inDesc2=list2.getJsonObject(i).getString("campaignDescription");
+                                inDesc2=list1.getJsonObject(i).getString("campaignDescription");
                                 if(inDesc2.length()>=60){
                                     inDesc2=inDesc2.substring(0,60);
                                 }
                                 count++;
                                 break;
                             case 3:
-                                inCode3=list3.getJsonObject(i).getString("campaignCode");
-                                inName3=list3.getJsonObject(i).getString("campaignName");
+                                inCode3=list1.getJsonObject(i).getString("campaignCode");
+                                inName3=list1.getJsonObject(i).getString("campaignName");
                                 if(inName3.length()>=60){
                                     inName3=inName3.substring(0,60);
                                 }
-                                inDesc3=list3.getJsonObject(i).getString("campaignDescription");
+                                inDesc3=list1.getJsonObject(i).getString("campaignDescription");
                                 if(inDesc3.length()>=60){
                                     inDesc3=inDesc3.substring(0,60);
                                 }
