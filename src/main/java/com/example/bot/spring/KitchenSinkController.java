@@ -1197,6 +1197,24 @@ public class KitchenSinkController {
                  if(twDesc3.length()>=60){
                     twDesc3=twDesc3.substring(0,60);
                 }
+                String twCode4=list.getJsonObject(3).getString("campaignCode");
+                String twName4=list.getJsonObject(3).getString("campaignName");
+                if(twName4.length()>=60){
+                    twName4=twName4.substring(0,60);
+                }
+                String twDesc4=list.getJsonObject(3).getString("campaignDescription");
+                 if(twDesc4.length()>=60){
+                    twDesc4=twDesc4.substring(0,60);
+                }
+                String twCode5=list.getJsonObject(4).getString("campaignCode");
+                String twName5=list.getJsonObject(4).getString("campaignName");
+                if(twName5.length()>=60){
+                    twName5=twName5.substring(0,60);
+                }
+                String twDesc5=list.getJsonObject(4).getString("campaignDescription");
+                 if(twDesc5.length()>=60){
+                    twDesc5=twDesc5.substring(0,60);
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode1+"/banner/710x310.jpg"), twName1, twDesc1, Arrays.asList(
@@ -1210,6 +1228,14 @@ public class KitchenSinkController {
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode3+"/banner/710x310.jpg"), twName3, twDesc3, Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode3), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode4+"/banner/710x310.jpg"), twName4, twDesc4, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode4), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+twCode5+"/banner/710x310.jpg"), twName5, twDesc5, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code="+twCode5), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("最新優惠", carouselTemplate);
@@ -1241,53 +1267,49 @@ public class KitchenSinkController {
                 String inCode3 = "";
                 String inName3 = "";
                 String inDesc3 = "";
+                int count = 1;
                 for (int i=0;i<list1.size();i++) {
-                    if(!"0".equals(list1.getJsonObject(i).getString("choiceSeq"))) {
-                        if("5".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                            inCode1=list1.getJsonObject(i).getString("campaignCode");
-                            inName1=list1.getJsonObject(i).getString("campaignName");
-                            if(inName1.length()>=60){
-                                inName1=inName1.substring(0,60);
-                            }
-                            inDesc1=list1.getJsonObject(i).getString("campaignDescription");
-                            if(inDesc1.length()>=60){
-                                inDesc1=inDesc1.substring(0,60);
-                            }
-                        } else if("27".equals(list1.getJsonObject(i).getString("preparationFlag"))) {
-                            inCode2=list1.getJsonObject(i).getString("campaignCode");
-                            inName2=list1.getJsonObject(i).getString("campaignName");
-                            if(inName2.length()>=60){
-                                inName2=inName2.substring(0,60);
-                            }
-                            inDesc2=list1.getJsonObject(i).getString("campaignDescription");
-                            if(inDesc2.length()>=60){
-                                inDesc2=inDesc2.substring(0,60);
-                            }
+                    if("5".equals(list1.getJsonObject(i).getString("preparationFlag")) || "9".equals(list1.getJsonObject(i).getString("preparationFlag") || "27".equals(list1.getJsonObject(i).getString("preparationFlag")) {
+                        switch(count) {
+                            case 1:
+                                inCode1=list1.getJsonObject(i).getString("campaignCode");
+                                inName1=list1.getJsonObject(i).getString("campaignName");
+                                if(inName1.length()>=60){
+                                    inName1=inName1.substring(0,60);
+                                }
+                                inDesc1=list1.getJsonObject(i).getString("campaignDescription");
+                                if(inDesc1.length()>=60){
+                                    inDesc1=inDesc1.substring(0,60);
+                                }
+                                count++;
+                                break;
+                            case 2:
+                                inCode2=list2.getJsonObject(i).getString("campaignCode");
+                                inName2=list2.getJsonObject(i).getString("campaignName");
+                                if(inName2.length()>=60){
+                                    inName2=inName2.substring(0,60);
+                                }
+                                inDesc2=list2.getJsonObject(i).getString("campaignDescription");
+                                if(inDesc2.length()>=60){
+                                    inDesc2=inDesc2.substring(0,60);
+                                }
+                                count++;
+                                break;
+                            case 3:
+                                inCode3=list3.getJsonObject(i).getString("campaignCode");
+                                inName3=list3.getJsonObject(i).getString("campaignName");
+                                if(inName3.length()>=60){
+                                    inName3=inName3.substring(0,60);
+                                }
+                                inDesc3=list3.getJsonObject(i).getString("campaignDescription");
+                                if(inDesc3.length()>=60){
+                                    inDesc3=inDesc3.substring(0,60);
+                                }
+                                count++;
+                                break;
                         }
+                        
                     }
-                }
-                url1 = new URL("https://card.rakuten.com.tw/card-taiwan-app/rest/campaign-master/latest-merchant");
-                conn1 = (HttpsURLConnection) url1.openConnection();
-                conn1.setRequestMethod("GET");
-                conn1.setRequestProperty("Content-Type", "application/json");
-                conn1.setRequestProperty("Authorization", "Basic YXBwOnJha3V0ZW5jYXJk");
-                conn1.setDoOutput(true);
-                conn1.setDoInput(true);
-                responseCode1 = conn1.getResponseCode();
-                responseData1 = "";
-                reader1 = new BufferedReader(new InputStreamReader(conn1.getInputStream()));
-                while ((line1 = reader1.readLine()) != null) {
-                    responseData1 += line1;
-                }
-                JsonObject jobject = Json.createReader(new StringReader(responseData1)).readObject();
-                inCode3=jobject.getString("campaignCode");
-                inName3=jobject.getString("campaignName");
-                if(inName3.length()>=60){
-                    inName3=inName3.substring(0,60);
-                }
-                inDesc3=jobject.getString("campaignDescription");
-                if(inDesc3.length()>=60){
-                    inDesc3=inDesc3.substring(0,60);
                 }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
@@ -1351,6 +1373,24 @@ public class KitchenSinkController {
                 if(jpDesc3.length()>=60){
                     jpDesc3=jpDesc3.substring(0,60);
                 }
+                String jpCode4=list2.getJsonObject(3).getString("campaignCode");
+                String jpName4=list2.getJsonObject(3).getString("campaignName");
+                if(jpName4.length()>=60){
+                    jpName4=jpName4.substring(0,60);
+                }
+                String jpDesc4=list2.getJsonObject(3).getString("campaignDescription");
+                if(jpDesc4.length()>=60){
+                    jpDesc4=jpDesc4.substring(0,60);
+                }
+                String jpCode5=list2.getJsonObject(4).getString("campaignCode");
+                String jpName5=list2.getJsonObject(4).getString("campaignName");
+                if(jpName5.length()>=60){
+                    jpName5=jpName5.substring(0,60);
+                }
+                String jpDesc5=list2.getJsonObject(4).getString("campaignDescription");
+                if(jpDesc5.length()>=60){
+                    jpDesc5=jpDesc5.substring(0,60);
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode1+"/banner/710x310.jpg"), jpName1, jpDesc1, Arrays.asList(
@@ -1364,6 +1404,14 @@ public class KitchenSinkController {
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode3+"/banner/710x310.jpg"), jpName3, jpDesc3, Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code="+jpCode3), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode4+"/banner/710x310.jpg"), jpName4, jpDesc4, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code="+jpCode4), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/campaign/"+jpCode5+"/banner/710x310.jpg"), jpName5, jpDesc5, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code="+jpCode5), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("日本優惠", carouselTemplate);
@@ -1413,6 +1461,24 @@ public class KitchenSinkController {
                 if(meDesc3.length()>=60){
                     meDesc3=meDesc3.substring(0,60);
                 }
+                String meCode4=list3.getJsonObject(3).getString("campaignCode");
+                String meName4=list3.getJsonObject(3).getString("campaignName");
+                if(meName4.length()>=60){
+                    meName4=meName4.substring(0,60);
+                }
+                String meDesc4=list3.getJsonObject(3).getString("campaignDescription");
+                if(meDesc4.length()>=60){
+                    meDesc4=meDesc4.substring(0,60);
+                }
+                String meCode5=list3.getJsonObject(4).getString("campaignCode");
+                String meName5=list3.getJsonObject(4).getString("campaignName");
+                if(meName5.length()>=60){
+                    meName5=meName5.substring(0,60);
+                }
+                String meDesc5=list3.getJsonObject(4).getString("campaignDescription");
+                if(meDesc5.length()>=60){
+                    meDesc5=meDesc5.substring(0,60);
+                }
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode1+"/400x250.jpg"), meName1, meDesc1, Arrays.asList(
@@ -1426,6 +1492,14 @@ public class KitchenSinkController {
                                 new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode3+"/400x250.jpg"), meName3, meDesc3, Arrays.asList(
                                         new URIAction("立即前往",
                                                       URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code="+meCode3), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode4+"/400x250.jpg"), meName4, meDesc4, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code="+meCode4), null)
+                                )),
+                                new CarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant/"+meCode5+"/400x250.jpg"), meName5, meDesc5, Arrays.asList(
+                                        new URIAction("立即前往",
+                                                      URI.create("https://card.rakuten.com.tw/corp/merchant/cpn.xhtml?code="+meCode5), null)
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("國內特店", carouselTemplate);
@@ -1454,6 +1528,10 @@ public class KitchenSinkController {
                 String miUrl2=list4.getJsonObject(1).getString("merchantUrl");
                 String miCode3=list4.getJsonObject(2).getString("merchantArea");
                 String miUrl3=list4.getJsonObject(2).getString("merchantUrl");
+                String miCode4=list4.getJsonObject(3).getString("merchantArea");
+                String miUrl4=list4.getJsonObject(3).getString("merchantUrl");
+                String miCode5=list4.getJsonObject(4).getString("merchantArea");
+                String miUrl5=list4.getJsonObject(4).getString("merchantUrl");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode1+"/200x162.jpg"),
@@ -1467,6 +1545,14 @@ public class KitchenSinkController {
                                 new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode3+"/200x162.jpg"),
                                                         new URIAction("立即前往",
                                                                       URI.create(miUrl3), null)
+                                ),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode4+"/200x162.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create(miUrl4), null)
+                                ),
+                                new ImageCarouselColumn(new URI("https://image.card.tw.r10s.com/images/corp/merchant_installment/"+miCode5+"/200x162.jpg"),
+                                                        new URIAction("立即前往",
+                                                                      URI.create(miUrl5), null)
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("分期特約商家",
