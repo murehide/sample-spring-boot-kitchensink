@@ -1507,7 +1507,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, ImagemapMessage
                         .builder()
                         .baseUrl(createUri("/static/imagemap_video"))
-                        .altText("日韓5天Wi-Fi吃到飽")
+                        .altText("租借wifi好easy")
                         .baseSize(new ImagemapBaseSize(722, 1040))
                         .video(
                                 ImagemapVideo.builder()
@@ -1518,14 +1518,14 @@ public class KitchenSinkController {
                                              .area(new ImagemapArea(40, 46, 952, 536))
                                              .externalLink(
                                                      new ImagemapExternalLink(
-                                                             URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=992"),
+                                                             URI.create("https://card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1246"),
                                                              "查看詳情")
                                              )
                                              .build()
                         )
                         .actions(singletonList(
                                 MessageImagemapAction.builder()
-                                                     .text("日韓5天Wi-Fi吃到飽")
+                                                     .text("租借wifi好easy")
                                                      .area(new ImagemapArea(260, 600, 450, 86))
                                                      .build()
                         ))
@@ -1544,8 +1544,8 @@ public class KitchenSinkController {
                                                   "corporate_card"),
                                 new MessageAction("分期特約商家",
                                                   "merchant_installment"),
-                                new MessageAction("日韓5天Wi-Fi吃到飽",
-                                                  "wifi")
+                                new MessageAction("指定網購加碼",
+                                                  "ecbonus")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("推廣", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
@@ -1558,14 +1558,54 @@ public class KitchenSinkController {
                         "小幫手",
                         "選單",
                         Arrays.asList(
-                                new MessageAction("帳號資訊",
-                                                  "profile"),
+                                new MessageAction("立即開卡",
+                                                  "activate"),
                                 new MessageAction("帳號綁定",
                                                   "bind"),
                                 new URIAction("聯絡客服", URI.create("tel:0225168518"), null),
                                 new URIAction("粉絲團", URI.create("https://www.facebook.com/twrakutencard/"), null)
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("小幫手", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "latest": {
+                URI imageUrl = createUri("/static/buttons/1040.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        imageUrl,
+                        "卡友優惠",
+                        "選單",
+                        Arrays.asList(
+                                new MessageAction("最新優惠",
+                                                  "campaign"),
+                                new MessageAction("分期活動",
+                                                  "installment"),
+                                new MessageAction("日本優惠",
+                                                  "japan"),
+                                new MessageAction("國內特店",
+                                                  "merchant")
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("卡友優惠", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "application": {
+                URI imageUrl = createUri("/static/buttons/1040.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        imageUrl,
+                        "辦卡相關",
+                        "選單",
+                        Arrays.asList(
+                                new MessageAction("重寄申請書",
+                                                  "resend"),
+                                new MessageAction("補上傳文件",
+                                                  "reupload"),
+                                new MessageAction("查詢進度",
+                                                  "status"),
+                                new MessageAction("推薦辦卡",
+                                                  "mgm")
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("辦卡相關", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -1610,6 +1650,39 @@ public class KitchenSinkController {
                         new MessageAction("否", "No")
                 );
                 TemplateMessage templateMessage = new TemplateMessage("文件補上傳", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "status": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "查詢進度?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/application/status.xhtml"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("查詢進度", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "mgm": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "推薦辦卡?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/application/mgm.xhtml"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("推薦辦卡", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "ecbonus": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "指定網購加碼?",
+                        new URIAction("是",
+                            URI.create("https://card.rakuten.com.tw/corp/ecbonus-list/"), null),
+                        new MessageAction("否", "No")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("指定網購加碼", confirmTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
