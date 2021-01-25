@@ -1784,6 +1784,7 @@ public class KitchenSinkController {
                 break;
             }
             case "more":
+                this.replyText(replyToken, "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：");
                 this.reply(replyToken, new CustomizedFlexMessageSupplier().get());
                 break;
             case "faq":
