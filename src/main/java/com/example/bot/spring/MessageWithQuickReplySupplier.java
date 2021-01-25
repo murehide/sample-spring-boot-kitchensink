@@ -79,7 +79,7 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
 
         return TextMessage
                 .builder()
-                .text("快捷功能")
+                .text("您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：")
                 .quickReply(quickReply)
                 .build();
     }
