@@ -21,6 +21,8 @@ import static java.util.Arrays.asList;
 import java.net.URI;
 import java.util.function.Supplier;
 
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
 import com.linecorp.bot.model.action.MessageAction;
 import com.linecorp.bot.model.action.URIAction;
 import com.linecorp.bot.model.message.FlexMessage;
@@ -68,19 +70,19 @@ public class CustomizedFlexMessageSupplier implements Supplier<FlexMessage> {
     private Box createBox() {
         final Image image1 =
                 Image.builder()
-                     .url(URI.create("https://image.card.tw.r10s.com/images/common/status.png"))
+                     .url(createUri("/static/icon/1.jpg"))
                      .aspectMode(ImageAspectMode.Cover)
                      .action(new MessageAction("查詢進度", "status"))
                      .build();
         final Image image2 =
                 Image.builder()
-                     .url(URI.create("https://image.card.tw.r10s.com/images/common/status.png"))
+                     .url(createUri("/static/icon/2.jpg"))
                      .aspectMode(ImageAspectMode.Cover)
                      .action(new MessageAction("文件上傳", "reupload"))
                      .build();
         final Image image3 =
                 Image.builder()
-                     .url(URI.create("https://image.card.tw.r10s.com/images/common/status.png"))
+                     .url(createUri("/static/icon/3.jpg"))
                      .aspectMode(ImageAspectMode.Cover)
                      .action(new MessageAction("立即開卡", "activate"))
                      .build();
@@ -94,19 +96,19 @@ public class CustomizedFlexMessageSupplier implements Supplier<FlexMessage> {
     private Box createBox2() {
         final Image image4 =
                 Image.builder()
-                     .url(URI.create("https://image.card.tw.r10s.com/images/common/status.png"))
+                     .url(createUri("/static/icon/4.jpg"))
                      .aspectMode(ImageAspectMode.Cover)
                      .action(new MessageAction("最新活動", "campaign"))
                      .build();
         final Image image5 =
                 Image.builder()
-                     .url(URI.create("https://image.card.tw.r10s.com/images/common/status.png"))
+                     .url(createUri("/static/icon/5.jpg"))
                      .aspectMode(ImageAspectMode.Cover)
                      .action(new MessageAction("24小時卡友專線", "faq"))
                      .build();
         final Image image6 =
                 Image.builder()
-                     .url(URI.create("https://image.card.tw.r10s.com/images/common/status.png"))
+                     .url(createUri("/static/icon/6.jpg"))
                      .aspectMode(ImageAspectMode.Cover)
                      .action(new MessageAction("行動APP", "app"))
                      .build();
@@ -115,5 +117,12 @@ public class CustomizedFlexMessageSupplier implements Supplier<FlexMessage> {
                   .layout(FlexLayout.HORIZONTAL)
                   .contents(asList(image4, image5, image6))
                   .build();
+    }
+
+    private static URI createUri(String path) {
+        return ServletUriComponentsBuilder.fromCurrentContextPath()
+                                          .scheme("https")
+                                          .path(path).build()
+                                          .toUri();
     }
 }
