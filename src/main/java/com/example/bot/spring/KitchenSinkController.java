@@ -1783,7 +1783,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：":
+            case "more":
                 this.reply(replyToken, new MessageWithQuickReplySupplier().get());
                 break;
             case "faq":
