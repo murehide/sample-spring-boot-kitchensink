@@ -1697,7 +1697,7 @@ public class KitchenSinkController {
             }
             case "activate": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                        "立即開卡?",
+                        "您可登入此連結，進行開卡",
                         new URIAction("是",
                             URI.create("https://card.rakuten.com.tw/activation/"), null),
                         new MessageAction("否", "No")
@@ -1741,7 +1741,7 @@ public class KitchenSinkController {
             }
             case "reupload": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                        "補上傳文件?",
+                        "提供此連結給您，登入即可上傳補件",
                         new URIAction("是",
                             URI.create("https://card.rakuten.com.tw/application/reupload.xhtml"), null),
                         new MessageAction("否", "No")
@@ -1752,7 +1752,7 @@ public class KitchenSinkController {
             }
             case "status": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                        "查詢進度?",
+                        "您可登入此連結，查詢目前申辦進度",
                         new URIAction("是",
                             URI.create("https://card.rakuten.com.tw/application/status.xhtml"), null),
                         new MessageAction("否", "No")
@@ -1785,6 +1785,12 @@ public class KitchenSinkController {
             }
             case "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：":
                 this.reply(replyToken, new MessageWithQuickReplySupplier().get());
+                break;
+            case "faq":
+                this.replyText(replyToken, "📞提供卡友24小時服務專線給您：\n(02)2516-8518，0800-505-058(限市話)\n✉️　customer_service@card.rakuten.com.tw\n\n📣若您尚未成為卡友，申辦信用卡相關問題可撥打(02)2508-7218轉2，服務時間為平日上午9點-下午6點。");
+                break;
+            case "app":
+                this.replyText(replyToken, "樂天信用卡APP提供卡友:\n💡查詢帳單金額、刷卡明細\n✨優惠特店及優惠券功能\n📢最新刷卡回饋活動\n👍輕鬆申辦分期及登錄活動\n>>立即下載<<\n➡️iOS：http://rcd.page.link/ios\n➡️Android：https://rcd.page.link/android");
                 break;
             case "bye": {
                 Source source = event.getSource();
