@@ -56,16 +56,22 @@ public class MessageWithQuickReplySupplier implements Supplier<Message> {
                                                     .build())
                               .build()*/
                 QuickReplyItem.builder()
+                              .action(new MessageAction("查詢進度", "status"))
+                              .build(),
+                QuickReplyItem.builder()
+                              .action(new MessageAction("文件上傳", "reupload"))
+                              .build(),
+                QuickReplyItem.builder()
                               .action(new MessageAction("立即開卡", "activate"))
                               .build(),
                 QuickReplyItem.builder()
-                              .action(new MessageAction("會員服務", "member"))
+                              .action(new MessageAction("最新活動", "campaign"))
                               .build(),
                 QuickReplyItem.builder()
-                              .action(new MessageAction("申請書重寄", "resend"))
+                              .action(new MessageAction("24小時卡友專線", "faq"))
                               .build(),
                 QuickReplyItem.builder()
-                              .action(new MessageAction("文件補上傳", "reupload"))
+                              .action(new MessageAction("行動APP", "app"))
                               .build()
         );
 
