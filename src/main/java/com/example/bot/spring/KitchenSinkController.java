@@ -1594,31 +1594,31 @@ public class KitchenSinkController {
                         .builder()
                         .baseUrl(new URI("https://image.card.tw.r10s.com/images/common/robot.jpg"))
                         .altText("智能客服")
-                        .baseSize(new ImagemapBaseSize(1200, 810))
+                        .baseSize(new ImagemapBaseSize(1040, 810))
                         .actions(Arrays.asList(
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/application/status.xhtml")
-                                                 .area(new ImagemapArea(0, 0, 400, 405))
+                                                 .area(new ImagemapArea(0, 0, 347, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/application/reupload.xhtml")
-                                                 .area(new ImagemapArea(400, 0, 400, 405))
+                                                 .area(new ImagemapArea(347, 0, 347, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/activation/")
-                                                 .area(new ImagemapArea(800, 0, 400, 405))
+                                                 .area(new ImagemapArea(694, 0, 346, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/corp/campaign/")
-                                                 .area(new ImagemapArea(0, 405, 400, 405))
+                                                 .area(new ImagemapArea(0, 405, 347, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/corp/support/contact.xhtml")
-                                                 .area(new ImagemapArea(400, 405, 400, 405))
+                                                 .area(new ImagemapArea(347, 405, 347, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/corp/guide/new-app.xhtml")
-                                                 .area(new ImagemapArea(800, 405, 400, 405))
+                                                 .area(new ImagemapArea(694, 405, 346, 405))
                                                  .build()
                         ))
                         .build());
