@@ -61,7 +61,7 @@ public class CustomizedFlexMessageSupplier implements Supplier<FlexMessage> {
     private Box createHeaderBlock() {
         final Text title =
                 Text.builder()
-                    .text("您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：")
+                    .text("您好，我是智能客服小樂。\n很高興為您服務，\n提供常用功能快速連結給您：")
                     .weight(TextWeight.BOLD)
                     .size(FlexFontSize.LG)
                     .build();
