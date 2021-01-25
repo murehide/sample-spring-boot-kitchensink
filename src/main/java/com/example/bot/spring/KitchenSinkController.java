@@ -1784,7 +1784,7 @@ public class KitchenSinkController {
                 break;
             }
             case "more":
-                this.reply(replyToken, new MessageWithQuickReplySupplier().get());
+                this.reply(replyToken, new CustomizedFlexMessageSupplier().get());
                 break;
             case "faq":
                 this.replyText(replyToken, "📞提供卡友24小時服務專線給您：\n(02)2516-8518，0800-505-058(限市話)\n✉️　customer_service@card.rakuten.com.tw\n\n📣若您尚未成為卡友，申辦信用卡相關問題可撥打(02)2508-7218轉2，服務時間為平日上午9點-下午6點。");
