@@ -1611,6 +1611,14 @@ public class KitchenSinkController {
                                 URIImagemapAction.builder()
                                                  .linkUri("https://card.rakuten.com.tw/corp/campaign/")
                                                  .area(new ImagemapArea(0, 405, 347, 405))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://card.rakuten.com.tw/corp/support/contact.xhtml")
+                                                 .area(new ImagemapArea(347, 405, 347, 405))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://card.rakuten.com.tw/corp/guide/new-app.xhtml")
+                                                 .area(new ImagemapArea(694, 405, 346, 405))
                                                  .build()
                         ))
                         .build());
