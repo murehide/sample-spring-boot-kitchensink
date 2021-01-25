@@ -1592,25 +1592,25 @@ public class KitchenSinkController {
             case "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：":
                 this.reply(replyToken, ImagemapMessage
                         .builder()
-                        .baseUrl(createUri("/static/rich"))
-                        .altText("公司卡")
-                        .baseSize(new ImagemapBaseSize(1040, 1040))
+                        .baseUrl(new URI("https://image.card.tw.r10s.com/images/common/robot.jpg"))
+                        .altText("智能客服")
+                        .baseSize(new ImagemapBaseSize(1040, 810))
                         .actions(Arrays.asList(
                                 URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section1")
-                                                 .area(new ImagemapArea(0, 0, 520, 520))
+                                                 .linkUri("https://card.rakuten.com.tw/application/status.xhtml")
+                                                 .area(new ImagemapArea(0, 0, 347, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section2")
-                                                 .area(new ImagemapArea(520, 0, 520, 520))
+                                                 .linkUri("https://card.rakuten.com.tw/application/reupload.xhtml")
+                                                 .area(new ImagemapArea(347, 0, 347, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section3")
-                                                 .area(new ImagemapArea(0, 520, 520, 520))
+                                                 .linkUri("https://card.rakuten.com.tw/activation/")
+                                                 .area(new ImagemapArea(694, 0, 346, 405))
                                                  .build(),
                                 URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/product/cccard.xhtml#section4")
-                                                 .area(new ImagemapArea(520, 520, 520, 520))
+                                                 .linkUri("https://card.rakuten.com.tw/corp/campaign/")
+                                                 .area(new ImagemapArea(0, 405, 347, 405))
                                                  .build()
                         ))
                         .build());
