@@ -47,13 +47,30 @@ import com.linecorp.bot.model.message.flex.unit.FlexMarginSize;
 public class CustomizedFlexMessageSupplier implements Supplier<FlexMessage> {
     @Override
     public FlexMessage get() {
+        final Box headerBlock = createHeaderBlock();
         final Box bodyBlock = createBodyBlock();
         final Bubble bubble =
                 Bubble.builder()
+                      .header(headerBlock)
                       .body(bodyBlock)
                       .build();
 
         return new FlexMessage("智能客服", bubble);
+    }
+    
+    private Box createHeaderBlock() {
+        final Text title =
+                Text.builder()
+                    .text("您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：")
+                    .weight(TextWeight.BOLD)
+                    .size(FlexFontSize.LG)
+                    .build();
+
+        return Box.builder()
+                  .layout(FlexLayout.VERTICAL)
+                  .spacing(FlexMarginSize.SM)
+                  .contents(asList(title))
+                  .build();
     }
 
     private Box createBodyBlock() {
