@@ -1592,7 +1592,7 @@ public class KitchenSinkController {
             case "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：":
                 this.reply(replyToken, ImagemapMessage
                         .builder()
-                        .baseUrl(new URI("https://image.card.tw.r10s.com/images/common/robot.jpg"))
+                        .baseUrl(createUri("/static/icon"))
                         .altText("智能客服")
                         .baseSize(new ImagemapBaseSize(1040, 810))
                         .actions(Arrays.asList(
