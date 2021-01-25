@@ -1721,7 +1721,7 @@ public class KitchenSinkController {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "進入帳務查詢?",
                         new URIAction("是",
-                            URI.create("https://card.rakuten.com.tw/members/statement/billed/index.xhtml?uid="+encrytStr), null),
+                            URI.create("https://stg.card.rakuten.com.tw/members/statement/billed/index.xhtml?uid="+encrytStr), null),
                         new MessageAction("否", "No")
                 );
                 TemplateMessage templateMessage = new TemplateMessage("帳務查詢", confirmTemplate);
