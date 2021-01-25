@@ -1589,40 +1589,6 @@ public class KitchenSinkController {
                         ))
                         .build());
                 break;
-            case "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：":
-                this.reply(replyToken, ImagemapMessage
-                        .builder()
-                        .baseUrl(createUri("/static/icon"))
-                        .altText("智能客服")
-                        .baseSize(new ImagemapBaseSize(1040, 702))
-                        .actions(Arrays.asList(
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/application/status.xhtml")
-                                                 .area(new ImagemapArea(0, 0, 347, 351))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/application/reupload.xhtml")
-                                                 .area(new ImagemapArea(347, 0, 347, 351))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/activation/")
-                                                 .area(new ImagemapArea(694, 0, 346, 351))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/campaign/")
-                                                 .area(new ImagemapArea(0, 351, 347, 351))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/support/contact.xhtml")
-                                                 .area(new ImagemapArea(347, 351, 347, 351))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://card.rakuten.com.tw/corp/guide/new-app.xhtml")
-                                                 .area(new ImagemapArea(694, 351, 346, 351))
-                                                 .build()
-                        ))
-                        .build());
-                break;
             case "wifi":
                 this.reply(replyToken, ImagemapMessage
                         .builder()
@@ -1817,7 +1783,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "shortcut":
+            case "您好，我是智能客服小樂。很高興為您服務，提供常用功能快速連結給您：":
                 this.reply(replyToken, new MessageWithQuickReplySupplier().get());
                 break;
             case "bye": {
